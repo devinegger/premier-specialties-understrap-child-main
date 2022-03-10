@@ -1,0 +1,21 @@
+/* HEADER */
+#main-nav {
+    position: absolute;
+    width: 100%;
+}
+
+.navbar-brand img {
+    max-width: 200px;
+}
+
+.nav-link {
+    font-weight: 300;
+}
+
+/* HOMEPAGE */
+.homepage-hero {
+    background-image: url('https://premierspecialties.local/wp-content/uploads/2022/03/OnScentHeroBackground.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
