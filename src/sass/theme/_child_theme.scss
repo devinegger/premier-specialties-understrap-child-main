@@ -3,6 +3,7 @@
 #main-nav {
     position: absolute;
     width: 100%;
+    z-index: 999;
 }
 
 .navbar-brand img {
@@ -44,4 +45,30 @@
     background-repeat: no-repeat;
     background-position: top right;
     height: 100vh;
+}
+
+/* PAGE TEMPLATE */
+
+.page-header-wrap {
+    filter: drop-shadow(0 7px 5px rgba(143,143,143,1));
+}
+.page-header {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 0 96%);
+}
+
+.circle-icon {
+    span {
+        display: block;
+        background-color: #294761;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 4rem;
+        box-shadow: 5px 8px 7px -4px #8f8f8fa6;
+        margin-top: -10rem;
+        z-index: 999;
+    }
 }
