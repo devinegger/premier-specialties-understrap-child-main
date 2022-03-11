@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 				'container_class' => 'collapse navbar-collapse',
 				'container_id'    => 'navbarNavDropdown',
 				'menu_class'      => 'navbar-nav ms-auto mt-4',
-				'fallback_cb'     => '',
+				'fallback_cb'     => 'false',
 				'menu_id'         => 'main-menu',
 				'depth'           => 2,
 				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),

@@ -5,16 +5,24 @@
 
 $spacer: 2.5rem;
 
+//colors
+$on-scent-green: rgb(108,173,82); 
+$on-scent-blue: #044560;
+$on-scent-light-blue: #dae7f1;
+
+$primary: $on-scent-green; 
+$dark: rgb(29, 38, 29);
+
 //font
 $font-family-base: proxima-nova, sans-serif; 
 $font-weight-semi-bold: 500;
+$body-color: $on-scent-blue;
 
-//colors
-$on-scent-green: rgb(108,173,82); 
-$primary: $on-scent-green; 
+//componantes
+$border-radius: .5rem !default;
 
 //text
-$border-radius: .5rem !default;
+$text-shadow: 1px 1px 1px rgba($dark, .8);
 
 // navbar
 $navbar-dark-color: #ffffff;
@@ -27,9 +35,17 @@ $navbar-nav-link-padding-x: 2rem;
 // dropdown
 $dropdown-font-size: .75rem;
 $dropdown-link-color: #ffffff;
-$dropdown-bg: rgba($on-scent-green, .5);
-$dropdown-link-hover-bg: rgba($on-scent-green, .5);
+$dropdown-link-hover-bg: rgba($on-scent-green, .9);
 $dropdown-border-radius: none;
+
+
+// dropdown - ititial style
+$dropdown-bg: rgba($on-scent-green, .5);
+
+// ** dropdown - options for eric ** 
+// $dropdown-bg: rgba($dark, .5);
+// $dropdown-bg: rgba($dark, .7);
+
 
 // dropdown items
 $dropdown-item-padding-y: .25rem;

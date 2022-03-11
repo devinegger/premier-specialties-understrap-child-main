@@ -36,7 +36,7 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: #1d261d;
   --bs-primary-rgb: 108, 173, 82;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -44,10 +44,10 @@
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-rgb: 29, 38, 29;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-color-rgb: 4, 69, 96;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -56,7 +56,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #044560;
   --bs-body-bg: #fff;
 }
 
@@ -1955,15 +1955,15 @@ progress {
 .table, .wp-block-table table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #212529;
+  --bs-table-striped-color: #044560;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #212529;
+  --bs-table-active-color: #044560;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #212529;
+  --bs-table-hover-color: #044560;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 2.5rem;
-  color: #212529;
+  color: #044560;
   vertical-align: top;
   border-color: #dee2e6;
 }
@@ -2102,15 +2102,15 @@ progress {
 }
 
 .table-dark {
-  --bs-table-bg: #212529;
-  --bs-table-striped-bg: #2c3034;
+  --bs-table-bg: #1d261d;
+  --bs-table-striped-bg: #283128;
   --bs-table-striped-color: #fff;
-  --bs-table-active-bg: #373b3e;
+  --bs-table-active-bg: #343c34;
   --bs-table-active-color: #fff;
-  --bs-table-hover-bg: #323539;
+  --bs-table-hover-bg: #2e362e;
   --bs-table-hover-color: #fff;
   color: #fff;
-  border-color: #373b3e;
+  border-color: #343c34;
 }
 
 .table-responsive {
@@ -2203,7 +2203,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #044560;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -2269,7 +2269,7 @@ progress {
 .wpcf7 select:focus,
 .wpcf7 textarea:focus, .widget_categories select:focus,
 .widget_archive select:focus {
-  color: #212529;
+  color: #044560;
   background-color: #fff;
   border-color: #b6d6a9;
   outline: 0;
@@ -2371,7 +2371,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #212529;
+  color: #044560;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2405,7 +2405,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #212529;
+  color: #044560;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2489,7 +2489,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #212529;
+  color: #044560;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2552,7 +2552,7 @@ progress {
   padding: 0.375rem 0;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #212529;
+  color: #044560;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2648,7 +2648,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #044560;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2680,7 +2680,7 @@ textarea.form-control-lg {
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #212529;
+  text-shadow: 0 0 0 #044560;
 }
 
 .form-select-sm {
@@ -3201,7 +3201,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #044560;
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
@@ -3982,7 +3982,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #044560;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -4004,7 +4004,7 @@ textarea.form-control-lg {
   }
 }
 .btn:hover, .wpcf7 input[type=submit]:hover, .login-btn a:hover, .woocommerce-info a.button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover {
-  color: #212529;
+  color: #044560;
 }
 .btn-check:focus + .btn, .wpcf7 .btn-check:focus + input[type=submit], .login-btn .btn-check:focus + a, .woocommerce-info .btn-check:focus + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:focus + a.button, .btn:focus, .wpcf7 input[type=submit]:focus, .login-btn a:focus, .woocommerce-info a.button:focus, .woocommerce-notices-wrapper .woocommerce-message a.button:focus {
   outline: 0;
@@ -4227,32 +4227,32 @@ textarea.form-control-lg {
 
 .btn-dark {
   color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #1d261d;
+  border-color: #1d261d;
 }
 .btn-dark:hover {
   color: #fff;
-  background-color: #1c1f23;
-  border-color: #1a1e21;
+  background-color: #192019;
+  border-color: #171e17;
 }
 .btn-check:focus + .btn-dark, .btn-dark:focus {
   color: #fff;
-  background-color: #1c1f23;
-  border-color: #1a1e21;
-  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+  background-color: #192019;
+  border-color: #171e17;
+  box-shadow: 0 0 0 0.25rem rgba(63, 71, 63, 0.5);
 }
 .btn-check:checked + .btn-dark, .btn-check:active + .btn-dark, .btn-dark:active, .btn-dark.active, .show > .btn-dark.dropdown-toggle {
   color: #fff;
-  background-color: #1a1e21;
-  border-color: #191c1f;
+  background-color: #171e17;
+  border-color: #161d16;
 }
 .btn-check:checked + .btn-dark:focus, .btn-check:active + .btn-dark:focus, .btn-dark:active:focus, .btn-dark.active:focus, .show > .btn-dark.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(66, 70, 73, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(63, 71, 63, 0.5);
 }
 .btn-dark:disabled, .btn-dark.disabled {
   color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #1d261d;
+  border-color: #1d261d;
 }
 
 .btn-outline-primary, .wpcf7 input[type=submit] {
@@ -4431,27 +4431,27 @@ textarea.form-control-lg {
 }
 
 .btn-outline-dark {
-  color: #212529;
-  border-color: #212529;
+  color: #1d261d;
+  border-color: #1d261d;
 }
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #1d261d;
+  border-color: #1d261d;
 }
 .btn-check:focus + .btn-outline-dark, .btn-outline-dark:focus {
-  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(29, 38, 29, 0.5);
 }
 .btn-check:checked + .btn-outline-dark, .btn-check:active + .btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
   color: #fff;
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #1d261d;
+  border-color: #1d261d;
 }
 .btn-check:checked + .btn-outline-dark:focus, .btn-check:active + .btn-outline-dark:focus, .btn-outline-dark:active:focus, .btn-outline-dark.active:focus, .btn-outline-dark.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(29, 38, 29, 0.5);
 }
 .btn-outline-dark:disabled, .btn-outline-dark.disabled {
-  color: #212529;
+  color: #1d261d;
   background-color: transparent;
 }
 
@@ -4535,7 +4535,7 @@ textarea.form-control-lg {
   padding: 0.5rem 0;
   margin: 0;
   font-size: 0.75rem;
-  color: #212529;
+  color: #044560;
   text-align: left;
   list-style: none;
   background-color: rgba(108, 173, 82, 0.5);
@@ -4700,7 +4700,7 @@ textarea.form-control-lg {
 }
 .dropdown-item:hover, .dropdown-item:focus {
   color: #e6e6e6;
-  background-color: rgba(108, 173, 82, 0.5);
+  background-color: rgba(108, 173, 82, 0.9);
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
@@ -5665,7 +5665,7 @@ textarea.form-control-lg {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1rem;
-  color: #212529;
+  color: #044560;
   text-align: left;
   background-color: #fff;
   border: 0;
@@ -5693,7 +5693,7 @@ textarea.form-control-lg {
   height: 1.25rem;
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23044560'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1.25rem;
   transition: transform 0.2s ease-in-out;
@@ -5989,12 +5989,12 @@ textarea.form-control-lg {
 }
 
 .alert-dark {
-  color: #141619;
-  background-color: #d3d3d4;
-  border-color: #bcbebf;
+  color: #111711;
+  background-color: #d2d4d2;
+  border-color: #bbbebb;
 }
 .alert-dark .alert-link {
-  color: #101214;
+  color: #0e120e;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -6079,7 +6079,7 @@ textarea.form-control-lg {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #212529;
+  color: #044560;
   background-color: #e9ecef;
 }
 
@@ -6371,17 +6371,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-dark {
-  color: #141619;
-  background-color: #d3d3d4;
+  color: #111711;
+  background-color: #d2d4d2;
 }
 .list-group-item-dark.list-group-item-action:hover, .list-group-item-dark.list-group-item-action:focus {
-  color: #141619;
-  background-color: #bebebf;
+  color: #111711;
+  background-color: #bdbfbd;
 }
 .list-group-item-dark.list-group-item-action.active {
   color: #fff;
-  background-color: #141619;
-  border-color: #141619;
+  background-color: #111711;
+  border-color: #111711;
 }
 
 .btn-close {
@@ -6977,7 +6977,7 @@ textarea.form-control-lg {
 
 .popover-body {
   padding: 2.5rem 2.5rem;
-  color: #212529;
+  color: #044560;
 }
 
 .carousel {
@@ -7476,10 +7476,10 @@ textarea.form-control-lg {
 }
 
 .link-dark {
-  color: #212529;
+  color: #1d261d;
 }
 .link-dark:hover, .link-dark:focus {
-  color: #1a1e21;
+  color: #171e17;
 }
 
 .ratio {
@@ -7908,7 +7908,7 @@ textarea.form-control-lg {
 }
 
 .border-dark {
-  border-color: #212529 !important;
+  border-color: #1d261d !important;
 }
 
 .border-white {
@@ -12378,7 +12378,7 @@ a.skip-link {
 .navbar-dark .navbar-nav .dropdown-menu .nav-link:hover, .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
   color: #e6e6e6 !important;
   text-decoration: none;
-  background-color: rgba(108, 173, 82, 0.5);
+  background-color: rgba(108, 173, 82, 0.9);
 }
 .navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
   color: #fff !important;
@@ -15571,6 +15571,7 @@ figure.woocommerce-product-gallery__wrapper {
 .nav-link {
   font-weight: 300;
   padding-left: 0 !important;
+  text-shadow: 1px 1px 1px rgba(29, 38, 29, 0.8);
 }
 .nav-link:hover {
   font-weight: 500;
@@ -15584,6 +15585,11 @@ figure.woocommerce-product-gallery__wrapper {
     font-size: 0.75rem;
   }
 }
+/* NAV - DROPDOWN */
+.dropdown-item {
+  text-shadow: 1px 1px 1px rgba(29, 38, 29, 0.8);
+}
+
 /* HOMEPAGE */
 .homepage-hero {
   background-image: url("https://premierspecialties.local/wp-content/uploads/2022/03/OnScentHeroBackground.jpg");
@@ -15609,7 +15615,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 .circle-icon span {
   display: block;
-  background-color: #294761;
+  background-color: #044560;
   height: 8rem;
   width: 8rem;
   border-radius: 4rem;
@@ -15820,12 +15826,12 @@ figure.woocommerce-product-gallery__wrapper {
 
 .has-dark-color,
 .has-dark-color:visited {
-  color: #212529;
+  color: #1d261d;
 }
 
 .has-dark-background-color {
-  background-color: #212529;
-  border-color: #212529;
+  background-color: #1d261d;
+  border-color: #1d261d;
 }
 
 figure.wp-block-image {

@@ -45,30 +45,24 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<main class="site-main" id="main">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
+					<?php
+					while ( have_posts() ) {
+						the_post();
+						get_template_part( 'loop-templates/content', 'page-internal' );
 
-			<main class="site-main" id="main">
-
-				<?php
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'loop-templates/content', 'page-internal' );
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) {
+							comments_template();
+						}
 					}
-				}
-				?>
+					?>
 
-			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
+				</main><!-- #main -->
+			</div><!-- .col -->
 		</div><!-- .row -->
 
 	</div><!-- #content -->
