@@ -3,18 +3,34 @@
 // Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
 
 
-$font-family-base: proxima-nova, sans-serif; 
+$spacer: 2.5rem;
 
+//font
+$font-family-base: proxima-nova, sans-serif; 
+$font-weight-semi-bold: 500;
+
+//colors
 $on-scent-green: rgb(108,173,82); 
 $primary: $on-scent-green; 
 
+//text
+$border-radius: .5rem !default;
 
+// navbar
 $navbar-dark-color: #ffffff;
 $navbar-dark-hover-color: $on-scent-green;
 $enable-caret: false;
 
+//nav-link
+$navbar-nav-link-padding-x: 2rem;
+
+// dropdown
 $dropdown-font-size: .75rem;
 $dropdown-link-color: #ffffff;
 $dropdown-bg: rgba($on-scent-green, .5);
 $dropdown-link-hover-bg: rgba($on-scent-green, .5);
 $dropdown-border-radius: none;
+
+// dropdown items
+$dropdown-item-padding-y: .25rem;
+$dropdown-item-padding-x: .75rem;

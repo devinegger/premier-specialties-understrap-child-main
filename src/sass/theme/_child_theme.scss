@@ -1,4 +1,5 @@
-/* HEADER */
+/* HEADER - NAVIGATION */
+
 #main-nav {
     position: absolute;
     width: 100%;
@@ -9,13 +10,38 @@
 }
 
 .nav-link {
-    font-weight: 300;
+    font-weight: $font-weight-light;
+    padding-left: 0 !important;
+
+    &:hover {
+        font-weight: $font-weight-semi-bold;
+    }
 }
 
+.login-btn {
+    a {
+        @extend .btn, .btn-primary, .btn-sm, .px-2, .py-0,;
+    }
+}
+
+@include media-breakpoint-up(md) { 
+    .login-btn {
+        position: absolute;
+        top: 1.25rem;
+        right: 2.5rem;
+        font-size: .75rem;
+    }
+}
+
+
+
+
 /* HOMEPAGE */
+
 .homepage-hero {
     background-image: url('https://premierspecialties.local/wp-content/uploads/2022/03/OnScentHeroBackground.jpg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: top right;
     height: 100vh;
 }
