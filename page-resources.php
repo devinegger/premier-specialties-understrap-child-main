@@ -59,7 +59,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 					<?php get_template_part('template-parts/page', 'tile-half'); ?>
 
 					<!-- Product Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-half'); ?>
+					<?php get_template_part('template-parts/product', 'tile'); ?>
 
 					<div class="container px-0">
 						<div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
@@ -69,7 +69,9 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 									<div class="card-body p-2">
 										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
 										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
-										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus. 
+											<span class="more-link"><a href="#" class="text-secondary text-decoration-none"> > More</a></span>
+										</p>
 									</div>
 								</div>
 							</div>
@@ -79,37 +81,42 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 									<div class="card-body p-2">
 										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
 										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
-										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus. 
+											<span class="more-link"><a href="#" class="text-secondary text-decoration-none"> > More</a></span>
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="col">
+							</div><div class="col">
 								<div class="card text-center team-member border-0">
 									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
 									<div class="card-body p-2">
 										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
 										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
-										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus. 
+											<span class="more-link"><a href="#" class="text-secondary text-decoration-none"> > More</a></span>
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="col">
+							</div><div class="col">
 								<div class="card text-center team-member border-0">
 									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
 									<div class="card-body p-2">
 										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
 										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
-										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus. 
+											<span class="more-link"><a href="#" class="text-secondary text-decoration-none"> > More</a></span>
+										</p>
 									</div>
 								</div>
-							</div>
-							<div class="col">
+							</div><div class="col">
 								<div class="card text-center team-member border-0">
 									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
 									<div class="card-body p-2">
 										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
 										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
-										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus. 
+											<span class="more-link"><a href="#" class="text-secondary text-decoration-none"> > More</a></span>
+										</p>
 									</div>
 								</div>
 							</div>
