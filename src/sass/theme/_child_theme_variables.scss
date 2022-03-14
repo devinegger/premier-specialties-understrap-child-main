@@ -7,11 +7,12 @@ $spacer: 2.5rem;
 
 //colors
 $on-scent-green: rgb(108,173,82); 
-$on-scent-blue: #044560;
-$on-scent-light-blue: #dae7f1;
+$on-scent-blue: rgb(4, 69, 96);
+$on-scent-light-blue: rgb(218, 231, 241);
 
 $primary: $on-scent-green; 
 $dark: rgb(29, 38, 29);
+$gray: rgb(127, 127, 127);
 
 //font
 $font-family-base: proxima-nova, sans-serif; 
@@ -44,7 +45,7 @@ $dropdown-bg: rgba($on-scent-green, .5);
 
 // ** dropdown - options for eric ** 
 // $dropdown-bg: rgba($dark, .5);
-// $dropdown-bg: rgba($dark, .7);
+//$dropdown-bg: rgba($dark, .7);
 
 
 // dropdown items

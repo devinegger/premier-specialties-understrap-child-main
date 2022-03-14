@@ -1,26 +1,33 @@
+/* HELPER CLASSES */
+
+
+
+
 /* HEADER - NAVIGATION */
 
 #main-nav {
     position: absolute;
     width: 100%;
     z-index: 999;
+
+    .nav-link {
+        font-weight: $font-weight-light;
+        padding-left: 0;
+        
+        // text shadow not original design
+        text-shadow: $text-shadow;
+    
+        &:hover {
+            font-weight: $font-weight-semi-bold;
+        }
+    }
 }
 
 .navbar-brand img {
     max-width: 200px;
 }
 
-.nav-link {
-    font-weight: $font-weight-light;
-    padding-left: 0 !important;
-    
-    // text shadow not original design
-    text-shadow: $text-shadow;
 
-    &:hover {
-        font-weight: $font-weight-semi-bold;
-    }
-}
 
 .login-btn {
     a {
@@ -49,7 +56,7 @@
 /* HOMEPAGE */
 
 .homepage-hero {
-    background-image: url('https://premierspecialties.local/wp-content/uploads/2022/03/OnScentHeroBackground.jpg');
+    background-image: url('/wp-content/uploads/2022/03/OnScentHeroBackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top right;
@@ -64,7 +71,7 @@
 .page-header {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: bottom right;
     height: 60vh;
     clip-path: polygon(0 0, 100% 0, 100% 74%, 0 96%);
 }
@@ -79,5 +86,51 @@
         box-shadow: 5px 8px 7px -4px #8f8f8fa6;
         margin-top: -10rem;
         z-index: 999;
+    }
+}
+
+/* TEMPLATE PARTS */
+
+.img-left-tile {
+    border-radius: 1rem;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.tile-sub-section::before {
+    content: "|";
+    padding: 0 .5rem;
+}
+
+.tile-sub-section {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+/* SUB NAV */
+
+.page-sub-navigation {
+
+    .nav-item {
+        border-right: 1px solid $white;
+    }
+
+    .nav-item:last-child {
+        border-right: none;
+    }
+
+    .nav-link {
+        text-shadow: none;
+        color: $white;
+        font-weight: $font-weight-light;
+        background-color: $gray;
+        padding: 1rem 3rem;
+    }
+
+    .nav-link.active {
+        background-color: $on-scent-blue;
     }
 }
