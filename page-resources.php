@@ -49,41 +49,44 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 			<div class="col-10">
 				<main class="site-main" id="main">
 
-				<!-- Sub Navigation -->
-				<?php get_template_part('template-parts/page', 'sub-nav'); ?>
+					<!-- Sub Navigation -->
+					<?php get_template_part('template-parts/page', 'sub-nav'); ?>
+					
+					<!-- Full Tile Template -->
+					<?php //get_template_part('template-parts/page', 'tile-full'); ?>
+					
+					<!-- Full Tile Template -->
+					<?php // get_template_part('template-parts/page', 'tile-half'); ?>
 
 					<div class="container px-0">
-						<div class="row img-left-tile bg-light mb-2">
-							<div class="col-md-3 px-0">
-								<img src="/wp-content/uploads/2022/03/demo-for-temps.jpg" />
-							</div>
-							<div class="col-md-9 p-2">
-								<div class="d-flex">
-									<h3 class="fw-bold">Toiletries</h3><span class="tile-sub-section">Air Care</span><span class="tile-sub-section">Hard Surface Cleaners</span>
+						<div class="row bg-light mb-2 p-2 product-tile">
+							<div class="col">
+								<div class="row">
+									<div class="col-md-3 px-0">
+										<img src="/wp-content/uploads/2022/03/demo-for-temps.jpg" />
+									</div>
+									<div class="col-md-9 p-2">
+										<h3 class="fw-bold mb-0">Toiletries</h3>
+										<span class="product-sub-titles text-gray">INCI Name: Orbignya Oleifera Seed Oil and Tocopherol</span>
+										<p class="text-black">Vitae congue eu consequat ac felis donec et odio pellentesque. Orci sagittis eu volutpat odio facilisis mauris sit. Sed elementum tempus egestas sed sed risus pretium. Vehicula ipsum a arcu cursus vitae. Tempus urna et pharetra pharetra massa massa. Diam quam nulla porttitor massa id neque aliquam. </p>
+									</div>
 								</div>
-								<p class="text-black">Vitae congue eu consequat ac felis donec et odio pellentesque. Orci sagittis eu volutpat odio facilisis mauris sit. Sed elementum tempus egestas sed sed risus pretium. Vehicula ipsum a arcu cursus vitae. Tempus urna et pharetra pharetra massa massa. Diam quam nulla porttitor massa id neque aliquam. </p>
-							</div>
-						</div>
-						<div class="row img-left-tile bg-light mb-2">
-							<div class="col-md-3 px-0">
-								<img src="/wp-content/uploads/2022/03/demo-for-temps.jpg" />
-							</div>
-							<div class="col-md-9 p-2">
-								<h3 class="fw-bold">Fabric Care</h3>
-								<p class="text-black">Vitae congue eu consequat ac felis donec et odio pellentesque. Orci sagittis eu volutpat odio facilisis mauris sit. Sed elementum tempus egestas sed sed risus pretium. Vehicula ipsum a arcu cursus vitae. Tempus urna et pharetra pharetra massa massa. Diam quam nulla porttitor massa id neque aliquam. </p>
-							</div>
-						</div>
-						<div class="row img-left-tile bg-light mb-2">
-							<div class="col-md-3 px-0">
-								<img src="/wp-content/uploads/2022/03/demo-for-temps.jpg" />
-							</div>
-							<div class="col-md-9 p-2">
-								<h3 class="fw-bold">Home Care</h3>
-								<p class="text-black">Vitae congue eu consequat ac felis donec et odio pellentesque. Orci sagittis eu volutpat odio facilisis mauris sit. Sed elementum tempus egestas sed sed risus pretium. Vehicula ipsum a arcu cursus vitae. Tempus urna et pharetra pharetra massa massa. Diam quam nulla porttitor massa id neque aliquam. </p>
+								<div class="row">
+									<div class="col text-end">
+										<form>
+											<label class="text-gray">Request Standard Sample</label>
+											<input class="mx-2 text-center" size="2"/>
+											<button class="btn btn-secondary rounded-0" type="submit">Add to Cart</button>
+										</form>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 
+				
+				
+							
 					<?php
 					while ( have_posts() ) {
 						the_post();

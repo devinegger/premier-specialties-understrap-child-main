@@ -30,7 +30,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #6cad52;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #044560;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -38,7 +38,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #1d261d;
   --bs-primary-rgb: 108, 173, 82;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 4, 69, 96;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -2030,15 +2030,15 @@ progress {
 }
 
 .table-secondary {
-  --bs-table-bg: #e2e3e5;
-  --bs-table-striped-bg: #d7d8da;
+  --bs-table-bg: #cddadf;
+  --bs-table-striped-bg: #c3cfd4;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #cbccce;
+  --bs-table-active-bg: #b9c4c9;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #d1d2d4;
+  --bs-table-hover-bg: #becace;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #cbccce;
+  border-color: #b9c4c9;
 }
 
 .table-success {
@@ -2153,22 +2153,22 @@ progress {
 }
 
 .col-form-label {
-  padding-top: calc(0.375rem + 1px);
-  padding-bottom: calc(0.375rem + 1px);
+  padding-top: calc(0.375rem + 2px);
+  padding-bottom: calc(0.375rem + 2px);
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
 }
 
 .col-form-label-lg {
-  padding-top: calc(0.5rem + 1px);
-  padding-bottom: calc(0.5rem + 1px);
+  padding-top: calc(0.5rem + 2px);
+  padding-bottom: calc(0.5rem + 2px);
   font-size: 1.25rem;
 }
 
 .col-form-label-sm {
-  padding-top: calc(0.25rem + 1px);
-  padding-bottom: calc(0.25rem + 1px);
+  padding-top: calc(0.25rem + 2px);
+  padding-bottom: calc(0.25rem + 2px);
   font-size: 0.875rem;
 }
 
@@ -2206,7 +2206,7 @@ progress {
   color: #044560;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 2px solid #7f7f7f;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2377,7 +2377,7 @@ progress {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-  border-inline-end-width: 1px;
+  border-inline-end-width: 2px;
   border-radius: 0;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2411,7 +2411,7 @@ progress {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-  border-inline-end-width: 1px;
+  border-inline-end-width: 2px;
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2495,7 +2495,7 @@ progress {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-  border-inline-end-width: 1px;
+  border-inline-end-width: 2px;
   border-radius: 0;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2555,7 +2555,7 @@ progress {
   color: #044560;
   background-color: transparent;
   border: solid transparent;
-  border-width: 1px 0;
+  border-width: 2px 0;
 }
 .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
   padding-right: 0;
@@ -2563,7 +2563,7 @@ progress {
 }
 
 .form-control-sm {
-  min-height: calc(1.5em + 0.5rem + 2px);
+  min-height: calc(1.5em + 0.5rem + 4px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem;
@@ -2588,7 +2588,7 @@ progress {
 }
 
 .form-control-lg {
-  min-height: calc(1.5em + 1rem + 2px);
+  min-height: calc(1.5em + 1rem + 4px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.3rem;
@@ -2614,13 +2614,13 @@ progress {
 
 textarea.form-control, .wpcf7 textarea.wpcf7-validation-errors,
 .wpcf7 textarea {
-  min-height: calc(1.5em + 0.75rem + 2px);
+  min-height: calc(1.5em + 0.75rem + 4px);
 }
 textarea.form-control-sm {
-  min-height: calc(1.5em + 0.5rem + 2px);
+  min-height: calc(1.5em + 0.5rem + 4px);
 }
 textarea.form-control-lg {
-  min-height: calc(1.5em + 1rem + 2px);
+  min-height: calc(1.5em + 1rem + 4px);
 }
 
 .form-control-color {
@@ -2654,7 +2654,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 16px 12px;
-  border: 1px solid #ced4da;
+  border: 2px solid #7f7f7f;
   border-radius: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-appearance: none;
@@ -2915,7 +2915,7 @@ textarea.form-control-lg {
 .wpcf7 .form-floating > textarea, .widget_categories .form-floating > select,
 .widget_archive .form-floating > select,
 .form-floating > .form-select {
-  height: calc(3.5rem + 2px);
+  height: calc(3.5rem + 4px);
   line-height: 1.25;
 }
 .form-floating > label {
@@ -2925,7 +2925,7 @@ textarea.form-control-lg {
   height: 100%;
   padding: 1rem 0.75rem;
   pointer-events: none;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transform-origin: 0 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
@@ -3205,7 +3205,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
+  border: 2px solid #7f7f7f;
   border-radius: 0.5rem;
 }
 
@@ -3285,7 +3285,7 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0;
 }
 .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-  margin-left: -1px;
+  margin-left: -2px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -4047,32 +4047,32 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #044560;
+  border-color: #044560;
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
+  background-color: #033b52;
+  border-color: #03374d;
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+  background-color: #033b52;
+  border-color: #03374d;
+  box-shadow: 0 0 0 0.25rem rgba(42, 97, 120, 0.5);
 }
 .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #565e64;
-  border-color: #51585e;
+  background-color: #03374d;
+  border-color: #033448;
 }
 .btn-check:checked + .btn-secondary:focus, .btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(130, 138, 145, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(42, 97, 120, 0.5);
 }
 .btn-secondary:disabled, .btn-secondary.disabled {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #044560;
+  border-color: #044560;
 }
 
 .btn-success, .woocommerce-notices-wrapper .woocommerce-message a.button {
@@ -4281,27 +4281,27 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  color: #6c757d;
-  border-color: #6c757d;
+  color: #044560;
+  border-color: #044560;
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #044560;
+  border-color: #044560;
 }
 .btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(4, 69, 96, 0.5);
 }
 .btn-check:checked + .btn-outline-secondary, .btn-check:active + .btn-outline-secondary, .btn-outline-secondary:active, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #044560;
+  border-color: #044560;
 }
 .btn-check:checked + .btn-outline-secondary:focus, .btn-check:active + .btn-outline-secondary:focus, .btn-outline-secondary:active:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(4, 69, 96, 0.5);
 }
 .btn-outline-secondary:disabled, .btn-outline-secondary.disabled {
-  color: #6c757d;
+  color: #044560;
   background-color: transparent;
 }
 
@@ -5935,12 +5935,12 @@ textarea.form-control-lg {
 }
 
 .alert-secondary {
-  color: #41464b;
-  background-color: #e2e3e5;
-  border-color: #d3d6d8;
+  color: #02293a;
+  background-color: #cddadf;
+  border-color: #b4c7cf;
 }
 .alert-secondary .alert-link {
-  color: #34383c;
+  color: #02212e;
 }
 
 .alert-success, .woocommerce-notices-wrapper .woocommerce-message {
@@ -6287,17 +6287,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-secondary {
-  color: #41464b;
-  background-color: #e2e3e5;
+  color: #02293a;
+  background-color: #cddadf;
 }
 .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  color: #41464b;
-  background-color: #cbccce;
+  color: #02293a;
+  background-color: #b9c4c9;
 }
 .list-group-item-secondary.list-group-item-action.active {
   color: #fff;
-  background-color: #41464b;
-  border-color: #41464b;
+  background-color: #02293a;
+  border-color: #02293a;
 }
 
 .list-group-item-success {
@@ -7434,10 +7434,10 @@ textarea.form-control-lg {
 }
 
 .link-secondary {
-  color: #6c757d;
+  color: #044560;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #565e64;
+  color: #03374d;
 }
 
 .link-success {
@@ -7884,7 +7884,7 @@ textarea.form-control-lg {
 }
 
 .border-secondary {
-  border-color: #6c757d !important;
+  border-color: #044560 !important;
 }
 
 .border-success {
@@ -15558,6 +15558,10 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /* HELPER CLASSES */
+.text-gray {
+  color: #7f7f7f;
+}
+
 /* HEADER - NAVIGATION */
 #main-nav {
   position: absolute;
@@ -15625,10 +15629,10 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 /* TEMPLATE PARTS */
-.img-left-tile {
+.img-left-tile, .product-tile {
   border-radius: 1rem;
 }
-.img-left-tile img {
+.img-left-tile img, .product-tile img {
   height: 100%;
   width: 100%;
 }
@@ -15803,12 +15807,12 @@ figure.woocommerce-product-gallery__wrapper {
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #6c757d;
+  color: #044560;
 }
 
 .has-secondary-background-color {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #044560;
+  border-color: #044560;
 }
 
 .has-success-color,

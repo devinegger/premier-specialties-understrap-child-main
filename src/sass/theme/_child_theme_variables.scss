@@ -11,6 +11,7 @@ $on-scent-blue: rgb(4, 69, 96);
 $on-scent-light-blue: rgb(218, 231, 241);
 
 $primary: $on-scent-green; 
+$secondary: $on-scent-blue;
 $dark: rgb(29, 38, 29);
 $gray: rgb(127, 127, 127);
 
@@ -51,3 +52,7 @@ $dropdown-bg: rgba($on-scent-green, .5);
 // dropdown items
 $dropdown-item-padding-y: .25rem;
 $dropdown-item-padding-x: .75rem;
+
+// forms
+$input-border-color: $gray;
+$input-border-width: 2px;

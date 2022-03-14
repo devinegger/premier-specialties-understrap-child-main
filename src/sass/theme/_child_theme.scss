@@ -1,5 +1,8 @@
 /* HELPER CLASSES */
 
+.text-gray {
+    color: $gray;
+}
 
 
 
@@ -91,7 +94,7 @@
 
 /* TEMPLATE PARTS */
 
-.img-left-tile {
+.img-left-tile, .product-tile {
     border-radius: 1rem;
 
     img {
@@ -109,6 +112,7 @@
     font-size: 1.4rem;
     font-weight: 300;
 }
+
 
 /* SUB NAV */
 
