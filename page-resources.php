@@ -53,36 +53,70 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 					<?php get_template_part('template-parts/page', 'sub-nav'); ?>
 					
 					<!-- Full Tile Template -->
-					<?php //get_template_part('template-parts/page', 'tile-full'); ?>
+					<?php get_template_part('template-parts/page', 'tile-full'); ?>
 					
-					<!-- Full Tile Template -->
-					<?php // get_template_part('template-parts/page', 'tile-half'); ?>
+					<!-- Half Tile Template -->
+					<?php get_template_part('template-parts/page', 'tile-half'); ?>
+
+					<!-- Product Tile Template -->
+					<?php get_template_part('template-parts/page', 'tile-half'); ?>
 
 					<div class="container px-0">
-						<div class="row bg-light mb-2 p-2 product-tile">
+						<div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
 							<div class="col">
-								<div class="row">
-									<div class="col-md-3 px-0">
-										<img src="/wp-content/uploads/2022/03/demo-for-temps.jpg" />
-									</div>
-									<div class="col-md-9 p-2">
-										<h3 class="fw-bold mb-0">Toiletries</h3>
-										<span class="product-sub-titles text-gray">INCI Name: Orbignya Oleifera Seed Oil and Tocopherol</span>
-										<p class="text-black">Vitae congue eu consequat ac felis donec et odio pellentesque. Orci sagittis eu volutpat odio facilisis mauris sit. Sed elementum tempus egestas sed sed risus pretium. Vehicula ipsum a arcu cursus vitae. Tempus urna et pharetra pharetra massa massa. Diam quam nulla porttitor massa id neque aliquam. </p>
+								<div class="card text-center team-member border-0">
+									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
+									<div class="card-body p-2">
+										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
+										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col text-end">
-										<form>
-											<label class="text-gray">Request Standard Sample</label>
-											<input class="mx-2 text-center" size="2"/>
-											<button class="btn btn-secondary rounded-0" type="submit">Add to Cart</button>
-										</form>
+							</div>
+							<div class="col">
+								<div class="card text-center team-member border-0">
+									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
+									<div class="card-body p-2">
+										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
+										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center team-member border-0">
+									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
+									<div class="card-body p-2">
+										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
+										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center team-member border-0">
+									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
+									<div class="card-body p-2">
+										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
+										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="card text-center team-member border-0">
+									<img src="/wp-content/uploads/2022/03/headshot-1.jpg" class="card-img-top headshot m-auto pt-2" alt="...">
+									<div class="card-body p-2">
+										<h3 class="card-title mb-1 fw-bold fs-5">Bertrand Lemont</h3>
+										<h4 class="card-subtitle mb-2 fw-light fs-6">Chief Executive Officer</h4>
+										<p class="card-text text-gray text-start lh-2 fs-6">Faucibus turpis in eu mi. Eu feugiat pretium nibh ipsum. Curabitur gravida arcu ac tortor dignissim convallis aenean. Bibendum enim facilisis gravida neque convallis a. Vitae turpis massa sed elementum tempus egestas. Risus feugiat in ante metus.</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
+					
 
 				
 				

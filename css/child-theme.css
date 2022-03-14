@@ -15628,25 +15628,6 @@ figure.woocommerce-product-gallery__wrapper {
   z-index: 999;
 }
 
-/* TEMPLATE PARTS */
-.img-left-tile, .product-tile {
-  border-radius: 1rem;
-}
-.img-left-tile img, .product-tile img {
-  height: 100%;
-  width: 100%;
-}
-
-.tile-sub-section::before {
-  content: "|";
-  padding: 0 0.5rem;
-}
-
-.tile-sub-section {
-  font-size: 1.4rem;
-  font-weight: 300;
-}
-
 /* SUB NAV */
 .page-sub-navigation .nav-item {
   border-right: 1px solid #fff;
@@ -15663,6 +15644,32 @@ figure.woocommerce-product-gallery__wrapper {
 }
 .page-sub-navigation .nav-link.active {
   background-color: #044560;
+}
+
+/* TEMPLATE PARTS */
+.img-left-tile, .product-tile, .team-member {
+  border-radius: 1rem;
+}
+
+.img-left-tile img {
+  height: 100%;
+  width: 100%;
+}
+
+.tile-sub-section::before {
+  content: "|";
+  padding: 0 0.5rem;
+}
+
+.tile-sub-section {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.team-member .headshot img {
+  max-height: 8rem;
+  max-width: 8rem;
+  border-radius: 4rem !important;
 }
 
 .has-blue-color,
