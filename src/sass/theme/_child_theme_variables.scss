@@ -9,6 +9,7 @@ $spacer: 2.5rem;
 $on-scent-green: rgb(108,173,82); 
 $on-scent-blue: rgb(4, 69, 96);
 $on-scent-light-blue: rgb(218, 231, 241);
+$neon-green: rgb(95, 185, 70);
 
 $primary: $on-scent-green; 
 $secondary: $on-scent-blue;
@@ -56,3 +57,15 @@ $dropdown-item-padding-x: .75rem;
 // forms
 $input-border-color: $gray;
 $input-border-width: 2px;
+
+// carousel 
+// $carousel-control-color: $on-scent-blue;
+$carousel-control-icon-width: 4rem;
+$carousel-indicator-width: 40px;
+$carousel-indicator-height: 5px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer: 8px;
+
+// modal
+$modal-header-border-width: 0;
+$modal-header-padding: 2.5rem 2.5rem 0 2.5rem;

@@ -4,7 +4,9 @@
     color: $gray;
 }
 
-
+.fw-semi-bold {
+    font-weight: $font-weight-semi-bold;
+}
 
 /* HEADER - NAVIGATION */
 
@@ -12,6 +14,12 @@
     position: absolute;
     width: 100%;
     z-index: 999;
+
+    .nav-item.active {
+        .nav-link {
+            font-weight: $font-weight-bold;
+        }
+    }
 
     .nav-link {
         font-weight: $font-weight-light;
@@ -64,7 +72,7 @@
     height: 100vh;
 }
 
-/* PAGE TEMPLATE */
+/* PAGE TEMPLATES */
 
 .page-header-wrap {
     filter: drop-shadow(0 7px 5px rgba(143,143,143,1));
@@ -88,6 +96,12 @@
         margin-top: -10rem;
         z-index: 999;
     }
+}
+
+.contact-form {
+    background-color: $neon-green;
+    border-radius: 1rem;
+    margin-top: -300px;
 }
 
 /* SUB NAV */
@@ -117,7 +131,7 @@
 
 /* TEMPLATE PARTS */
 
-.img-left-tile, .product-tile, .team-member {
+.img-left-tile, .product-tile, .team-member, .blog-card {
     border-radius: 1rem;
 }
 
@@ -143,6 +157,65 @@
         max-height: 8rem;
         max-width: 8rem;
         border-radius: 4rem !important;
+    }
+}
+
+.blog-card {
+    .card-subtitle {
+        font-size: .8rem;
+    }
+}
+
+// TEAM CAROUSEL
+
+.carousel-indicators {
+    bottom: -9rem;
+}
+
+.carousel-control-prev {
+    left: -12rem;
+  }
+
+.carousel-control-next {
+    right: -12rem;
+  }
+
+.modal-body { 
+    padding: 1rem 2.5rem 2.5rem 2.5rem;
+}
+
+
+// FOOTER
+
+#wrapper-footer {
+    background-color: $gray;
+}
+
+.company-info {
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+}
+
+.footer-middle {
+    h5 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.social-icon-column {
+
+    a {
+        padding-bottom: 1rem;
+        vertical-align: super;
+    }
+    .fa {
+        font-size: 2rem;
+        padding-right: .5rem;
+    }
+    .social-text {
+        vertical-align: top;
     }
 }
 

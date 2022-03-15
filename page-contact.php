@@ -46,27 +46,13 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<div class="row justify-content-center">
-			<div class="col-10">
-				<main class="site-main" id="main">
-
-					<!-- Sub Navigation -->
-					<?php get_template_part('template-parts/page', 'sub-nav'); ?>
-					
-					<!-- Full Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-full'); ?>
-					
-					<!-- Half Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-half'); ?>
-
-					<!-- Product Tile Template -->
-					<?php get_template_part('template-parts/product', 'tile'); ?>
-
-					<!-- Team Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-team'); ?>
-
-					<!-- Team Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-blog'); ?>
-				
+			<div class="col-md-5" style="z-index: 999;">
+				<div class="contact-form align-items-center mx-2 p-2">
+					<img src="<?= get_stylesheet_directory_uri() ?>/img/demo-contact-form.jpg" alt="">
+				</div>
+			</div>
+			<div class="col-md-7">
+				<main class="site-main" id="main">				
 							
 					<?php
 					while ( have_posts() ) {
