@@ -15570,6 +15570,11 @@ figure.woocommerce-product-gallery__wrapper {
   font-weight: 500;
 }
 
+.fadeInUp {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
 /* HEADER - NAVIGATION */
 #main-nav {
   position: absolute;

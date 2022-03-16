@@ -226,7 +226,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<a class="btn btn-primary text-white px-3">Contact Us</a>
 		</div>
 		<div class="d-flex col-md-6 align-items-<?= $align_items ?>">
-			<img class="d-block mx-auto" style="max-width: 400px;" src="/wp-content/uploads/2022/03/demo-for-temps-2.jpg" alt="">
+			<img class="d-block mx-auto fadeup-effect animate__animated" style="max-width: 400px;" src="/wp-content/uploads/2022/03/demo-for-temps-2.jpg" alt="">
 		</div>
 	</div>
 </div>
