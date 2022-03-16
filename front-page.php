@@ -164,6 +164,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 </div>
 
+<!-- client quotes slider -->
 <div class="container">
 	<div class="row">
 		<div class="col-12">
@@ -199,6 +200,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 
 <!-- Headline Left Image Right -->
+<?php 
+	$align_items = "";
+	$align_bottom = TRUE; // set to FALSE for middle alignment
+	$align_bottom ? $align_items = "end" : $align_items = "center";
+?>
+
 <div class="container">
 	<div class="row py-3">
 		<div class="col-md-6 py-4">
@@ -206,7 +213,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<p class="text-dark-gray mb-3">Leo urna molestie at elementum eu facilisis sed. Mattis pellentesque id nibh tortor id aliquet lectus proin nibh. Luctus accumsan tortor posuere ac. Blandit aliquam etiam erat velit. Dui ut ornare lectus sit amet est. Orci sagittis eu volutpat odio facilisis mauris sit.</p>
 			<a class="btn btn-primary text-white px-3">Contact Us</a>
 		</div>
-		<div class="col-md-6 justify-content-">
+		<div class="d-flex col-md-6 align-items-<?= $align_items ?>">
 			<img class="d-block mx-auto" style="max-width: 400px;" src="/wp-content/uploads/2022/03/demo-for-temps-2.jpg" alt="">
 		</div>
 	</div>
@@ -215,7 +222,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- Headline Right Image Left -->
 <div class="container">
 	<div class="row py-3">
-		<div class="col-md-6 justify-content-">
+		<div class="d-flex col-md-6 align-items-center">
 			<img class="d-block mx-auto" style="max-width: 400px;" src="/wp-content/uploads/2022/03/demo-for-temps-2.jpg" alt="">
 		</div>
 		<div class="col-md-6 py-4 text-end">

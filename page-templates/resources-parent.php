@@ -39,7 +39,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 
 					<!-- Sub Navigation -->
-					<?php get_template_part('template-parts/page', 'sub-nav'); ?>
+					<?php
+						get_template_part( 'template-parts/page', 'sub-nav', array( 
+							'menu' => 'resources-sub-menu'
+						));
+					?>
 					
 					<!-- Full Tile Template -->
 					<?php get_template_part('template-parts/page', 'tile-full'); ?>

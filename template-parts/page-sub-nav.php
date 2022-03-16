@@ -5,7 +5,10 @@
  */
 
 // will need to set this menu variable with ACF somehow..
-$menu = "test-menu";
+//$menu = $args['menu'];
+
+$menu = $args['menu'];
+
 
 ?>
 
@@ -24,7 +27,10 @@ wp_nav_menu(
         'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
     )
 );
+
+
 ?>
+
 
 
 <!-- original HTML 
