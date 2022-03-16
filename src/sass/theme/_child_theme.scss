@@ -4,6 +4,10 @@
     color: $gray;
 }
 
+.text-dark-gray {
+    color: $dark-gray;
+}
+
 .fw-semi-bold {
     font-weight: $font-weight-semi-bold;
 }
@@ -104,6 +108,17 @@
     margin-top: -300px;
 }
 
+.subhead {
+    img {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    h3, p {
+        color: $dark-gray;
+    }
+}
+
 /* SUB NAV */
 
 .page-sub-navigation {
@@ -166,23 +181,29 @@
     }
 }
 
+// QUOTE CAROUSEL
+
+
 // TEAM CAROUSEL
 
-.carousel-indicators {
-    bottom: -9rem;
+#teamCarousel {
+    .carousel-indicators {
+        bottom: -9rem;
+    }
+    
+    .carousel-control-prev {
+        left: -12rem;
+      }
+    
+    .carousel-control-next {
+        right: -12rem;
+      }
+    
+    .modal-body { 
+        padding: 1rem 2.5rem 2.5rem 2.5rem;
+    }
 }
 
-.carousel-control-prev {
-    left: -12rem;
-  }
-
-.carousel-control-next {
-    right: -12rem;
-  }
-
-.modal-body { 
-    padding: 1rem 2.5rem 2.5rem 2.5rem;
-}
 
 
 // FOOTER

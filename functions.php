@@ -87,3 +87,15 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+/*
+* 
+*/
+
+function register_childtheme_menus() {
+	register_nav_menu('sub_nav', __( 'Sub Navigation', 'premierspec-understrap-child' ));
+  }
+  
+  add_action( 'init', 'register_childtheme_menus' );
+  
