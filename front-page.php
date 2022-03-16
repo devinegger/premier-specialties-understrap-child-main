@@ -26,12 +26,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-6 text-light">
 				<div class="container">
 					<h2 class="display-4 fw-bold">Discover Your Authentic Fragrance Advantage</h2>
-					<a class="btn btn-primary text-white mt-2 px-3 py-1">Watch Video</a>
+					<a class="btn btn-primary text-white mt-2 px-3 py-1" data-bs-toggle="modal" data-bs-target="#videoModal">Watch Video</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- video modal -->
+<div class="modal fade" id="videoModal"  tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-body">
+				<iframe src="https://www.youtube.com/embed/Dx5qFachd3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <!-- 1x2 template -->
 <div class="container">
