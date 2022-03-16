@@ -15605,6 +15605,10 @@ figure.woocommerce-product-gallery__wrapper {
   text-shadow: 1px 1px 1px rgba(29, 38, 29, 0.8);
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* HOMEPAGE */
 .homepage-hero {
   background-image: url("/wp-content/uploads/2022/03/OnScentHeroBackground.jpg");
@@ -15667,7 +15671,10 @@ figure.woocommerce-product-gallery__wrapper {
   background-color: #7f7f7f;
   padding: 1rem 3rem;
 }
-.page-sub-navigation .nav-link.active {
+.page-sub-navigation .nav-link:hover {
+  font-weight: 500;
+}
+.page-sub-navigation .nav-item.active .nav-link {
   background-color: #044560;
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Part for displaying Product tile
+ * Template Part for displaying Product Tile
  */
 
  ?>

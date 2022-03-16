@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Part for displaying Page Full Tile
+ * Template Part for displaying Page - Half Tile
  */
 
  ?>
