@@ -40,22 +40,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<!-- Sub Navigation -->
 					<?php
-						get_template_part( 'template-parts/page', 'sub-nav', array( 
+						get_template_part( 'template-parts/sub', 'navigation', array( 
 							'menu' => 'resources-sub-menu'
 						));
 					?>
-					
-					<!-- Full Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-full'); ?>
-					
-					<!-- Half Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-half'); ?>
-
-					<!-- Product Tile Template -->
-					<?php get_template_part('template-parts/product', 'tile'); ?>
-
-					<!-- Team Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-team'); ?>
 
 					<!-- Team Tile Template -->
 					<?php get_template_part('template-parts/page', 'tile-blog'); ?>

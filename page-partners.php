@@ -1,6 +1,8 @@
 <?php
+
+//  !!! this template is not being used, and has been moved to resources-parent.php in /page-templates !!!
+
 /**
- * Template Name: Company Parent Template
  * 
  * The template for displaying Resources pages
  *
@@ -39,15 +41,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 
 					<!-- Sub Navigation -->
-					<?php
-						get_template_part( 'template-parts/sub', 'navigation', array( 
-							'menu' => 'company-sub-menu'
-						));
-					?>
-					
-					<!-- Team Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-team'); ?>
+					<?php get_template_part('template-parts/page', 'sub-nav'); ?>
 
+					<!-- Product Tile Template -->
+					<?php get_template_part('template-parts/product', 'tile'); ?>
 
 				</main><!-- #main -->
 			</div><!-- .col -->

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Company Parent Template
+ * Template Name: Page with Sub Navigation
  * 
  * The template for displaying Resources pages
  *
@@ -45,8 +45,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 						));
 					?>
 					
-					<!-- Team Tile Template -->
-					<?php get_template_part('template-parts/page', 'tile-team'); ?>
 
 
 				</main><!-- #main -->
