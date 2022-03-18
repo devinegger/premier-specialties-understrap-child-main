@@ -6,6 +6,7 @@
 
 $page_id = get_the_ID();
 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
+$icon_image = get_field('page_icon') ? get_field('page_icon') : "/wp-content/uploads/2022/03/mock-icon.png";
 ?>
 
 <div class="page-header-wrap">
@@ -23,6 +24,6 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 </div>
 <div class="circle-icon d-flex justify-content-center">
 	<span class="d-flex justify-content-center align-items-center">
-		<img src="/wp-content/uploads/2022/03/mock-icon.png" height="72" width="72"/>
+		<img src="<?= $icon_image ?>" height="72" width="72"/>
 	</span>
 </div>
