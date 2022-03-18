@@ -39,12 +39,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 
 					<!-- Sub Navigation -->
-					<?php
-						get_template_part( 'template-parts/sub', 'navigation', array( 
-							'menu' => 'company-sub-menu'
-						));
-					?>
+					<?php get_template_part( 'template-parts/sub', 'navigation'); ?>
 					
+					<!-- Team Tile Template -->
+					<?php get_template_part('template-parts/page', 'acf-team'); ?>
 
 
 				</main><!-- #main -->

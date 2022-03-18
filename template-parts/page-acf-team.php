@@ -10,42 +10,45 @@
  * 
  */
 
-$args = array( 'post_type' => 'team_member' );
-$team_members = get_posts($args);
-$num_team_members = count($team_members);
-$count=0;
+if (have_rows('section_templates')) : // if there are custom section templates on page
+    while (have_rows('section_templates')) : the_row();
+        if (get_row_layout() == 'team_members') : // and team members is one of those templates
+
+            $team_cards = get_sub_field('team_cards'); // array of Team Members CPTs
+            $num_team_members = count($team_cards); 
 ?>
 
 <div class="container px-0">
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
 
-<?php foreach ($team_members as $team_member) :  setup_postdata( $team_member ); ?>
 
-    <?php $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) ); ?>
-    <?php $name = $team_member->post_title;  ?>
-    <?php $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);  ?>
-    <?php $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE ); ?>
-    <?php $job_description = substr($job_description,0,200); ?>
-    
+<?php
+            foreach($team_cards as $team_card) : 
 
+                $team_member = $team_card['team_member']; // this is the Team Member CPT
+                $name = $team_member->post_title;
+                $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
+                $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
+                $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
+                $job_description = substr($job_description,0,200);
+?>
         <div class="col">
             <div class="card text-center team-member border-0">
-                <img src="<?= $headshot_URL; ?>" class="card-img-top headshot m-auto pt-2" alt="...">
+                <img src="<?= $headshot_URL ?>" class="card-img-top headshot m-auto pt-2" alt="..." />
                 <div class="card-body p-2">
                     <h3 class="card-title mb-1 fw-bold fs-5"><?= $name ?></h3>
                     <h4 class="card-subtitle mb-2 fw-light fs-6"><?= $job_title ?></h4>
                     <p class="card-text text-gray text-start lh-2 fs-6"><?= $job_description ?>
                         <span class="more-link">
                             <!--  ~~ ** ~~  I need to find a way to make this link open the Modal AND slide to the correct slide > use JS ~~ ** ~~ -->  
-                            <a href="#" class="text-secondary text-decoration-none" data-bs-toggle="modal" data-bs-target="#teamModal" data-bs-slide-to="<?= $count ?>"> > More</a>
+                            <a href="#" class="text-secondary text-decoration-none" data-bs-toggle="modal" data-bs-target="#teamModal" data-bs-slide-to="<?=  $count ?>"> > More</a>
                         </span>
                     </p>
                 </div>
             </div>
-        </div>  
-<?php $count++; ?>
-<?php endforeach; ?>
+        </div> 
 
+            <?php endforeach; ?>
     </div>
 </div>
 
@@ -60,23 +63,23 @@ $count=0;
             <div class="modal-body">
                 <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                        <?php for($i=0; $i<$num_team_members; $i++ ) : ?>
+                        <?php  for($i=0; $i<$num_team_members; $i++ ) : ?>
                             <button type="button" data-bs-target="#teamCarouselIndicators" data-bs-slide-to="<?= $i ?>" class="active" aria-current="true" aria-label="Slide <?= $i ?>"></button>
-                        <?php endfor; ?>
+                        <?php  endfor; ?>
                     </div>
                     <div class="carousel-inner">
 
-<?php $count=0; ?>
-<?php $class=""; ?>
+<?php
+            $count=0;
+            foreach($team_cards as $team_card) : 
 
-<?php foreach ($team_members as $team_member) :  setup_postdata( $team_member ); ?>
-
-
-    <?php $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) ); ?>
-    <?php $name = $team_member->post_title;  ?>
-    <?php $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);  ?>
-    <?php $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE ); ?>
-    <?php $count===0 ? $class="active" : $class="" ; ?>
+                $team_member = $team_card['team_member']; // this is the Team Member CPT
+                $name = $team_member->post_title;
+                $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
+                $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
+                $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
+                $count===0 ? $class="active" : $class="" ;
+?>
 
 
                         <div class="carousel-item <?= $class ?>">
@@ -92,8 +95,8 @@ $count=0;
                             </div>
                         </div>
 
-    <?php $count++; ?>
-<?php endforeach; ?>
+            <?php $count++; ?>
+            <?php endforeach; ?>
                         
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
@@ -109,3 +112,7 @@ $count=0;
         </div><!-- .modal-content -->
     </div><!-- .modal-dialog -->
 </div><!-- .modal -->
+
+        <?php endif; ?>
+    <?php endwhile; ?>
+<?php endif; ?>
