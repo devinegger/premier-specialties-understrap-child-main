@@ -18,7 +18,7 @@ if (have_rows('section_templates')) : // if there are custom section templates o
             $num_team_members = count($team_cards); 
 ?>
 
-<div class="container px-4">
+<div class="container px-5">
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
 
 <?php

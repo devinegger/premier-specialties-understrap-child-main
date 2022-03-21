@@ -15743,6 +15743,12 @@ figure.woocommerce-product-gallery__wrapper {
   max-width: 400px;
 }
 
+.cta-panel-img img {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
 #wrapper-footer {
   background-color: #7f7f7f;
 }

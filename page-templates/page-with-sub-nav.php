@@ -60,5 +60,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- Left Right Highlight Image Template -->
 <?php get_template_part('template-parts/page', 'acf-left-right-highlight'); ?>
 
+<!-- CTA Panel Template -->
+<?php get_template_part('template-parts/page', 'acf-cta-panel'); ?>
+
 <?php
 get_footer();

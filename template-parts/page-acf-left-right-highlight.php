@@ -23,7 +23,7 @@ if (have_rows('section_templates')) : // if there are custom section templates o
 			$image_ID = $image_arr['ID']; 
             $image_URL = $image_arr['url']; 
 			$image_alt = $image_arr['alt']; 
-			$image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'd-block mx-auto left-right-img', 'alt'=>$image_alt) );
+			$image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'left-right-img d-flex mx-auto', 'alt'=>$image_alt) );
 			// video modal
             $video_URL = get_sub_field('video_url');
 			$youtube_video_id = substr($video_URL, -11);

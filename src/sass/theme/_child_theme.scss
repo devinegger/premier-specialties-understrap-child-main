@@ -239,12 +239,19 @@
 }
 
 // LEFT RIGHT HEADLINE IMAGE
-.left-right-img {
+.left-right-img  {
     img {
         max-width: 400px;
     }
 }
 
+.cta-panel-img  {
+    img {
+        max-width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+}
 
 // FOOTER
 
