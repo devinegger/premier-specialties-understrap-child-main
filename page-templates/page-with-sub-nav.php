@@ -40,18 +40,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<!-- Sub Navigation -->
 					<?php get_template_part( 'template-parts/sub', 'navigation'); ?>
-					
-					<!-- Team Tile Template -->
-					<?php get_template_part('template-parts/page', 'acf-team'); ?>
-
-
 				</main><!-- #main -->
 			</div><!-- .col -->
 		</div><!-- .row -->
+					
+		<!-- Team Tile Template -->
+		<?php get_template_part('template-parts/page', 'acf-team'); ?>
 
 	</div><!-- #content -->
 
 </div><!-- #page-wrapper -->
+
+<!-- Column Box Template -->
+<?php get_template_part('template-parts/page', 'acf-column-box'); ?>
+
+<!-- Client Quote Template -->
+<?php get_template_part('template-parts/page', 'acf-client-quote'); ?>
+
+<!-- Left Right Highlight Image Template -->
+<?php get_template_part('template-parts/page', 'acf-left-right-highlight'); ?>
 
 <?php
 get_footer();

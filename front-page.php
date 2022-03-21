@@ -181,19 +181,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="row">
 		<div class="col-12">
 			<div id="quoteCarousel" class="carousel carousel-dark slide py-2" data-bs-ride="carousel">
-				<div class="carousel-inner">
+				<div class="carousel-inner text-center">
+					<h3 class="display-5 fw-semi-bold">What our clients say</h3>
 					<div class="carousel-item text-center active">
-						<h3 class="display-5 fw-semi-bold">What our clients say</h3>
 						<p class="quote-body fs-4 w-50 mx-auto mb-1">"The OnScent team always comes up with solutions that are on-brief, on-brand, and on-target"</p>
 						<p class="quote-author fw-bold">Product Manager, Consumer Packaged Goods</p>
 					</div>
 					<div class="carousel-item text-center">
-						<h3 class="display-5 fw-semi-bold">What our clients say</h3>
 						<p class="quote-body fs-4 w-50 mx-auto mb-1">"The OnScent team always comes up with solutions that are on-brief, on-brand, and on-target"</p>
 						<p class="quote-author fw-bold">Product Manager, Consumer Packaged Goods</p>
 					</div>
 					<div class="carousel-item text-center">
-						<h3 class="display-5 fw-semi-bold">What our clients say</h3>
 						<p class="quote-body fs-4 w-50 mx-auto mb-1">"The OnScent team always comes up with solutions that are on-brief, on-brand, and on-target"</p>
 						<p class="quote-author fw-bold">Product Manager, Consumer Packaged Goods</p>
 					</div>

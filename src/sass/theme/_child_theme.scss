@@ -132,12 +132,15 @@
     margin-top: -300px;
 }
 
-.subhead {
-    img {
-        height: 6rem;
-        width: 6rem;
+.content-box {
+    .content-box-img {
+        img {
+            height: 6rem;
+            width: 6rem;
+            max-height: 6rem;
+            max-width: 6rem;
+        }
     }
-
     h3, p {
         color: $dark-gray;
     }
@@ -235,6 +238,12 @@
       }
 }
 
+// LEFT RIGHT HEADLINE IMAGE
+.left-right-img {
+    img {
+        max-width: 400px;
+    }
+}
 
 
 // FOOTER

@@ -18,9 +18,8 @@ if (have_rows('section_templates')) : // if there are custom section templates o
             $num_team_members = count($team_cards); 
 ?>
 
-<div class="container px-0">
+<div class="container px-4">
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
-
 
 <?php
             foreach($team_cards as $team_card) : 
@@ -51,7 +50,6 @@ if (have_rows('section_templates')) : // if there are custom section templates o
             <?php endforeach; ?>
     </div>
 </div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">

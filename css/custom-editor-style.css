@@ -446,7 +446,7 @@ progress {
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #6cad52;
-  --bs-secondary: #044560;
+  --bs-secondary: #044662;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -454,7 +454,7 @@ progress {
   --bs-light: #f8f9fa;
   --bs-dark: #1d261d;
   --bs-primary-rgb: 108, 173, 82;
-  --bs-secondary-rgb: 4, 69, 96;
+  --bs-secondary-rgb: 4, 70, 98;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -463,7 +463,7 @@ progress {
   --bs-dark-rgb: 29, 38, 29;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 4, 69, 96;
+  --bs-body-color-rgb: 4, 70, 98;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -472,22 +472,22 @@ progress {
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #044560;
+  --bs-body-color: #044662;
   --bs-body-bg: #fff;
 }
 
 .table, .wp-block-table table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #044560;
+  --bs-table-striped-color: #044662;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #044560;
+  --bs-table-active-color: #044662;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #044560;
+  --bs-table-hover-color: #044662;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 2.5rem;
-  color: #044560;
+  color: #044662;
   vertical-align: top;
   border-color: #dee2e6;
 }
@@ -554,15 +554,15 @@ progress {
 }
 
 .table-secondary {
-  --bs-table-bg: #cddadf;
-  --bs-table-striped-bg: #c3cfd4;
+  --bs-table-bg: #cddae0;
+  --bs-table-striped-bg: #c3cfd5;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #b9c4c9;
+  --bs-table-active-bg: #b9c4ca;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #becace;
+  --bs-table-hover-bg: #becacf;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #b9c4c9;
+  border-color: #b9c4ca;
 }
 
 .table-success {
@@ -953,12 +953,12 @@ progress {
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #044560;
+  color: #044662;
 }
 
 .has-secondary-background-color {
-  background-color: #044560;
-  border-color: #044560;
+  background-color: #044662;
+  border-color: #044662;
 }
 
 .has-success-color,

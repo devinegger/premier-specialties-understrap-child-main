@@ -30,7 +30,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #6cad52;
-  --bs-secondary: #044560;
+  --bs-secondary: #044662;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -38,7 +38,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #1d261d;
   --bs-primary-rgb: 108, 173, 82;
-  --bs-secondary-rgb: 4, 69, 96;
+  --bs-secondary-rgb: 4, 70, 98;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -47,7 +47,7 @@
   --bs-dark-rgb: 29, 38, 29;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 4, 69, 96;
+  --bs-body-color-rgb: 4, 70, 98;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -56,7 +56,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #044560;
+  --bs-body-color: #044662;
   --bs-body-bg: #fff;
 }
 
@@ -1955,15 +1955,15 @@ progress {
 .table, .wp-block-table table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #044560;
+  --bs-table-striped-color: #044662;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #044560;
+  --bs-table-active-color: #044662;
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: #044560;
+  --bs-table-hover-color: #044662;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 2.5rem;
-  color: #044560;
+  color: #044662;
   vertical-align: top;
   border-color: #dee2e6;
 }
@@ -2030,15 +2030,15 @@ progress {
 }
 
 .table-secondary {
-  --bs-table-bg: #cddadf;
-  --bs-table-striped-bg: #c3cfd4;
+  --bs-table-bg: #cddae0;
+  --bs-table-striped-bg: #c3cfd5;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #b9c4c9;
+  --bs-table-active-bg: #b9c4ca;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #becace;
+  --bs-table-hover-bg: #becacf;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #b9c4c9;
+  border-color: #b9c4ca;
 }
 
 .table-success {
@@ -2203,7 +2203,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #044560;
+  color: #044662;
   background-color: #fff;
   background-clip: padding-box;
   border: 2px solid #7f7f7f;
@@ -2269,7 +2269,7 @@ progress {
 .wpcf7 select:focus,
 .wpcf7 textarea:focus, .widget_categories select:focus,
 .widget_archive select:focus {
-  color: #044560;
+  color: #044662;
   background-color: #fff;
   border-color: #b6d6a9;
   outline: 0;
@@ -2371,7 +2371,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #044560;
+  color: #044662;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2405,7 +2405,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #044560;
+  color: #044662;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2489,7 +2489,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: #044560;
+  color: #044662;
   background-color: #e9ecef;
   pointer-events: none;
   border-color: inherit;
@@ -2552,7 +2552,7 @@ progress {
   padding: 0.375rem 0;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #044560;
+  color: #044662;
   background-color: transparent;
   border: solid transparent;
   border-width: 2px 0;
@@ -2648,7 +2648,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #044560;
+  color: #044662;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -2680,7 +2680,7 @@ textarea.form-control-lg {
 }
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #044560;
+  text-shadow: 0 0 0 #044662;
 }
 
 .form-select-sm {
@@ -3201,7 +3201,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #044560;
+  color: #044662;
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
@@ -3982,7 +3982,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #044560;
+  color: #044662;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -4004,7 +4004,7 @@ textarea.form-control-lg {
   }
 }
 .btn:hover, .wpcf7 input[type=submit]:hover, .login-btn a:hover, .woocommerce-info a.button:hover, .woocommerce-notices-wrapper .woocommerce-message a.button:hover {
-  color: #044560;
+  color: #044662;
 }
 .btn-check:focus + .btn, .wpcf7 .btn-check:focus + input[type=submit], .login-btn .btn-check:focus + a, .woocommerce-info .btn-check:focus + a.button, .woocommerce-notices-wrapper .woocommerce-message .btn-check:focus + a.button, .btn:focus, .wpcf7 input[type=submit]:focus, .login-btn a:focus, .woocommerce-info a.button:focus, .woocommerce-notices-wrapper .woocommerce-message a.button:focus {
   outline: 0;
@@ -4047,32 +4047,32 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #044560;
-  border-color: #044560;
+  background-color: #044662;
+  border-color: #044662;
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #033b52;
-  border-color: #03374d;
+  background-color: #033c53;
+  border-color: #03384e;
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
-  background-color: #033b52;
-  border-color: #03374d;
-  box-shadow: 0 0 0 0.25rem rgba(42, 97, 120, 0.5);
+  background-color: #033c53;
+  border-color: #03384e;
+  box-shadow: 0 0 0 0.25rem rgba(42, 98, 122, 0.5);
 }
 .btn-check:checked + .btn-secondary, .btn-check:active + .btn-secondary, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #03374d;
-  border-color: #033448;
+  background-color: #03384e;
+  border-color: #03354a;
 }
 .btn-check:checked + .btn-secondary:focus, .btn-check:active + .btn-secondary:focus, .btn-secondary:active:focus, .btn-secondary.active:focus, .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(42, 97, 120, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(42, 98, 122, 0.5);
 }
 .btn-secondary:disabled, .btn-secondary.disabled {
   color: #fff;
-  background-color: #044560;
-  border-color: #044560;
+  background-color: #044662;
+  border-color: #044662;
 }
 
 .btn-success, .woocommerce-notices-wrapper .woocommerce-message a.button {
@@ -4281,27 +4281,27 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  color: #044560;
-  border-color: #044560;
+  color: #044662;
+  border-color: #044662;
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #044560;
-  border-color: #044560;
+  background-color: #044662;
+  border-color: #044662;
 }
 .btn-check:focus + .btn-outline-secondary, .btn-outline-secondary:focus {
-  box-shadow: 0 0 0 0.25rem rgba(4, 69, 96, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(4, 70, 98, 0.5);
 }
 .btn-check:checked + .btn-outline-secondary, .btn-check:active + .btn-outline-secondary, .btn-outline-secondary:active, .btn-outline-secondary.active, .btn-outline-secondary.dropdown-toggle.show {
   color: #fff;
-  background-color: #044560;
-  border-color: #044560;
+  background-color: #044662;
+  border-color: #044662;
 }
 .btn-check:checked + .btn-outline-secondary:focus, .btn-check:active + .btn-outline-secondary:focus, .btn-outline-secondary:active:focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(4, 69, 96, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(4, 70, 98, 0.5);
 }
 .btn-outline-secondary:disabled, .btn-outline-secondary.disabled {
-  color: #044560;
+  color: #044662;
   background-color: transparent;
 }
 
@@ -4535,7 +4535,7 @@ textarea.form-control-lg {
   padding: 0.5rem 0;
   margin: 0;
   font-size: 0.75rem;
-  color: #044560;
+  color: #044662;
   text-align: left;
   list-style: none;
   background-color: rgba(108, 173, 82, 0.5);
@@ -5665,7 +5665,7 @@ textarea.form-control-lg {
   width: 100%;
   padding: 1rem 1.25rem;
   font-size: 1rem;
-  color: #044560;
+  color: #044662;
   text-align: left;
   background-color: #fff;
   border: 0;
@@ -5693,7 +5693,7 @@ textarea.form-control-lg {
   height: 1.25rem;
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23044560'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23044662'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 1.25rem;
   transition: transform 0.2s ease-in-out;
@@ -5935,12 +5935,12 @@ textarea.form-control-lg {
 }
 
 .alert-secondary {
-  color: #02293a;
-  background-color: #cddadf;
-  border-color: #b4c7cf;
+  color: #022a3b;
+  background-color: #cddae0;
+  border-color: #b4c8d0;
 }
 .alert-secondary .alert-link {
-  color: #02212e;
+  color: #02222f;
 }
 
 .alert-success, .woocommerce-notices-wrapper .woocommerce-message {
@@ -6079,7 +6079,7 @@ textarea.form-control-lg {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #044560;
+  color: #044662;
   background-color: #e9ecef;
 }
 
@@ -6287,17 +6287,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-secondary {
-  color: #02293a;
-  background-color: #cddadf;
+  color: #022a3b;
+  background-color: #cddae0;
 }
 .list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
-  color: #02293a;
-  background-color: #b9c4c9;
+  color: #022a3b;
+  background-color: #b9c4ca;
 }
 .list-group-item-secondary.list-group-item-action.active {
   color: #fff;
-  background-color: #02293a;
-  border-color: #02293a;
+  background-color: #022a3b;
+  border-color: #022a3b;
 }
 
 .list-group-item-success {
@@ -6977,7 +6977,7 @@ textarea.form-control-lg {
 
 .popover-body {
   padding: 2.5rem 2.5rem;
-  color: #044560;
+  color: #044662;
 }
 
 .carousel {
@@ -7434,10 +7434,10 @@ textarea.form-control-lg {
 }
 
 .link-secondary {
-  color: #044560;
+  color: #044662;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #03374d;
+  color: #03384e;
 }
 
 .link-success {
@@ -7884,7 +7884,7 @@ textarea.form-control-lg {
 }
 
 .border-secondary {
-  border-color: #044560 !important;
+  border-color: #044662 !important;
 }
 
 .border-success {
@@ -15649,7 +15649,7 @@ figure.woocommerce-product-gallery__wrapper {
 
 .circle-icon span {
   display: block;
-  background-color: #044560;
+  background-color: #044662;
   height: 8rem;
   width: 8rem;
   border-radius: 4rem;
@@ -15664,11 +15664,13 @@ figure.woocommerce-product-gallery__wrapper {
   margin-top: -300px;
 }
 
-.subhead img {
+.content-box .content-box-img img {
   height: 6rem;
   width: 6rem;
+  max-height: 6rem;
+  max-width: 6rem;
 }
-.subhead h3, .subhead .h3, .subhead p {
+.content-box h3, .content-box .h3, .content-box p {
   color: #535353;
 }
 
@@ -15690,7 +15692,7 @@ figure.woocommerce-product-gallery__wrapper {
   font-weight: 500;
 }
 .page-sub-navigation .nav-item.active .nav-link {
-  background-color: #044560;
+  background-color: #044662;
 }
 
 /* TEMPLATE PARTS */
@@ -15735,6 +15737,10 @@ figure.woocommerce-product-gallery__wrapper {
 }
 #teamCarousel .carousel-control-next {
   right: -12rem;
+}
+
+.left-right-img img {
+  max-width: 400px;
 }
 
 #wrapper-footer {
@@ -15904,12 +15910,12 @@ figure.woocommerce-product-gallery__wrapper {
 
 .has-secondary-color,
 .has-secondary-color:visited {
-  color: #044560;
+  color: #044662;
 }
 
 .has-secondary-background-color {
-  background-color: #044560;
-  border-color: #044560;
+  background-color: #044662;
+  border-color: #044662;
 }
 
 .has-success-color,
