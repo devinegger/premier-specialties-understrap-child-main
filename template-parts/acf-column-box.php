@@ -5,17 +5,13 @@
  * 
  * 
  */
-
-if (have_rows('section_templates')) : // if there are custom section templates on page
-    while (have_rows('section_templates')) : the_row();
-        if (get_row_layout() == 'column_box') : // and team members is one of those templates
 			
-			$background_color = get_sub_field('background_color');
-            $heading = get_sub_field('heading');
-			$heading_color = get_sub_field('heading_color');
-            $num_columns = get_sub_field('number_of_columns');
-            $column_class = $num_columns === '2' ? "col-md-6" : "col-md-4";
-            $content_boxes = get_sub_field('content_boxes');
+$background_color = get_sub_field('background_color');
+$heading = get_sub_field('heading');
+$heading_color = get_sub_field('heading_color');
+$num_columns = get_sub_field('number_of_columns');
+$column_class = $num_columns === '2' ? "col-md-6" : "col-md-4";
+$content_boxes = get_sub_field('content_boxes');
 ?>
 <div class="content-wrap" style="background-color: <?= $background_color ?>;">
 	<div class="container">
@@ -45,7 +41,3 @@ if (have_rows('section_templates')) : // if there are custom section templates o
 		</div>
 	</div>
 </div>
-
-        <?php endif; ?>
-    <?php endwhile; ?>
-<?php endif; ?>

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Part for displaying Page - Team Tile
+ * Template Part for displaying ACF Team Members
  * 
  * Displays a 3 column row with the Team Members custom post type data displayed in cards using the Title as 
  * the name of the person, and then custom fields for Headshot, Job Title, and Job Description
@@ -10,26 +10,22 @@
  * 
  */
 
-if (have_rows('section_templates')) : // if there are custom section templates on page
-    while (have_rows('section_templates')) : the_row();
-        if (get_row_layout() == 'team_members') : // and team members is one of those templates
-
-            $team_cards = get_sub_field('team_cards'); // array of Team Members CPTs
-            $num_team_members = count($team_cards); 
+$team_cards = get_sub_field('team_cards'); // array of Team Members CPTs
+$num_team_members = count($team_cards); 
 ?>
 
 <div class="container px-5">
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
 
 <?php
-            foreach($team_cards as $team_card) : 
+foreach($team_cards as $team_card) : 
 
-                $team_member = $team_card['team_member']; // this is the Team Member CPT
-                $name = $team_member->post_title;
-                $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
-                $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
-                $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
-                $job_description = substr($job_description,0,200);
+    $team_member = $team_card['team_member']; // this is the Team Member CPT
+    $name = $team_member->post_title;
+    $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
+    $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
+    $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
+    $job_description = substr($job_description,0,200);
 ?>
         <div class="col">
             <div class="card text-center team-member border-0">
@@ -46,8 +42,7 @@ if (have_rows('section_templates')) : // if there are custom section templates o
                 </div>
             </div>
         </div> 
-
-            <?php endforeach; ?>
+<?php endforeach; ?>
     </div>
 </div>
 
@@ -68,15 +63,15 @@ if (have_rows('section_templates')) : // if there are custom section templates o
                     <div class="carousel-inner">
 
 <?php
-            $count=0;
-            foreach($team_cards as $team_card) : 
+$count=0;
+foreach($team_cards as $team_card) : 
 
-                $team_member = $team_card['team_member']; // this is the Team Member CPT
-                $name = $team_member->post_title;
-                $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
-                $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
-                $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
-                $count===0 ? $class="active" : $class="" ;
+    $team_member = $team_card['team_member']; // this is the Team Member CPT
+    $name = $team_member->post_title;
+    $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
+    $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
+    $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
+    $count===0 ? $class="active" : $class="" ;
 ?>
 
 
@@ -93,8 +88,8 @@ if (have_rows('section_templates')) : // if there are custom section templates o
                             </div>
                         </div>
 
-            <?php $count++; ?>
-            <?php endforeach; ?>
+<?php $count++; ?>
+<?php endforeach; ?>
                         
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
@@ -110,7 +105,3 @@ if (have_rows('section_templates')) : // if there are custom section templates o
         </div><!-- .modal-content -->
     </div><!-- .modal-dialog -->
 </div><!-- .modal -->
-
-        <?php endif; ?>
-    <?php endwhile; ?>
-<?php endif; ?>

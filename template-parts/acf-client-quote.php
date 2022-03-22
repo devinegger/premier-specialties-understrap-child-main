@@ -6,12 +6,10 @@
  * 
  */
 
-if (have_rows('section_templates')) : // if there are custom section templates on page
-    while (have_rows('section_templates')) : the_row();
-        if (get_row_layout() == 'client_quote_slider') : // and team members is one of those templates
-            $client_quotes = get_sub_field('client_quotes');
-			$count = 0;
-			$active_class = "";
+
+$client_quotes = get_sub_field('client_quotes');
+$count = 0;
+$active_class = "";
 ?>
 <!-- client quotes slider -->
 <div class="container">
@@ -44,7 +42,3 @@ if (have_rows('section_templates')) : // if there are custom section templates o
 		</div>
 	</div>
 </div>
-
-        <?php endif; ?>
-    <?php endwhile; ?>
-<?php endif; ?>
