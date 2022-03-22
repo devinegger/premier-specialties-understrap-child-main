@@ -14,7 +14,7 @@ $team_cards = get_sub_field('team_cards'); // array of Team Members CPTs
 $num_team_members = count($team_cards); 
 ?>
 
-<div class="container px-5">
+<div class="container px-3 py-2">
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
 
 <?php

@@ -36,6 +36,21 @@ if (have_rows('section_templates')) : // if there are custom section templates o
 		if (get_row_layout() == 'team_members') : 
 			get_template_part('template-parts/acf', 'team-members'); 
 		endif;
+
+		// Blog Highlight Template
+		if (get_row_layout() == 'blog_highlights') : 
+			get_template_part('template-parts/acf', 'blog-highlights'); 
+		endif;
+
+		// Product Sample Tile Template
+		if (get_row_layout() == 'product_sample_tiles') : 
+			get_template_part('template-parts/acf', 'product-sample-tiles'); 
+		endif;
+
+		// Product Sample Tag Template
+		if (get_row_layout() == 'product_selection_list') : 
+			get_template_part('template-parts/acf', 'product-selection-list'); 
+		endif;
 ?>
 
 

@@ -10,7 +10,7 @@ $content = get_sub_field('content');
 <!-- wysiwyg -->
 <div class="container">
 	<div class="row">
-		<div class="col-12">
+		<div class="col-12 px-3 py-2">
 			<?= $content ?>
 		</div>
 	</div>

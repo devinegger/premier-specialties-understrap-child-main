@@ -27,7 +27,7 @@ $button_target = $button['target'];
 
 <!-- CTA template -->
 <div class="content-wrap" style="background-color: <?= $background_color ?>;">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row py-3">
 			<div class="col-md-6 text-center py-4">
 				<p class="display-5 fw-semi-bold"><?= $headline ?></p>

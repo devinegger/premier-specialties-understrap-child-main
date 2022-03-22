@@ -20,7 +20,7 @@ $content_boxes = get_sub_field('content_boxes');
 				<h2 class="display-4 text-center fw-semi-bold" style="color: <?= $heading_color ?>;"><?= $heading ?></h2>
 			</div>
 		</div>
-		<div class="row pb-3">
+		<div class="row p-3">
 			<?php foreach($content_boxes as $content_box) : ?>
 				<?php $image_ID = $content_box['image']['ID']; ?> 
 				<?php $image_URL = $content_box['image']['url']; ?>

@@ -18,9 +18,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper p-0" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container-fluid p-0" id="content" tabindex="-1">
 
 		<div class="row justify-content-center">
 			<div class="col-10">

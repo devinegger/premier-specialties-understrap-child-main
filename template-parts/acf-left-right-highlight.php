@@ -48,7 +48,7 @@ $image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "c
 <!-- Headline Left Image Right -->
 <div class="content-wrap" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row pt-2">
+		<div class="row pt-2 px-1">
 			<div class="d-flex col-md-6 align-items-<?= $align_items ?> <?= $image_class ?>">
 				<?= $image ?>
 			</div>
