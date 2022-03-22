@@ -4538,7 +4538,7 @@ textarea.form-control-lg {
   color: #044662;
   text-align: left;
   list-style: none;
-  background-color: rgba(108, 173, 82, 0.5);
+  background-color: rgba(29, 38, 29, 0.7);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: none;
@@ -15579,12 +15579,12 @@ figure.woocommerce-product-gallery__wrapper {
 #main-nav .nav-item.active .nav-link {
   font-weight: 700;
 }
-#main-nav .nav-link {
+#main-nav .nav-link, #main-nav .mega-menu-link {
   font-weight: 300;
   padding-left: 0;
   text-shadow: 1px 1px 1px rgba(29, 38, 29, 0.8);
 }
-#main-nav .nav-link:hover {
+#main-nav .nav-link:hover, #main-nav .mega-menu-link:hover {
   font-weight: 500;
 }
 
@@ -15592,12 +15592,27 @@ figure.woocommerce-product-gallery__wrapper {
   max-width: 200px;
 }
 
+.mega-login-btn {
+  border-radius: 0.5rem !important;
+  background-color: #6cad52 !important;
+}
+.mega-login-btn a {
+  padding: 0 30px !important;
+  font-size: 12px !important;
+}
+
 @media (min-width: 768px) {
   .login-btn {
-    position: absolute;
-    top: 1.25rem;
-    right: 2.5rem;
-    font-size: 0.75rem;
+    position: absolute !important;
+    top: 1.25rem !important;
+    right: 2.5rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .mega-login-btn {
+    position: absolute !important;
+    top: 0.25rem !important;
+    right: 0.75rem !important;
   }
 }
 /* NAV - DROPDOWN */

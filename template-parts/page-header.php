@@ -11,7 +11,7 @@ $icon_image = get_field('page_icon') ? get_field('page_icon') : "/wp-content/upl
 
 <div class="page-header-wrap">
 	<div class="page-header d-flex align-items-center" style="background-image:url('<?php echo $image[0]; ?>');">
-		<div class="container clip-path pt-5">
+		<div class="container clip-path pt-2">
 			<div class="row">	
 				<div class="col">
 					<header class="entry-header">

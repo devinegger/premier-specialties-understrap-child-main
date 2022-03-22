@@ -25,7 +25,7 @@
         }
     }
 
-    .nav-link {
+    .nav-link, .mega-menu-link {
         font-weight: $font-weight-light;
         padding-left: 0;
         
@@ -44,17 +44,35 @@
 
 
 .login-btn {
+
     a {
-        @extend .btn, .btn-primary, .btn-sm, .px-2, .py-0,;
+        @extend .btn, .btn-primary, .btn-sm, .px-2, .py-0;
+        
+    }
+}
+
+.mega-login-btn {
+    border-radius: $border-radius !important;
+    background-color: $primary !important;
+    
+    a {
+        padding: 0 30px !important;
+        font-size: 12px !important;
     }
 }
 
 @include media-breakpoint-up(md) { 
     .login-btn {
-        position: absolute;
-        top: 1.25rem;
-        right: 2.5rem;
-        font-size: .75rem;
+        position: absolute !important;
+        top: 1.25rem !important;
+        right: 2.5rem !important;
+        font-size: .75rem !important;
+    }
+
+    .mega-login-btn {
+        position: absolute !important;
+        top: .25rem !important;
+        right: .75rem !important;
     }
 }
 
