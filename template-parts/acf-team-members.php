@@ -74,7 +74,6 @@ foreach($team_cards as $team_card) :
     $count===0 ? $class="active" : $class="" ;
 ?>
 
-
                         <div class="carousel-item <?= $class ?>">
                             <div class="container-fluid">
                                 <div class="row">

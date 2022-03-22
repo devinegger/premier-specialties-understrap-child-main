@@ -44,7 +44,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- .col -->
 		</div><!-- .row -->
 
-		
+		<!-- display any ACF Templates -->
+		<?php get_template_part( 'template-parts/acf', 'main' ); ?>
 
 	</div><!-- #content -->
 
