@@ -200,23 +200,6 @@
     border-radius: 1rem;
 }
 
-.img-left-tile {
-    img {
-        height: 100%;
-        width: 100%;
-    }
-}
-
-.tile-sub-section::before {
-    content: "|";
-    padding: 0 .5rem;
-}
-
-.tile-sub-section {
-    font-size: 1.4rem;
-    font-weight: 300;
-}
-
 .team-member {
     .headshot img {
         max-height: 8rem;
@@ -230,8 +213,6 @@
         font-size: .8rem;
     }
 }
-
-// QUOTE CAROUSEL
 
 
 // TEAM MODAL/CAROUSEL
@@ -256,7 +237,9 @@
       }
 }
 
+
 // LEFT RIGHT HEADLINE IMAGE
+
 .left-right-img  {
     img {
         max-width: 400px;
@@ -279,6 +262,51 @@
         margin: 0 auto;
     }
 }
+
+
+// PRODUCT INFO
+
+.product-info {
+    .img-left-tile {
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .nav-item {
+        display: flex;
+
+        .nav-link {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: $secondary;
+            padding-left: 0;
+
+            &:before {
+                content: "|";
+                padding: 0 1rem 0 0;
+                font-size: 1.7rem;
+            }
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            font-size: 1.7rem;
+            
+            &:before {
+                content: none;
+                padding: 0;
+            }
+        }     
+    }
+
+    .more-link {
+        color: $on-scent-semi-light-blue;
+    }
+}
+
+
 
 // FOOTER
 

@@ -51,6 +51,11 @@ if (have_rows('section_templates')) : // if there are custom section templates o
 		if (get_row_layout() == 'product_selection_list') : 
 			get_template_part('template-parts/acf', 'product-selection-list'); 
 		endif;
+
+		// Product Information Group Template
+		if (get_row_layout() == 'product_information_group') : 
+			get_template_part('template-parts/acf', 'product-info'); 
+		endif;
 ?>
 
 

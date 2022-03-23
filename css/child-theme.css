@@ -15715,21 +15715,6 @@ figure.woocommerce-product-gallery__wrapper {
   border-radius: 1rem;
 }
 
-.img-left-tile img {
-  height: 100%;
-  width: 100%;
-}
-
-.tile-sub-section::before {
-  content: "|";
-  padding: 0 0.5rem;
-}
-
-.tile-sub-section {
-  font-size: 1.4rem;
-  font-weight: 300;
-}
-
 .team-member .headshot img {
   max-height: 8rem;
   max-width: 8rem;
@@ -15767,6 +15752,36 @@ figure.woocommerce-product-gallery__wrapper {
 .product-image img {
   display: block;
   margin: 0 auto;
+}
+
+.product-info .img-left-tile img {
+  height: 100%;
+  width: 100%;
+}
+.product-info .nav-item {
+  display: flex;
+}
+.product-info .nav-item .nav-link {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #044662;
+  padding-left: 0;
+}
+.product-info .nav-item .nav-link:before {
+  content: "|";
+  padding: 0 1rem 0 0;
+  font-size: 1.7rem;
+}
+.product-info .nav-item .nav-link.active {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.product-info .nav-item .nav-link.active:before {
+  content: none;
+  padding: 0;
+}
+.product-info .more-link {
+  color: #5a8eb6;
 }
 
 #wrapper-footer {
