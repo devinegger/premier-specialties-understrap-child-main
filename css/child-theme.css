@@ -15771,12 +15771,13 @@ figure.woocommerce-product-gallery__wrapper {
   content: "|";
   padding: 0 1rem 0 0;
   font-size: 1.7rem;
+  font-weight: 400;
 }
 .product-info .nav-item .nav-link.active {
   font-weight: bold;
   font-size: 1.7rem;
 }
-.product-info .nav-item .nav-link.active:before {
+.product-info .nav-item:first-child .nav-link:before {
   content: none;
   padding: 0;
 }

@@ -287,18 +287,22 @@
                 content: "|";
                 padding: 0 1rem 0 0;
                 font-size: 1.7rem;
+                font-weight: 400;
             }
         }
 
         .nav-link.active {
             font-weight: bold;
             font-size: 1.7rem;
-            
-            &:before {
-                content: none;
-                padding: 0;
+        }   
+        &:first-child {
+            .nav-link {
+                &:before {
+                    content: none;
+                    padding: 0;
+                }
             }
-        }     
+        }  
     }
 
     .more-link {

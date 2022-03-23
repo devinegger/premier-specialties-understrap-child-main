@@ -55,7 +55,7 @@ foreach($info_groups as $info_group)  {
                         <?php $count === 0 ? $title_class = "active" : $title_class = "" ; ?>
 
                     <li class="nav-item tile-sub-section">
-                        <a class="nav-link <?= $title_class ?>" data-link="<?= $count ?>" href="#"><?= $single_title ?></a>
+                        <a class="product-info-tab nav-link <?= $title_class ?>" data-link="<?= $count ?>" href="#"><?= $single_title ?></a>
                     </li>
 
                         <?php $count++; ?>
