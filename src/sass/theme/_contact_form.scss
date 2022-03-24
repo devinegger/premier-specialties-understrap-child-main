@@ -1,0 +1,14 @@
+.contact-form {
+	padding: 2rem;
+
+	p {
+		font-weight: bold;
+		color: #fff;
+	}
+}
+
+.hbspt-form {
+	.hs-button.primary {
+		@extend .btn, .btn-primary;
+	}
+}

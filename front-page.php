@@ -38,7 +38,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="modal-content">
 			<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="modal-body">
+				<div class="ratio ratio-16x9">
 				<iframe src="https://www.youtube.com/embed/Dx5qFachd3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</div>

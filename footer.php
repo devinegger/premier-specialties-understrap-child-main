@@ -39,9 +39,23 @@ $second_button_target = $second_button['target'];
 					<div class="col-md-3">
 						<h5 class="fw-normal fs-6">FRAGRANCES</h5>
 						<p>Stay up to date on all things OnScent</p>
+						<!--[if lte IE 8]> 
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+						<![endif]-->
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+						  hbspt.forms.create({
+						region: "na1",
+						portalId: "21646813",
+						formId: "8d20a057-30fe-49df-9918-13f66646a660"
+						});
+						</script>
+						<?php /*
 						<form>
 							<input class="p-1 text-center text-uppercase" placeholder="Email Address" />
 							<button class="btn btn-primary text-white mt-2 px-3" type="submit">Subscribe</button>
+						*/ ?>
+
 					</div>
 					<div class="col-md-2">
 						<h5 class="fw-normal fs-6">NATURAL COSMETICS</h5>
