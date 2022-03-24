@@ -49,7 +49,7 @@ foreach($info_groups as $info_group)  {
         </div>
         <div class="col-md-9 p-2">
             <div class="d-flex">
-                <ul class="nav text-secondary">
+                <ul class="nav text-secondary align-items-center">
 
                     <?php  foreach($title_group as $single_title) : ?>
                         <?php $count === 0 ? $title_class = "active" : $title_class = "" ; ?>

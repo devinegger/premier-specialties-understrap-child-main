@@ -15,7 +15,7 @@ $num_team_members = count($team_cards);
 ?>
 
 <div class="container px-3 py-2">
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-2 justify-content-around">
 
 <?php
 foreach($team_cards as $team_card) : 

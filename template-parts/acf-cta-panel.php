@@ -8,6 +8,9 @@
 
 // options
 $background_color = get_sub_field('background_color');
+$image_vertical_position = get_sub_field('image_vertical_position');
+
+$image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "center";
 
 // image
 $image_arr = get_sub_field('image');
@@ -18,22 +21,25 @@ $image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_
 
 // everything else
 $headline = get_sub_field('headline');
+$headline_color = get_sub_field('headline_color');
 $content = get_sub_field('content');
 $button = get_sub_field('button');
 $button_text = $button['title'];
 $button_link = $button['url'];
 $button_target = $button['target'];
+$button_bg_color = get_sub_field('button_background_color');
+$button_text_color = get_sub_field('button_text_color');
 ?>
 
 <!-- CTA template -->
 <div class="content-wrap" style="background-color: <?= $background_color ?>;">
 	<div class="container-fluid">
-		<div class="row py-3">
-			<div class="col-md-6 text-center py-4">
-				<p class="display-5 fw-semi-bold"><?= $headline ?></p>
-				<a class="btn btn-primary text-white px-3" href="<?= $button_link ?>" target="<?= $button_target ?>"><?= $button_text ?></a>
+		<div class="row">
+			<div class="col-md-6 text-center py-5">
+				<p class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></p>
+				<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" target="<?= $button_target ?>" style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 d-flex align-items-<?= $align_items ?>">
 				<?= $image ?>
 			</div>
 		</div>

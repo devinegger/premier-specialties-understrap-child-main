@@ -6,6 +6,11 @@
 
 $blog_highlights = get_sub_field('blog_posts'); // array of Blog highlights
 
+$see_all_link = get_sub_field('see_all_link');
+$see_all_title = $see_all_link['title'];
+$see_all_url = $see_all_link['url'];
+$see_all_target = $see_all_link['target'];
+
 ?>
 
 <div class="container px-3 py-2">
@@ -26,7 +31,10 @@ foreach ($blog_highlights as $blog_highlight) :
     $date = $blog_highlight['date'];
 
     $excerpt = $blog_highlight['excerpt'];
-    $more_link = $blog_highlight['url']; // actually a URL ACF type
+    $more_link = $blog_highlight['link']; 
+    $more_link_title = $more_link['title']; // not using for now...
+    $more_link_url = $more_link['url'];
+    $more_link_target = $more_link['target'];
    
 ?>
         <div class="col">
@@ -36,7 +44,7 @@ foreach ($blog_highlights as $blog_highlight) :
                     <h3 class="card-title mb-0 fw-bold fs-5"><?= $title ?></h3>
                     <span class="card-subtitle text-dark text-uppercase">BY <?= $author ?> | <?= $date ?></span>
                     <p class="card-text mt-2 text-dark fw-light lh-2 fs-6"><?= $excerpt ?></p>
-                    <span class="more-link text-uppercase"><a href="<?= $more_link ?>" target="_blank" class="text-secondary text-decoration-none">More ></a></span>
+                    <span class="more-link text-uppercase"><a href="<?= $more_link_url ?>" target="<?= $more_link_target ?>" class="text-secondary text-decoration-none">More ></a></span>
                 </div>
             </div>
         </div>
@@ -44,4 +52,11 @@ foreach ($blog_highlights as $blog_highlight) :
 <?php  endforeach; ?>
 
     </div>
+    <?php if ($see_all_link) : ?>
+    <div class="row">
+        <div class="col text-center">
+            <a class="text-secondary text-decoration-none" href="<?= $see_all_url ?>" target="<?= $see_all_target ?>">See All</a>
+        </div>
+    </div>
+    <?php endif; ?>
 </div>

@@ -9,7 +9,7 @@ $sample_tiles = get_sub_field('sample_tiles'); // array of Product Sample Tiles
 ?>
 
 <div class="container px-3 py-2">
-    <div class="row py-1">
+    <div class="row py-1 justify-content-around">
 
 <?php 
     foreach($sample_tiles as $sample_tile) : 

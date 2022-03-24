@@ -33,6 +33,8 @@ $button = get_sub_field('button');
 $button_text = $button['title'];
 $button_link = $button['url'];
 $button_target = $button['target'];
+$button_bg_color = get_sub_field('button_background_color');
+$button_text_color = get_sub_field('button_text_color');
 
 $image_class = "";
 $text_class = "text-end";
@@ -55,7 +57,7 @@ $image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "c
 			<div class="col-md-6 py-4 <?= $text_class ?>">
 				<h3 class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></h3>
 				<p class="text-dark-gray mb-3"><?= $content ?></p>
-				<a class="btn btn-primary text-white px-3" href="<?= $button_link ?>" <?= $modal_attributes ?>><?= $button_text ?></a>
+				<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" <?= $modal_attributes ?>  target="<?= $button_target ?>"  style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
 			</div>
 		</div>
 	</div>
