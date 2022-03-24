@@ -70,7 +70,9 @@ $image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "c
 		<div class="modal-content">
 			<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="modal-body">
-				<iframe src="<?= $youtube_embed_url ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="ratio ratio-16x9">
+					<iframe src="<?= $youtube_embed_url ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
