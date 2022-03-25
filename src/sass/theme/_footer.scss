@@ -27,6 +27,9 @@ footer#colophon {
             height: 3.25rem;
             margin-bottom: 1rem;            
         }
+        .actions {
+            text-align: left;
+        }        
         .hs-button.primary {
             @extend .btn, .btn-primary;
         }        

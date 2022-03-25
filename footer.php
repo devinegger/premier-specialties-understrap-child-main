@@ -74,7 +74,7 @@ $second_button_target = $second_button['target'];
 					</div>
 				</div>
 			</div>
-			<div class="order-3 col-md-3 order-md-2 col-lg-2">
+			<div class="order-3 col-md-3 order-md-2 col-lg-2 ps-lg-3 ps-xl-4">
 				<ul class="social-links">
 					<li>
 						<a class="text-white text-decoration-none" href="">

@@ -41,7 +41,7 @@ get_header();
 					<?php get_template_part( 'template-parts/sub', 'navigation'); ?>
 
 				<!-- display any ACF Templates -->
-				<?php get_template_part( 'template-parts/acf', 'main' ); ?>					
+				<?php get_template_part( 'template-parts/acf', 'main' ); ?>
 				</main><!-- #main -->
 			</div><!-- .col -->
 		</div><!-- .row -->

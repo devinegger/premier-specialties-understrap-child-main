@@ -15687,6 +15687,10 @@ figure.woocommerce-product-gallery__wrapper {
   color: #fff;
 }
 
+a.fasc-button {
+  padding: 0.375rem 0.75rem !important;
+}
+
 .wrapper {
   padding: 0;
 }
@@ -15938,6 +15942,9 @@ footer#colophon .hbspt-form input:not([type=submit]) {
   border-radius: 0;
   height: 3.25rem;
   margin-bottom: 1rem;
+}
+footer#colophon .hbspt-form .actions {
+  text-align: left;
 }
 footer#colophon .menu-wrapper {
   margin-bottom: 1.5rem;

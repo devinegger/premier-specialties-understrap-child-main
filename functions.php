@@ -46,7 +46,14 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-
+/**
+ * Register and enqueue a custom stylesheet in the WordPress admin. Added to hide some options on the FASC (button generator) plugin
+ */
+function hdc_enqueue_custom_admin_style() {
+  wp_register_style( 'admin-overrides-css', get_stylesheet_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+  wp_enqueue_style( 'admin-overrides-css' );
+}
+add_action( 'admin_enqueue_scripts', 'hdc_enqueue_custom_admin_style' );
 
 /**
  * Load the child theme's text domain
@@ -120,3 +127,15 @@ function currentYear( $atts ){
   return date('Y');
 }
 add_shortcode( 'year', 'currentYear' );
+
+add_filter('enter_title_here', 'team_member_place_holder' , 20 , 2 );
+function team_member_place_holder($title , $post){
+
+  if( $post->post_type == 'team_member' ){
+    $my_title = "Team Member Name";
+    return $my_title;
+  }
+
+  return $title;
+
+}
