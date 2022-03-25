@@ -2,6 +2,10 @@
     color: #fff;
 }
 
+.wrapper {
+    padding: 0;
+}
+
 
 /* HELPER CLASSES */
 
@@ -324,40 +328,3 @@
         color: $on-scent-semi-light-blue;
     }
 }
-
-
-
-// FOOTER
-
-#wrapper-footer {
-    background-color: $gray;
-}
-
-.company-info {
-    a {
-        text-decoration: none;
-        color: $white;
-    }
-}
-
-.footer-middle {
-    h5 {
-        margin-bottom: 1.5rem;
-    }
-}
-
-.social-icon-column {
-
-    a {
-        padding-bottom: 1rem;
-        vertical-align: super;
-    }
-    .fa {
-        font-size: 2rem;
-        padding-right: .5rem;
-    }
-    .social-text {
-        vertical-align: top;
-    }
-}
-

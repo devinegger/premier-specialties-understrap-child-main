@@ -22,86 +22,96 @@ $second_button_target = $second_button['target'];
 ?>
 
 
-<div class="wrapper" id="wrapper-footer">
-
-	<footer class="site-footer container py-5 text-white" id="colophon">
+<footer id="colophon">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="order-1 col-md-9 mb-2 mb-md-0 col-lg-3">
 				<span class="footer-logo d-block mb-2">
-					<?= get_custom_logo() ?>
-				</span>
+					<?php echo get_custom_logo(); ?>
+				</span>				
 				<div class="company-info ps-3">
 					<?php the_field('left_column_content', 'options'); ?>
 				</div>
 			</div>
-			<div class="col-md-7 footer-middle">
-				<div class="row mt-2">
-					<div class="col-md-3">
-						<h5 class="fw-normal fs-6">FRAGRANCES</h5>
+			<div class="order-2 order-md-3 order-lg-2 col-lg-7">
+				<div class="row">
+					<div class="col-md-12 order-2 order-md-1">
+						<div class="menu-wrapper">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location'  => 'footer-menu',
+									'container_class' => '',
+									'menu_class'      => 'footer-nav',
+									'fallback_cb'     => 'false',
+									'menu_id'         => 'footer-menu',
+									'depth'           => 1,
+									'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+								)
+							);
+							?>
+						</div>						
+					</div>
+					<div class="order-1 order-md-2 col-md-6 col-lg-5 col-xl-4">
 						<p>Stay up to date on all things OnScent</p>
-						<!--[if lte IE 8]> 
+						<!--[if lte IE 8]>
 						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
 						<![endif]-->
 						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
 						<script>
 						  hbspt.forms.create({
-						region: "na1",
-						portalId: "21646813",
-						formId: "8d20a057-30fe-49df-9918-13f66646a660"
+							region: "na1",
+							portalId: "21646813",
+							formId: "8d20a057-30fe-49df-9918-13f66646a660"
 						});
-						</script>
-						<?php /*
-						<form>
-							<input class="p-1 text-center text-uppercase" placeholder="Email Address" />
-							<button class="btn btn-primary text-white mt-2 px-3" type="submit">Subscribe</button>
-						*/ ?>
-
+						</script>								
 					</div>
-					<div class="col-md-2">
-						<h5 class="fw-normal fs-6">NATURAL COSMETICS</h5>
-					</div>
-					<div class="col-md-2">
-						<h5 class="fw-normal fs-6">COMPANY</h5>
-						<a class="btn btn-primary text-white text-nowrap" href="<?= $first_button_url ?>" target="<?= $first_buton_target ?>"><?= $first_button_title ?></a>
-					</div>
-					<div class="col-md-2">
-						<h5 class="fw-normal fs-6">RESOURCES</h5>
-						<a class="btn btn-primary text-white text-nowrap" href="<?= $second_button_url ?>" target="<?= $second_buton_target ?>"><?= $second_button_title ?></a>
-					</div>
-					<div class="col-md-2">
-						<h5 class="fw-normal fs-6">CONTACT</h5>
-						
+					<div class="order-3 col-md-4 offset-md-1 col-lg-7 offset-lg-0 col-xl-8">
+						<div class="user-btns">
+							<a class="btn btn-primary text-white text-nowrap" href="<?= $first_button_url ?>" target="<?= $first_buton_target ?>"><?= $first_button_title ?></a>
+							<a class="btn btn-primary text-white text-nowrap" href="<?= $second_button_url ?>" target="<?= $second_buton_target ?>"><?= $second_button_title ?></a>							
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="social-icon-column d-flex flex-column">
-					<a class="text-white text-decoration-none" href="">
-						<i class="fa fa-brands fa-linkedin"></i>
-						<span class="social-text">LinkedIn</span>
-					</a>
-					<a class="text-white text-decoration-none" href="">
-						<i class="fa fa-brands fa-youtube-play"></i>
-						<span class="social-text">YouTube</span>
-					</a>
-					<a class="text-white text-decoration-none" href="">
-						<i class="fa fa-brands fa-facebook-square"></i>
-						<span class="social-text">Facebook</span>
-					</a>
-					<a class="text-white text-decoration-none" href="">
-						<i class="fa fa-brands fa-twitter"></i>
-						<span class="social-text">Twitter</span>
-					</a>
-					<a class="text-white text-decoration-none" href="">
-						<i class="fa fa-brands fa-instagram"></i>
-						<span class="social-text">Instagram</span>
-					</a>
-				</div>
+			<div class="order-3 col-md-3 order-md-2 col-lg-2">
+				<ul class="social-links">
+					<li>
+						<a class="text-white text-decoration-none" href="">
+							<i class="fa fa-brands fa-linkedin"></i>
+							<span class="social-text">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a class="text-white text-decoration-none" href="">
+							<i class="fa fa-brands fa-youtube-play"></i>
+							<span class="social-text">YouTube</span>
+						</a>
+					</li>
+					<li>
+						<a class="text-white text-decoration-none" href="">
+							<i class="fa fa-brands fa-facebook-square"></i>
+							<span class="social-text">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a class="text-white text-decoration-none" href="">
+							<i class="fa fa-brands fa-twitter"></i>
+							<span class="social-text">Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a class="text-white text-decoration-none" href="">
+							<i class="fa fa-brands fa-instagram"></i>
+							<span class="social-text">Instagram</span>
+						</a>
+					</li>					
+				</ul>
 			</div>
 		</div>
-	</footer><!-- #colophon -->
+	</div>
+</footer>
 
-</div><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 

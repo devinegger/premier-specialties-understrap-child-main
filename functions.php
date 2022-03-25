@@ -94,13 +94,18 @@ add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_co
 */
 
 function register_childtheme_menus() {
-	register_nav_menu('sub_nav', __( 'Sub Navigation', 'premierspec-understrap-child' ));
-  }
+	register_nav_menus(
+		array(
+			'sub_nav' => __( 'Sub Navigation' ),
+			'footer-menu' => __( 'Footer Menu' ),
+		)
+	);
+}
   
-  add_action( 'init', 'register_childtheme_menus' );
+add_action( 'init', 'register_childtheme_menus' );
 
 
-  if(function_exists('acf_add_options_page')) {
+if(function_exists('acf_add_options_page')) {
 	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Options',
 		'menu_title'	=> 'Theme Options',
@@ -108,4 +113,10 @@ function register_childtheme_menus() {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-  }
+}
+
+// Simple shortcode for keeping copyright year updated in Privacy Policy / WYSIWYG editor
+function currentYear( $atts ){
+  return date('Y');
+}
+add_shortcode( 'year', 'currentYear' );
