@@ -16,7 +16,7 @@ footer#colophon {
     .hbspt-form {
         margin-bottom: 1.25rem;
 
-        label {
+        label:not(.hs-error-msg) {
             @extend .visually-hidden;
         }
 

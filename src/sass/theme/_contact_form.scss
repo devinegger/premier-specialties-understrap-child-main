@@ -1,14 +1,50 @@
 .contact-form {
+  background-color: $neon-green;
+  border-radius: 1rem;
 	padding: 2rem;
+  margin-top: -300px;
 
 	p {
+		font-size: 1.125rem;
 		font-weight: bold;
 		color: #fff;
 	}
 }
 
 .hbspt-form {
+	label:not(.hs-error-msg) {
+		@extend .visually-hidden;
+	}	
+	
+	input:not([type="submit"]),
+	textarea {
+		@extend .form-control;
+		border: none;
+		margin-bottom: 1rem;
+	}
+
+	select {
+		@extend .form-select;
+    color: #7f7f7f;
+		border: none;
+		margin-bottom: 1rem;
+	}
+
+	.actions {
+		text-align: right;
+	}
 	.hs-button.primary {
-		@extend .btn, .btn-primary;
+		@extend .btn, .btn-secondary;
+	}
+
+	.hs-error-msgs {
+		list-style: none;
+    padding-left: 0.5rem;
+    margin-bottom: 1.5rem;
+
+		li {
+			font-size: 0.875rem;
+			font-style: italic;
+		}
 	}
 }
