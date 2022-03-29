@@ -1,0 +1,120 @@
+// FOOTER
+
+footer#colophon {
+    background-color: $gray;
+    color: #fff;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .company-info {
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .hbspt-form {
+        margin-bottom: 1.25rem;
+
+        label:not(.hs-error-msg) {
+            @extend .visually-hidden;
+        }
+
+        input:not([type="submit"]) {
+            @extend .form-control;
+            border: none;
+            border-radius: 0;
+            height: 3.25rem;
+            margin-bottom: 1rem;            
+        }
+        .actions {
+            text-align: left;
+        }        
+        .hs-button.primary {
+            @extend .btn, .btn-primary;
+        }        
+    }
+
+    .menu-wrapper {
+        margin-bottom: 1.5rem;
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 0.75rem 0;
+
+                    &:hover,
+                    &:focus {
+                        font-weight: bold;
+                        color: $secondary;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(md) {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            @include media-breakpoint-only(lg) {
+                li {
+                    a {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }        
+    }
+
+    .user-btns {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        a {
+            width: 48%;
+        }
+
+        @include media-breakpoint-only(md) {
+            display: block;
+            
+            a {
+                width: 100%;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 1.25rem;
+        }
+    }
+
+
+    .social-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+            
+            a {
+                display: flex;
+                align-items: center;
+        
+                .fa {
+                    width: 2rem;
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}

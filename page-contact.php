@@ -27,8 +27,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row justify-content-center">
 			<div class="col-md-5" style="z-index: 999;">
-				<div class="contact-form align-items-center mx-2 p-2">
-					<img src="<?= get_stylesheet_directory_uri() ?>/img/demo-contact-form.jpg" alt="">
+				<div class="contact-form align-items-center mx-2">
+					<p>Please fill out each of the sections below.</p>
+					<p><small><em>* Required</em></small></p>
+					<?php /* uses hubspot */ ?>
+					<!--[if lte IE 8]>
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+					<![endif]-->
+					<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+					<script>
+					  hbspt.forms.create({
+						region: "na1",
+						portalId: "21646813",
+						formId: "14046c50-ff94-4dc4-8e2a-d7813a7f4b4f"
+					});
+					</script>
+					
 				</div>
 			</div>
 			<div class="col-md-7">

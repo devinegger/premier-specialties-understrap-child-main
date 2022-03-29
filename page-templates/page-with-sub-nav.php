@@ -12,7 +12,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <!-- Page Header -->
@@ -40,12 +39,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<!-- Sub Navigation -->
 					<?php get_template_part( 'template-parts/sub', 'navigation'); ?>
+
+				<!-- display any ACF Templates -->
+				<?php get_template_part( 'template-parts/acf', 'main' ); ?>
 				</main><!-- #main -->
 			</div><!-- .col -->
 		</div><!-- .row -->
-
-		<!-- display any ACF Templates -->
-		<?php get_template_part( 'template-parts/acf', 'main' ); ?>
 
 	</div><!-- #content -->
 

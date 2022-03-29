@@ -45,12 +45,13 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 					}
 					?>
 
+				<!-- display any ACF Templates -->
+				<?php get_template_part( 'template-parts/acf', 'main' ); ?>
+		
 				</main><!-- #main -->
 			</div><!-- .col -->
 		</div><!-- .row -->
 
-		<!-- display any ACF Templates -->
-		<?php get_template_part( 'template-parts/acf', 'main' ); ?>
 
 	</div><!-- #content -->
 

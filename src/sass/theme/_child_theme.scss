@@ -1,3 +1,16 @@
+.btn-primary {
+    color: #fff;
+}
+
+a.fasc-button {
+    padding: .375rem .75rem !important;
+}
+
+.wrapper {
+    padding: 0;
+}
+
+
 /* HELPER CLASSES */
 
 .text-gray {
@@ -107,7 +120,7 @@
     }
     .modal-body { 
         padding: 0;
-        min-height: 50vh;
+        //min-height: 50vh;
     }
 
     .btn-close {
@@ -144,12 +157,6 @@
     }
 }
 
-.contact-form {
-    background-color: $neon-green;
-    border-radius: 1rem;
-    margin-top: -300px;
-}
-
 .content-box {
     .content-box-img {
         img {
@@ -169,19 +176,29 @@
 .page-sub-navigation {
 
     .nav-item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex: 1 1 0; 
+        background-color: $gray;
         border-right: 1px solid $white;
-    }
+        
+        &:first-child {
+            border-radius: 0.75rem 0 0 0.75rem;
+        }
+        &:last-child {
+            border-right: none;
+            border-radius: 0 0.75rem 0.75rem 0;
+        }
 
-    .nav-item:last-child {
-        border-right: none;
     }
 
     .nav-link {
         text-shadow: none;
         color: $white;
         font-weight: $font-weight-light;
-        background-color: $gray;
         padding: 1rem 3rem;
+        
         &:hover {
             font-weight: $font-weight-semi-bold;
         }
@@ -309,40 +326,3 @@
         color: $on-scent-semi-light-blue;
     }
 }
-
-
-
-// FOOTER
-
-#wrapper-footer {
-    background-color: $gray;
-}
-
-.company-info {
-    a {
-        text-decoration: none;
-        color: $white;
-    }
-}
-
-.footer-middle {
-    h5 {
-        margin-bottom: 1.5rem;
-    }
-}
-
-.social-icon-column {
-
-    a {
-        padding-bottom: 1rem;
-        vertical-align: super;
-    }
-    .fa {
-        font-size: 2rem;
-        padding-right: .5rem;
-    }
-    .social-text {
-        vertical-align: top;
-    }
-}
-

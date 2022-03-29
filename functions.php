@@ -46,7 +46,14 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-
+/**
+ * Register and enqueue a custom stylesheet in the WordPress admin. Added to hide some options on the FASC (button generator) plugin
+ */
+function hdc_enqueue_custom_admin_style() {
+  wp_register_style( 'admin-overrides-css', get_stylesheet_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+  wp_enqueue_style( 'admin-overrides-css' );
+}
+add_action( 'admin_enqueue_scripts', 'hdc_enqueue_custom_admin_style' );
 
 /**
  * Load the child theme's text domain
@@ -94,13 +101,18 @@ add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_co
 */
 
 function register_childtheme_menus() {
-	register_nav_menu('sub_nav', __( 'Sub Navigation', 'premierspec-understrap-child' ));
-  }
+	register_nav_menus(
+		array(
+			'sub_nav' => __( 'Sub Navigation' ),
+			'footer-menu' => __( 'Footer Menu' ),
+		)
+	);
+}
   
-  add_action( 'init', 'register_childtheme_menus' );
+add_action( 'init', 'register_childtheme_menus' );
 
 
-  if(function_exists('acf_add_options_page')) {
+if(function_exists('acf_add_options_page')) {
 	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Options',
 		'menu_title'	=> 'Theme Options',
@@ -108,4 +120,22 @@ function register_childtheme_menus() {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
+}
+
+// Simple shortcode for keeping copyright year updated in Privacy Policy / WYSIWYG editor
+function currentYear( $atts ){
+  return date('Y');
+}
+add_shortcode( 'year', 'currentYear' );
+
+add_filter('enter_title_here', 'team_member_place_holder' , 20 , 2 );
+function team_member_place_holder($title , $post){
+
+  if( $post->post_type == 'team_member' ){
+    $my_title = "Team Member Name";
+    return $my_title;
   }
+
+  return $title;
+
+}
