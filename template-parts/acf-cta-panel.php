@@ -2,8 +2,7 @@
 
 /**
  * Template Part for displaying the ACF CTA Panel
- * 
- * 
+ *
  */
 
 // options
@@ -17,7 +16,8 @@ $image_arr = get_sub_field('image');
 $image_ID = $image_arr['ID']; 
 $image_URL = $image_arr['url']; 
 $image_alt = $image_arr['alt']; 
-$image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'd-block mx-auto cta-panel-img', 'alt'=>$image_alt) );
+// cta-panel-img
+$image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'd-block mx-auto img-fluid', 'alt'=>$image_alt) );
 
 // everything else
 $headline = get_sub_field('headline');
@@ -32,16 +32,16 @@ $button_text_color = get_sub_field('button_text_color');
 ?>
 
 <!-- CTA template -->
-<div class="content-wrap" style="background-color: <?= $background_color ?>;">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6 text-center py-5">
+<section id="cta-panel" style="background-color: <?= $background_color ?>;">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6 py-4 text-center">
 				<p class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></p>
 				<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" target="<?= $button_target ?>" style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
 			</div>
-			<div class="col-md-6 d-flex align-items-<?= $align_items ?>">
+			<div class="col-md-6 px-4 d-flex align-items-<?= $align_items ?>">
 				<?= $image ?>
 			</div>
 		</div>
 	</div>
-</div>
+</section>

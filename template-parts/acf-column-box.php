@@ -13,14 +13,14 @@ $num_columns = get_sub_field('number_of_columns');
 $column_class = $num_columns === '2' ? "col-md-6" : "col-md-4";
 $content_boxes = get_sub_field('content_boxes');
 ?>
-<div class="content-wrap" style="background-color: <?= $background_color ?>;">
+<section id="column-box" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row py-2">
-			<div class="col-12 px-2">
+		<div class="row py-3">
+			<div class="col-12">
 				<h2 class="display-4 text-center fw-semi-bold" style="color: <?= $heading_color ?>;"><?= $heading ?></h2>
 			</div>
 		</div>
-		<div class="row p-3 justify-content-around">
+		<div class="row py-2 justify-content-around">
 			<?php foreach($content_boxes as $content_box) : ?> 
 				<?php $image_ID = $content_box['image']['ID']; ?> 
 				<?php $image_URL = $content_box['image']['url']; ?>
@@ -40,4 +40,4 @@ $content_boxes = get_sub_field('content_boxes');
 			<?php endforeach; ?>
 		</div>
 	</div>
-</div>
+</section>

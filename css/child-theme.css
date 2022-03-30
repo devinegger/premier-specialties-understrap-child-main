@@ -15730,13 +15730,8 @@ a.fasc-button {
   max-width: 200px;
 }
 
-.mega-login-btn {
-  border-radius: 0.5rem !important;
-  background-color: #6cad52 !important;
-}
-.mega-login-btn a {
-  padding: 0 30px !important;
-  font-size: 12px !important;
+.login-btn a:hover {
+  color: #ffffff !important;
 }
 
 @media (min-width: 768px) {
@@ -15745,12 +15740,6 @@ a.fasc-button {
     top: 1.25rem !important;
     right: 2.5rem !important;
     font-size: 0.75rem !important;
-  }
-
-  .mega-login-btn {
-    position: absolute !important;
-    top: 0.25rem !important;
-    right: 0.75rem !important;
   }
 }
 /* NAV - DROPDOWN */
@@ -15764,7 +15753,6 @@ a.fasc-button {
 
 /* HOMEPAGE */
 .homepage-hero {
-  background-image: url("/wp-content/uploads/2022/03/OnScentHeroBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
@@ -15821,7 +15809,7 @@ a.fasc-button {
 }
 
 /* SUB NAV */
-.page-sub-navigation .nav-item {
+#sub-navigation .nav-item {
   display: flex;
   align-items: center;
   height: 100%;
@@ -15829,24 +15817,24 @@ a.fasc-button {
   background-color: #7f7f7f;
   border-right: 1px solid #fff;
 }
-.page-sub-navigation .nav-item:first-child {
+#sub-navigation .nav-item:first-child {
   border-radius: 0.75rem 0 0 0.75rem;
 }
-.page-sub-navigation .nav-item:last-child {
+#sub-navigation .nav-item:last-child {
   border-right: none;
   border-radius: 0 0.75rem 0.75rem 0;
 }
-.page-sub-navigation .nav-link {
+#sub-navigation .nav-item.active {
+  background-color: #044662;
+}
+#sub-navigation .nav-link {
   text-shadow: none;
   color: #fff;
   font-weight: 300;
   padding: 1rem 3rem;
 }
-.page-sub-navigation .nav-link:hover {
+#sub-navigation .nav-link:hover {
   font-weight: 500;
-}
-.page-sub-navigation .nav-item.active .nav-link {
-  background-color: #044662;
 }
 
 /* TEMPLATE PARTS */
@@ -15882,45 +15870,38 @@ a.fasc-button {
   max-width: 400px;
 }
 
-.cta-panel-img img {
-  max-width: 400px;
-  display: block;
-  margin: 0 auto;
+.product-tile img {
+  width: 100%;
 }
 
-.product-image img {
-  display: block;
-  margin: 0 auto;
-}
-
-.product-info .img-left-tile img {
+#product-info .img-left-tile img {
   height: 100%;
   width: 100%;
 }
-.product-info .nav-item {
+#product-info .nav-item {
   display: flex;
 }
-.product-info .nav-item .nav-link {
-  font-size: 1.4rem;
+#product-info .nav-item .nav-link {
+  font-size: 1.7rem;
   font-weight: 300;
   color: #044662;
   padding-left: 0;
 }
-.product-info .nav-item .nav-link:before {
+#product-info .nav-item .nav-link:before {
   content: "|";
   padding: 0 1rem 0 0;
   font-size: 1.7rem;
   font-weight: 400;
 }
-.product-info .nav-item .nav-link.active {
+#product-info .nav-item .nav-link.active {
   font-weight: bold;
   font-size: 1.7rem;
 }
-.product-info .nav-item:first-child .nav-link:before {
+#product-info .nav-item:first-child .nav-link:before {
   content: none;
   padding: 0;
 }
-.product-info .more-link {
+#product-info .more-link {
   color: #5a8eb6;
 }
 

@@ -34,8 +34,9 @@ $child_args = array(
 $children = get_children($child_args);
 ?>
 
-<div class="page-sub-navigation d-flex justify-content-center py-2">
-    <ul class="nav sub-nav text-uppercase nav-fill w-100 align-items-center">
+<section id="sub-navigation">
+    <div class="container d-flex justify-content-center py-2">
+        <ul class="nav sub-nav text-uppercase nav-fill w-100 align-items-center">
 
 <?php
 
@@ -53,5 +54,6 @@ foreach (array_reverse($children) as $child) {
 }
 
 ?>
-    </ul>
-</div>
+        </ul><!-- .sub-nav -->
+    </div><!-- .container -->
+</section><!-- #sub-navigation -->

@@ -25,36 +25,27 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' 
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
 
-<div class="wrapper p-0" id="page-wrapper">
+<div class="wrapper" id="page-wrapper">
+	<div id="content" tabindex="-1">
+		<main class="site-main" id="main">
 
-	<div class="container-fluid p-0" id="content" tabindex="-1">
+			<?php
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( 'loop-templates/content', 'page-internal' );
 
-		<div class="row justify-content-center">
-			<div class="col-10">
-				<main class="site-main" id="main">
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+			}
+			?>
 
-					<?php
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page-internal' );
+		<!-- display any ACF Templates -->
+		<?php get_template_part( 'template-parts/acf', 'main' ); ?>
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-					}
-					?>
-
-				<!-- display any ACF Templates -->
-				<?php get_template_part( 'template-parts/acf', 'main' ); ?>
-		
-				</main><!-- #main -->
-			</div><!-- .col -->
-		</div><!-- .row -->
-
-
+		</main><!-- #main -->
 	</div><!-- #content -->
-
 </div><!-- #page-wrapper -->
 
 <?php

@@ -14,37 +14,39 @@ $team_cards = get_sub_field('team_cards'); // array of Team Members CPTs
 $num_team_members = count($team_cards); 
 ?>
 
-<div class="container px-3 py-2">
-    <div class="row row-cols-1 row-cols-md-3 g-4 mb-2 justify-content-around">
+<section id="team-members">
+    <div class="container px-3 py-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-2 justify-content-around">
 
-<?php
-foreach($team_cards as $team_card) : 
+    <?php
+    foreach($team_cards as $team_card) : 
 
-    $team_member = $team_card['team_member']; // this is the Team Member CPT
-    $name = $team_member->post_title;
-    $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
-    $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
-    $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
-    $job_description = substr($job_description,0,200);
-?>
-        <div class="col">
-            <div class="card text-center team-member border-0">
-                <img src="<?= $headshot_URL ?>" class="card-img-top headshot m-auto pt-2" alt="..." />
-                <div class="card-body p-2">
-                    <h3 class="card-title mb-1 fw-bold fs-5"><?= $name ?></h3>
-                    <h4 class="card-subtitle mb-2 fw-light fs-6"><?= $job_title ?></h4>
-                    <p class="card-text text-gray text-start lh-2 fs-6"><?= $job_description ?>
-                        <span class="more-link">
-                            <!--  ~~ ** ~~  I need to find a way to make this link open the Modal AND slide to the correct slide > use JS ~~ ** ~~ -->  
-                            <a href="#" class="text-secondary text-decoration-none" data-bs-toggle="modal" data-bs-target="#teamModal" data-bs-slide-to="<?=  $count ?>"> > More</a>
-                        </span>
-                    </p>
+        $team_member = $team_card['team_member']; // this is the Team Member CPT
+        $name = $team_member->post_title;
+        $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
+        $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
+        $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
+        $job_description = substr($job_description,0,200);
+    ?>
+            <div class="col">
+                <div class="card text-center team-member border-0">
+                    <img src="<?= $headshot_URL ?>" class="card-img-top headshot m-auto pt-2" alt="..." />
+                    <div class="card-body p-2">
+                        <h3 class="card-title mb-1 fw-bold fs-5"><?= $name ?></h3>
+                        <h4 class="card-subtitle mb-2 fw-light fs-6"><?= $job_title ?></h4>
+                        <p class="card-text text-gray text-start lh-2 fs-6"><?= $job_description ?>
+                            <span class="more-link">
+                                <!--  ~~ ** ~~  I need to find a way to make this link open the Modal AND slide to the correct slide > use JS ~~ ** ~~ -->  
+                                <a href="#" class="text-secondary text-decoration-none" data-bs-toggle="modal" data-bs-target="#teamModal" data-bs-slide-to="<?=  $count ?>"> > More</a>
+                            </span>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div> 
-<?php endforeach; ?>
+            </div> 
+    <?php endforeach; ?>
+        </div>
     </div>
-</div>
+</section>
 
 <!-- Modal -->
 <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="teamModalLabel" aria-hidden="true">

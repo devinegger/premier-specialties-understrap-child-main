@@ -17,37 +17,31 @@ get_header();
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
 
-<div class="wrapper p-0" id="page-wrapper">
+<div class="wrapper" id="page-wrapper">
+	<div id="content" tabindex="-1">
+		<main class="site-main" id="main">
+			
+		<?php
+			while ( have_posts() ) {
+				the_post();
+				get_template_part( 'loop-templates/content', 'page-internal' );
 
-	<div class="container-fluid p-0" id="content" tabindex="-1">
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+			}
+		?>
 
-		<div class="row justify-content-center">
-			<div class="col-10">
-				<main class="site-main" id="main">
+		<!-- Sub Navigation -->
+		<?php get_template_part( 'template-parts/sub', 'navigation'); ?>
 
-					<?php
-						while ( have_posts() ) {
-							the_post();
-							get_template_part( 'loop-templates/content', 'page-internal' );
-
-							// If comments are open or we have at least one comment, load up the comment template.
-							if ( comments_open() || get_comments_number() ) {
-								comments_template();
-							}
-						}
-					?>
-
-					<!-- Sub Navigation -->
-					<?php get_template_part( 'template-parts/sub', 'navigation'); ?>
-
-				<!-- display any ACF Templates -->
-				<?php get_template_part( 'template-parts/acf', 'main' ); ?>
-				</main><!-- #main -->
-			</div><!-- .col -->
-		</div><!-- .row -->
-
+		<!-- display any ACF Templates -->
+		<?php get_template_part( 'template-parts/acf', 'main' ); ?>
+		
+	
+		</main><!-- #main -->
 	</div><!-- #content -->
-
 </div><!-- #page-wrapper -->
 
 <?php

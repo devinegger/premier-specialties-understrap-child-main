@@ -1,12 +1,7 @@
 <?php
 
 /**
- * Template Part for displaying Page - Team Tile
- * 
- * Displays a 3 column row with the Team Members custom post type data displayed in cards using the Title as 
- * the name of the person, and then custom fields for Headshot, Job Title, and Job Description
- * 
- * This template file also creates a modal with a carousel for each Team Member CPT as well.
+ * Template Part for displaying Left Right Image Highlight Template
  * 
  */
 
@@ -48,9 +43,9 @@ $image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "c
 ?>
 
 <!-- Headline Left Image Right -->
-<div class="content-wrap" style="background-color: <?= $background_color ?>;">
+<section id="left-right-highlight" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row pt-2 px-1">
+		<div class="row pt-4 align-items-center">
 			<div class="d-flex col-md-6 align-items-<?= $align_items ?> <?= $image_class ?>">
 				<?= $image ?>
 			</div>
@@ -61,7 +56,7 @@ $image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "c
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <?php if ($video_URL) : ?>
 <!-- video modal -->

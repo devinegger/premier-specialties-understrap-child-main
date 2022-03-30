@@ -1,17 +1,18 @@
 <?php
 
 /**
- * Template Part for displaying ACF Product Info
+ * Template Part for displaying ACF Product Information Groups
  */
 
 
 $info_groups = get_sub_field('info_group');
-$num_groups = count($info_groups);
-$count = 0;
+$page_group_number = $args['group_count'];
+$section_count = 0;
 
 $image_group = array();
 $title_group = array();
 $content_group = array();
+
 
 foreach($info_groups as $info_group)  {
     // because of the way this template is set up, we have to run through the 
@@ -24,55 +25,58 @@ foreach($info_groups as $info_group)  {
 }
 ?>
 
-<div class="container px-3 product-info">
-    <div class="row img-left-tile bg-light mb-2">
-        <div class="col-md-3 px-0">
-            <?php 
-                foreach($image_group as $single_image) { 
-                     
-                    $image_ID = $single_image['ID']; 
-                    $image_URL = $single_image['url']; 
-                    $image_alt = $single_image['alt']; 
-                    $image_class = 'image-' . $count;
 
-                    if ($count !==0 ) {
-                        $image_class .= " d-none";
-                    }
-                    
-                    $image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> $image_class, 'alt'=>$image_alt) );
-                    echo $image;
-                    $count ++;
-                } 
+<section id="product-info" data-group="<?=$page_group_number?>" class="group-<?= $page_group_number ?>">
+    <div class="container px-3">
+        <div class="row img-left-tile bg-light mb-2">
+            <div class="col-md-3 p-0">
+                <?php 
+                    foreach($image_group as $single_image) { 
+                        
+                        $image_ID = $single_image['ID']; 
+                        $image_URL = $single_image['url']; 
+                        $image_alt = $single_image['alt']; 
+                        $image_class = 'image-' . $section_count;
 
-                $count = 0;
-            ?>
-        </div>
-        <div class="col-md-9 p-2">
-            <div class="d-flex">
-                <ul class="nav text-secondary align-items-center">
+                        if ($section_count !==0 ) {
+                            $image_class .= " d-none";
+                        }
+                        
+                        $image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> $image_class, 'alt'=>$image_alt) );
+                        echo $image;
+                        $section_count ++;
+                    } 
 
-                    <?php  foreach($title_group as $single_title) : ?>
-                        <?php $count === 0 ? $title_class = "active" : $title_class = "" ; ?>
-
-                    <li class="nav-item tile-sub-section">
-                        <a class="product-info-tab nav-link <?= $title_class ?>" data-link="<?= $count ?>" href="#"><?= $single_title ?></a>
-                    </li>
-
-                        <?php $count++; ?>
-                    <?php endforeach; ?>
-                    <?php $count = 0; ?>
-                </ul>
+                    $section_count = 0;
+                ?>
             </div>
+            <div class="col-md-9 p-2">
+                <div class="d-flex">
+                    <ul class="nav text-secondary align-items-center">
 
-            <?php foreach($content_group as $single_content) : ?>
-                <?php $content_class = 'content-' . $count; ?>
-                <?php $count !==0 ? $content_class .= " d-none" : $content_class .= ""; ?>
+                        <?php  foreach($title_group as $single_title) : ?>
+                            <?php $section_count === 0 ? $title_class = "active" : $title_class = "" ; ?>
 
-            <p class="text-black <?= $content_class ?>"><?= $single_content['content'] ?>
-                <a class="more-link text-decoration-none fw-light" href="<?= $single_content['more_link']['url'] ?>"> More ></a>
-            </p>
-                <?php $count++; ?>
-            <?php endforeach; ?>
+                        <li class="nav-item tile-sub-section">
+                            <a class="product-info-tab nav-link <?= $title_class ?>" data-link="<?= $section_count ?>" href="#"><?= $single_title ?></a>
+                        </li>
+
+                            <?php $section_count++; ?>
+                        <?php endforeach; ?>
+                        <?php $section_count = 0; ?>
+                    </ul>
+                </div>
+
+                <?php foreach($content_group as $single_content) : ?>
+                    <?php $content_class = 'content-' . $section_count; ?>
+                    <?php $section_count !==0 ? $content_class .= " d-none" : $content_class .= ""; ?>
+
+                <p class="text-black <?= $content_class ?>"><?= $single_content['content'] ?>
+                    <a class="more-link text-decoration-none fw-light" href="<?= $single_content['more_link']['url'] ?>"> More ></a>
+                </p>
+                    <?php $section_count++; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
-</div>
+</section>

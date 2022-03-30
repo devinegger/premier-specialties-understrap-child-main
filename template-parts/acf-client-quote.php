@@ -12,11 +12,11 @@ $count = 0;
 $active_class = "";
 ?>
 <!-- client quotes slider -->
-<div class="content-wrap" style="background-color: <?= $background_color ?>;">
+<section id="client-quote" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row">
+		<div class="row py-4">
 			<div class="col-12">
-				<div id="quoteCarousel" class="carousel carousel-dark slide py-2" data-bs-ride="carousel">
+				<div id="quoteCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
 					<div class="carousel-inner text-center">
 						<h3 class="display-5 fw-semi-bold">What our clients say</h3>
 
@@ -46,4 +46,4 @@ $active_class = "";
 			</div>
 		</div>
 	</div>
-</div>
+</section>

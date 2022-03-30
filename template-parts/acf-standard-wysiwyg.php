@@ -9,12 +9,12 @@ $background_color = get_sub_field('background_color');
 ?>
 
 <!-- wysiwyg -->
-<div class="content-wrap" style="background-color: <?= $background_color ?>;">
+<section id="standard-wysiwyg" style="background-color: <?= $background_color ?>;">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 px-3 py-2">
+			<div class="py-4">
 				<?= $content ?>
 			</div>
 		</div>
 	</div>
-</div>
+</section>

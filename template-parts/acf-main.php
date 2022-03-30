@@ -5,7 +5,11 @@
  */
 
 if (have_rows('section_templates')) : // if there are custom section templates on the page
+
+	$group_count = 0; // number of product information groups
+
     while (have_rows('section_templates')) : the_row();
+
 
 		// standard wysiwyg template
 		if (get_row_layout() == 'standard_wysiwyg') : 
@@ -54,7 +58,8 @@ if (have_rows('section_templates')) : // if there are custom section templates o
 
 		// Product Information Group Template
 		if (get_row_layout() == 'product_information_group') : 
-			get_template_part('template-parts/acf', 'product-info'); 
+			get_template_part('template-parts/acf', 'product-info', array('group_count' => &$group_count)); 
+			$group_count++;
 		endif;
 ?>
 
