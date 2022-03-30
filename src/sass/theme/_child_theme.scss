@@ -59,18 +59,11 @@ a.fasc-button {
 .login-btn {
 
     a {
-        @extend .btn, .btn-primary, .btn-sm, .px-2, .py-0;
-        
-    }
-}
+        @extend .btn, .btn-primary, .btn-sm, .px-2, .py-0; 
 
-.mega-login-btn {
-    border-radius: $border-radius !important;
-    background-color: $primary !important;
-    
-    a {
-        padding: 0 30px !important;
-        font-size: 12px !important;
+        &:hover {
+            color: #ffffff !important;
+        }
     }
 }
 
@@ -80,12 +73,6 @@ a.fasc-button {
         top: 1.25rem !important;
         right: 2.5rem !important;
         font-size: .75rem !important;
-    }
-
-    .mega-login-btn {
-        position: absolute !important;
-        top: .25rem !important;
-        right: .75rem !important;
     }
 }
 
@@ -106,7 +93,7 @@ a.fasc-button {
 /* HOMEPAGE */
 
 .homepage-hero {
-    background-image: url('/wp-content/uploads/2022/03/OnScentHeroBackground.jpg');
+    //background-image: url('/wp-content/uploads/2022/03/OnScentHeroBackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top right;
@@ -173,7 +160,7 @@ a.fasc-button {
 
 /* SUB NAV */
 
-.page-sub-navigation {
+#sub-navigation {
 
     .nav-item {
         display: flex;
@@ -193,6 +180,10 @@ a.fasc-button {
 
     }
 
+    .nav-item.active {
+        background-color: $on-scent-blue;
+    }
+
     .nav-link {
         text-shadow: none;
         color: $white;
@@ -204,11 +195,7 @@ a.fasc-button {
         }
     }
 
-    .nav-item.active {
-        .nav-link {
-            background-color: $on-scent-blue;
-        }
-    }
+    
 }
 
 /* TEMPLATE PARTS */
@@ -263,27 +250,17 @@ a.fasc-button {
     }
 }
 
-.cta-panel-img  {
+// PRODUCT SELECTION LIST
+.product-tile {
     img {
-        max-width: 400px;
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-// PRODUCT LISTS
-
-.product-image {
-    img {
-        display: block;
-        margin: 0 auto;
+        width: 100%;
     }
 }
 
 
-// PRODUCT INFO
+// PRODUCT INFORMATION GROUP
 
-.product-info {
+#product-info {
     .img-left-tile {
         img {
             height: 100%;
@@ -295,7 +272,7 @@ a.fasc-button {
         display: flex;
 
         .nav-link {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
             font-weight: 300;
             color: $secondary;
             padding-left: 0;
