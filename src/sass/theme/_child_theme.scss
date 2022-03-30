@@ -160,22 +160,25 @@ a.fasc-button {
 
 /* SUB NAV */
 
+
+/* original */
 #sub-navigation {
 
     .nav-item {
         display: flex;
         align-items: center;
-        height: 100%;
-        flex: 1 1 0; 
+        //height: 100%;
+        //flex: 1 1 0; 
         background-color: $gray;
-        border-right: 1px solid $white;
+        //border-right: 1px solid $white;
+        border: 1px solid $white;
         
         &:first-child {
-            border-radius: 0.75rem 0 0 0.75rem;
+            //border-radius: 0.75rem 0 0 0.75rem;
         }
         &:last-child {
             border-right: none;
-            border-radius: 0 0.75rem 0.75rem 0;
+            //border-radius: 0 0.75rem 0.75rem 0;
         }
 
     }
@@ -194,9 +197,43 @@ a.fasc-button {
             font-weight: $font-weight-semi-bold;
         }
     }
-
-    
 }
+
+/* sub nav list group 
+#sub-navigation {
+
+    .list-group-item {
+        //display: flex;
+        //align-items: center;
+        //height: 100%;
+        //flex: 1 1 0; 
+        background-color: $gray;
+        border-right: 1px solid $white;
+        
+        &:first-child {
+            //border-radius: 0.75rem 0 0 0.75rem;
+        }
+        &:last-child {
+            border-right: none;
+           // border-radius: 0 0.75rem 0.75rem 0;
+        }
+
+        &.active {
+            background-color: $on-scent-blue;
+        }
+
+        a {
+            text-shadow: none;
+            color: $white;
+            font-weight: $font-weight-light;
+            
+            &:hover {
+                font-weight: $font-weight-semi-bold;
+            }
+        }   
+    }
+}
+*/
 
 /* TEMPLATE PARTS */
 

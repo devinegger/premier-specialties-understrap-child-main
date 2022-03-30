@@ -35,8 +35,9 @@ $children = get_children($child_args);
 ?>
 
 <section id="sub-navigation">
-    <nav class="container d-flex justify-content-center py-2">
-            <ul class="nav sub-nav text-uppercase nav-fill w-100 align-items-center">
+    <div class="container py-2">
+        <!--<div class="container d-flex justify-content-center py-2">-->
+            <ul class="list-group list-group-horizontal-md text-uppercase align-items-center h-100 ">
 
 <?php
 
@@ -48,12 +49,13 @@ foreach (array_reverse($children) as $child) {
         $class_active = "";
     }
 
-    echo '<li class="nav-item ' . $class_active . '">';
-    echo '<a class="nav-link" aria-current="page" href="' . $base_slug . "/" . $child->post_name . '">' . $child->post_title . '</a>';
+    echo '<li class="list-group-item text-center ' . $class_active . '">';
+    echo '<a class="text-decoration-none" aria-current="page" href="' . $base_slug . "/" . $child->post_name . '">' . $child->post_title . '</a>';
     echo '</li>';
 }
 
 ?>
             </ul><!-- .sub-nav -->
-    </nav>
+        <!--</div>--><!-- .container -->
+    </div>
 </section><!-- #sub-navigation -->
