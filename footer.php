@@ -27,7 +27,7 @@ $second_button_target = $second_button['target'];
 		<div class="row">
 			<div class="order-1 col-md-9 mb-2 mb-md-0 col-lg-3">
 				<span class="footer-logo d-block mb-2">
-					<?php echo get_custom_logo(); ?>
+					<img src="/wp-content/uploads/2022/03/OnScent_Footer_logo_168x70px.png" alt="OnScent Logo" />
 				</span>				
 				<div class="company-info ps-3">
 					<?php the_field('left_column_content', 'options'); ?>

@@ -96,22 +96,6 @@ function understrap_child_customize_controls_js() {
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
 
 
-/*
-* 
-*/
-
-function register_childtheme_menus() {
-	register_nav_menus(
-		array(
-			'sub_nav' => __( 'Sub Navigation' ),
-			'footer-menu' => __( 'Footer Menu' ),
-		)
-	);
-}
-  
-add_action( 'init', 'register_childtheme_menus' );
-
-
 if(function_exists('acf_add_options_page')) {
 	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Options',
@@ -139,3 +123,10 @@ function team_member_place_holder($title , $post){
   return $title;
 
 }
+
+/*	
+* Bringing over existing WooCommerce customizations
+*/
+
+
+// add custom fields to product
