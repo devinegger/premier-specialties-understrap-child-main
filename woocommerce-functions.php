@@ -2,9 +2,6 @@
 
 // temporary file for holding all WooCommerce functions from previous site
 
-
-<?php
-
 //add_action( 'after_setup_theme', 'be_themes_child_theme_setup' );
 //function be_themes_child_theme_setup() {
     load_child_theme_textdomain( 'be-themes', get_stylesheet_directory() . '/languages' );
