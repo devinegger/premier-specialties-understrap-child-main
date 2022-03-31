@@ -76,8 +76,8 @@ $product_items = get_sub_field('product_list'); // array of Products
                     <div class="col">
                         <div class="text-end">
                             <label class="text-gray"><?= ucwords(str_replace('-', ' ', $pa_request_name)); ?></label>
-                            <input class="mx-2 text-center" placeholder="1" size="2"/>
-                            <a class="btn btn-secondary rounded-0" href="<?= $add_to_cart_url ?>">Add to Cart</a>
+                            <input class="mx-2 text-center quantity-input" placeholder="1" value="1" type="number" size="2"/>
+                            <a class="add-to-cart btn btn-secondary rounded-0" href="<?= $add_to_cart_url ?>">Add to Cart</a>
                         </div>
                     </div>
                 </div>
