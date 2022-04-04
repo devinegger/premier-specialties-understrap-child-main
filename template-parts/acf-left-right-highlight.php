@@ -15,11 +15,13 @@ $image_ID = $image_arr['ID'];
 $image_URL = $image_arr['url']; 
 $image_alt = $image_arr['alt']; 
 $image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'left-right-img d-flex mx-auto', 'alt'=>$image_alt) );
+
 // video modal
-$video_URL = get_sub_field('video_url');
-$youtube_video_id = substr($video_URL, -11);
-$youtube_embed_url = "https://www.youtube.com/embed/" . $youtube_video_id;
+$video_URL = get_field('video_url', 'options');
+$vimeo_video_id = substr($video_URL, -9);
+$vimeo_embed_url = "https://player.vimeo.com/video/". $vimeo_video_id . "?h=cbc8e3bbc7&portrait=0";
 $modal_attributes = $video_URL ? 'data-bs-toggle="modal" data-bs-target="#videoModal"' : '';
+
 // everything else
 $headline = get_sub_field('headline');
 $headline_color = get_sub_field('headline_color');
@@ -39,13 +41,20 @@ if ($image_horizontal_position === "Right") {
 	$text_class = "";
 } 
 
-$image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "center";
+if ($image_vertical_position === "Bottom") {
+	$align_items = "end";
+	$row_class = "pt-4";
+} else {
+	$align_items = "center";
+	$row_class = "py-2";
+}
+
 ?>
 
 <!-- Headline Left Image Right -->
 <section id="left-right-highlight" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row pt-4 align-items-center">
+		<div class="row <?= $row_class ?> align-items-center">
 			<div class="d-flex col-md-6 align-items-<?= $align_items ?> <?= $image_class ?>">
 				<?= $image ?>
 			</div>
@@ -66,7 +75,8 @@ $image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "c
 			<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="modal-body">
 				<div class="ratio ratio-16x9">
-					<iframe src="<?= $youtube_embed_url ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe src="<?= $vimeo_embed_url_one ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+					<script src="https://player.vimeo.com/api/player.js"></script>
 				</div>
 			</div>
 		</div>

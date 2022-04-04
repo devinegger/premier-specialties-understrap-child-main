@@ -15,21 +15,35 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$image_arr = get_field('hero_image', 'options');
+$image_arr = get_field('hero_image', 'option');
 $image_URL = $image_arr['url'];
+
+$headline = get_field('headline', 'option');
 
 $content = get_field('content', 'options');
 $content_width  = get_field('content_width', 'options');
 
-$button = get_field('button', 'options');
-$button_title = $button['title'];
-$button_url = $button['url'];
-$button_target = $button['target'];
+$button_one = get_field('button_one', 'options');
+$button_one_title = $button_one['title'];
+$button_one_url = $button_one['url'];
+$button_one_target = $button_one['target'];
 
-$video_URL = get_field('video_url', 'options');
-$youtube_video_id = substr($video_URL, -11);
-$youtube_embed_url = "https://www.youtube.com/embed/" . $youtube_video_id;
-$modal_attributes = $video_URL ? 'data-bs-toggle="modal" data-bs-target="#videoModal"' : '';
+$video_URL_one = get_field('video_url_one', 'options');
+$vimeo_video_id_one = substr($video_URL_one, -9);
+$vimeo_embed_url_one = "https://player.vimeo.com/video/". $vimeo_video_id_one . "?h=cbc8e3bbc7&portrait=0";
+$modal_attributes_one = $video_URL_one ? 'data-bs-toggle="modal" data-bs-target="#videoModalOne"' : '';
+
+$button_two = get_field('button_two', 'options');
+if ($button_two) {
+	$button_two_title = $button_two['title'];
+	$button_two_url = $button_two['url'];
+	$button_two_target = $button_two['target'];
+}
+
+$video_URL_two = get_field('video_url_two', 'options');
+$vimeo_video_id_two = substr($video_URL_two, -9);
+$vimeo_embed_url_two = "https://player.vimeo.com/video/". $vimeo_video_id_two . "?h=cbc8e3bbc7&portrait=0";
+$modal_attributes_two = $video_URL_two ? 'data-bs-toggle="modal" data-bs-target="#videoModalTwo"' : '';
 
 ?>
 
@@ -45,21 +59,52 @@ $modal_attributes = $video_URL ? 'data-bs-toggle="modal" data-bs-target="#videoM
 					<div class="row">
 						<div class="text-light" style="max-width: <?= $content_width ?>px;">
 							<div class="container">
-								<h2 class="display-4 fw-bold"><?= $content ?></h2>
-								<a class="btn btn-primary text-white mt-2 px-3 py-1" href="<?= $button_url ?>" target="<?= $button_target ?>" <?= $modal_attributes ?>><?= $button_title ?></a>
+								<h2 class="display-4 fw-bold"><?= $headline ?></h2>
+								<p><?= $content ?></p>
+							</div>
+						</div>
+						<div class="d-flex text-light">
+							<div class="container ">
+								<a class="btn btn-primary text-white mt-2 px-3 py-1 me-1" href="<?= $button_one_url ?>" target="<?= $button_one_target ?>" <?= $modal_attributes_one ?>><?= $button_one_title ?></a>
+								<?php if($button_two): ?>
+									<a class="btn btn-primary text-white mt-2 px-3 py-1" href="<?= $button_two_url ?>" target="<?= $button_two_target ?>" <?= $modal_attributes_two ?>><?= $button_two_title ?></a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- video modal -->
-			<div class="modal fade" id="videoModal"  tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+			<!-- video modal ONE -->
+			<div class="modal fade" id="videoModalOne"  tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered modal-lg">
 					<div class="modal-content">
 						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 						<div class="modal-body">
 							<div class="ratio ratio-16x9">
-							<iframe src="<?= $video_URL ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<iframe src="<?= $vimeo_embed_url_one ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+							<script src="https://player.vimeo.com/api/player.js"></script>
+
+							<!--
+								<iframe src="<?= $video_URL ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- video modal TWO -->
+			<div class="modal fade" id="videoModalTwo"  tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg">
+					<div class="modal-content">
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+						<div class="modal-body">
+							<div class="ratio ratio-16x9">
+								<iframe src="<?= $vimeo_embed_url_two ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+							<script src="https://player.vimeo.com/api/player.js"></script>
+
+							<!--
+								<iframe src="<?= $video_URL ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								-->
 							</div>
 						</div>
 					</div>

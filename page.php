@@ -19,13 +19,17 @@ $page_id = get_the_ID();
 //$page = get_page_by_id($page_id); 
 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
 
+// get page background color
+$page_background = get_field('page_background');
 
 ?>
+
+<div class="wrapper" id="page-wrapper" style="background-color: <?= $page_background ?>;">
 
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
 
-<div class="wrapper" id="page-wrapper">
+
 	<div id="content" tabindex="-1">
 		<main class="site-main" id="main">
 

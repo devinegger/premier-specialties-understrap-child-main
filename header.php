@@ -12,6 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 $bootstrap_version = get_theme_mod( 'understrap_bootstrap_version', 'bootstrap4' );
 $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -22,9 +23,9 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
+<body <?php body_class(); ?> <?php understrap_body_attributes(); ?> >
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
+<div class="site" id="page" >
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar">

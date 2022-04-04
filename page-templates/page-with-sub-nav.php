@@ -12,12 +12,17 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+// get page background color
+$page_background = get_field('page_background');
+
 ?>
+
+<div class="wrapper" id="page-wrapper" style="background-color: <?= $page_background ?>;">
 
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
 
-<div class="wrapper" id="page-wrapper">
+
 	<div id="content" tabindex="-1">
 		<main class="site-main" id="main">
 			

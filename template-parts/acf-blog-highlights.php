@@ -5,15 +5,17 @@
  */
 
 $blog_highlights = get_sub_field('blog_posts'); // array of Blog highlights
+$background_color = get_sub_field('background_color');
 
 $see_all_link = get_sub_field('see_all_link');
-$see_all_title = $see_all_link['title'];
-$see_all_url = $see_all_link['url'];
-$see_all_target = $see_all_link['target'];
-
+if($see_all_link) {
+    $see_all_title = $see_all_link['title'];
+    $see_all_url = $see_all_link['url'];
+    $see_all_target = $see_all_link['target'];
+}
 ?>
 
-<section id="blog-highlights">
+<section id="blog-highlights" style="background-color: <?= $background_color ?>;">
     <div class="container px-3 py-4">
         <div class="row row-cols-1 row-cols-md-3 g-4">
 
@@ -33,10 +35,11 @@ $see_all_target = $see_all_link['target'];
 
         $excerpt = $blog_highlight['excerpt'];
         $more_link = $blog_highlight['link']; 
-        $more_link_title = $more_link['title']; // not using for now...
-        $more_link_url = $more_link['url'];
-        $more_link_target = $more_link['target'];
-    
+        if($more_link) {
+            $more_link_title = $more_link['title']; // not using for now...
+            $more_link_url = $more_link['url'];
+            $more_link_target = $more_link['target'];
+        }
     ?>
             <div class="col">
                 <div class="card blog-card text-center border-0">
@@ -56,7 +59,7 @@ $see_all_target = $see_all_link['target'];
         <?php if ($see_all_link) : ?>
         <div class="row mt-2">
             <div class="col text-center">
-                <a class="text-secondary text-decoration-none" href="<?= $see_all_url ?>" target="<?= $see_all_target ?>">See All</a>
+                <a class="text-secondary text-decoration-none" href="<?= $see_all_url ?>" target="<?= $see_all_target ?>"><?= $see_all_title ?></a>
             </div>
         </div><!-- .row -->
         <?php endif; ?>

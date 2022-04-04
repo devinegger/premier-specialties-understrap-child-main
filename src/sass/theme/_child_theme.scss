@@ -12,7 +12,6 @@ a.fasc-button {
 
 
 /* HELPER CLASSES */
-
 .text-gray {
     color: $gray;
 }
@@ -26,7 +25,6 @@ a.fasc-button {
 }
 
 /* HEADER - NAVIGATION */
-
 #main-nav {
     position: absolute;
     width: 100%;
@@ -41,11 +39,10 @@ a.fasc-button {
     .nav-link, .mega-menu-link {
         font-weight: $font-weight-light;
         padding-left: 0;
-        
-        // text shadow not original design
         text-shadow: $text-shadow;
+
         &:hover {
-            font-weight: $font-weight-semi-bold;
+            text-decoration: underline;
         }
     }
 }
@@ -53,8 +50,6 @@ a.fasc-button {
 .navbar-brand img {
     max-width: 200px;
 }
-
-
 
 .login-btn {
 
@@ -73,6 +68,16 @@ a.fasc-button {
         top: 1.25rem !important;
         right: 2.5rem !important;
         font-size: .75rem !important;
+    }
+
+    .nav-icons {
+        position: absolute; 
+        top: 1rem; 
+        right: 3.5rem;
+    }
+
+    .nav-icons.move-left {
+        right: 9rem;
     }
 }
 
@@ -100,7 +105,7 @@ a.fasc-button {
     height: 100vh;
 }
 
-#videoModal {
+#videoModal, #videoModalOne, #videoModalTwo {
     iframe {
         width: 100%;
         height: 100%;
@@ -144,19 +149,6 @@ a.fasc-button {
     }
 }
 
-.content-box {
-    .content-box-img {
-        img {
-            height: 6rem;
-            width: 6rem;
-            max-height: 6rem;
-            max-width: 6rem;
-        }
-    }
-    h3, p {
-        color: $dark-gray;
-    }
-}
 
 /* SUB NAV */
 
@@ -167,20 +159,8 @@ a.fasc-button {
     .nav-item {
         display: flex;
         align-items: center;
-        //height: 100%;
-        //flex: 1 1 0; 
         background-color: $gray;
-        //border-right: 1px solid $white;
         border: 1px solid $white;
-        
-        &:first-child {
-            //border-radius: 0.75rem 0 0 0.75rem;
-        }
-        &:last-child {
-            border-right: none;
-            //border-radius: 0 0.75rem 0.75rem 0;
-        }
-
     }
 
     .nav-item.active {
@@ -199,41 +179,6 @@ a.fasc-button {
     }
 }
 
-/* sub nav list group 
-#sub-navigation {
-
-    .list-group-item {
-        //display: flex;
-        //align-items: center;
-        //height: 100%;
-        //flex: 1 1 0; 
-        background-color: $gray;
-        border-right: 1px solid $white;
-        
-        &:first-child {
-            //border-radius: 0.75rem 0 0 0.75rem;
-        }
-        &:last-child {
-            border-right: none;
-           // border-radius: 0 0.75rem 0.75rem 0;
-        }
-
-        &.active {
-            background-color: $on-scent-blue;
-        }
-
-        a {
-            text-shadow: none;
-            color: $white;
-            font-weight: $font-weight-light;
-            
-            &:hover {
-                font-weight: $font-weight-semi-bold;
-            }
-        }   
-    }
-}
-*/
 
 /* TEMPLATE PARTS */
 
@@ -241,13 +186,25 @@ a.fasc-button {
     border-radius: 1rem;
 }
 
-.team-member {
-    .headshot img {
-        max-height: 8rem;
-        max-width: 8rem;
-        border-radius: 4rem !important;
+// COLUMN BOXES
+.content-box {
+    .content-box-img {
+        img {
+            height: 6rem;
+            width: 6rem;
+            max-height: 6rem;
+            max-width: 6rem;
+        }
+    }
+    h3, p {
+        color: $dark-gray;
     }
 }
+
+
+
+
+// BLOG HIGHLIGHTS
 
 .blog-card {
     .card-subtitle {
@@ -256,8 +213,17 @@ a.fasc-button {
 }
 
 
-// TEAM MODAL/CAROUSEL
+// TEAM MEMBERS
+.team-member {
+    .headshot img {
+        max-height: 8rem;
+        max-width: 8rem;
+        border-radius: 4rem !important;
+    }
+}
 
+
+// TEAM MODAL/CAROUSEL
 #teamModal {
     .modal-body { 
         padding: 1rem 2.5rem 2.5rem 2.5rem;
@@ -280,7 +246,6 @@ a.fasc-button {
 
 
 // LEFT RIGHT HEADLINE IMAGE
-
 .left-right-img  {
     img {
         max-width: 400px;
@@ -291,12 +256,26 @@ a.fasc-button {
 .product-tile {
     img {
         width: 100%;
+        border: 4px solid #044560;
+        border-radius: 3px;
     }
 }
 
 
-// PRODUCT INFORMATION GROUP
+// CTA PANEL 
+#cta-panel {
+    .content-pane {
+        min-height: 400px;
+    }
 
+    img {
+        max-height: 400px;
+    }
+}
+
+
+
+// PRODUCT INFORMATION GROUP
 #product-info {
     .img-left-tile {
         img {
@@ -345,4 +324,8 @@ a.fasc-button {
 // WOOOCOMMERCE
 .shop_table {
     background-color: $white;
+}
+
+.return-to-shop {
+    display: none !important;
 }

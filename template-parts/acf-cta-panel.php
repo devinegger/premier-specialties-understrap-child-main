@@ -9,7 +9,14 @@
 $background_color = get_sub_field('background_color');
 $image_vertical_position = get_sub_field('image_vertical_position');
 
-$image_vertical_position === "Bottom" ? $align_items = "end" : $align_items = "center";
+if ($image_vertical_position === "Bottom") {
+	$align_items = "end";
+	$row_class = "pt-4";
+	
+} else {
+	$align_items = "center";
+	$row_class = "py-2";
+}
 
 // image
 $image_arr = get_sub_field('image');
@@ -34,12 +41,12 @@ $button_text_color = get_sub_field('button_text_color');
 <!-- CTA template -->
 <section id="cta-panel" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-md-6 py-4 text-center">
+		<div class="row align-items-center <?= $row_class ?>">
+			<div class="col-md-6 py-md-5 text-center content-pane">
 				<p class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></p>
 				<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" target="<?= $button_target ?>" style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
 			</div>
-			<div class="col-md-6 px-4 d-flex align-items-<?= $align_items ?>">
+			<div class="col-md-6 d-flex align-items-<?= $align_items ?>">
 				<?= $image ?>
 			</div>
 		</div>

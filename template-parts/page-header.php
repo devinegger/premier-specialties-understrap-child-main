@@ -5,8 +5,10 @@
  */
 
 $page_id = get_the_ID();
+
 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
-$icon_image = get_field('page_icon') ? get_field('page_icon') : "/wp-content/uploads/2022/03/mock-icon.png";
+$icon_image = get_field('page_icon') ? get_field('page_icon') : "/wp-content/uploads/2022/03/leaves-of-a-plant.png";
+
 ?>
 
 <div class="page-header-wrap">
@@ -15,7 +17,7 @@ $icon_image = get_field('page_icon') ? get_field('page_icon') : "/wp-content/upl
 			<div class="row">	
 				<div class="col">
 					<header class="entry-header">
-						<h1 class="entry-title display-4 fw-bold text-light text-center"><?php single_post_title(); ?> </h1>
+						<h1 class="entry-title display-4 fw-bold text-light text-center"><?php single_post_title(); ?></h1>
 					</header>
 				</div>
 			</div>

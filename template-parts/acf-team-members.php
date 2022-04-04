@@ -10,11 +10,13 @@
  * 
  */
 
+$background_color = get_sub_field('background_color');
 $team_cards = get_sub_field('team_cards'); // array of Team Members CPTs
 $num_team_members = count($team_cards); 
+$count=0;
 ?>
 
-<section id="team-members">
+<section id="team-members" style="background-color:<?= $background_color ?> ;">
     <div class="container px-3 py-4">
         <div class="row row-cols-1 row-cols-md-3 g-4 mb-2 justify-content-around">
 
@@ -37,12 +39,13 @@ $num_team_members = count($team_cards);
                         <p class="card-text text-gray text-start lh-2 fs-6"><?= $job_description ?>
                             <span class="more-link">
                                 <!--  ~~ ** ~~  I need to find a way to make this link open the Modal AND slide to the correct slide > use JS ~~ ** ~~ -->  
-                                <a href="#" class="text-secondary text-decoration-none" data-bs-toggle="modal" data-bs-target="#teamModal" data-bs-slide-to="<?=  $count ?>"> > More</a>
+                                <a href="#" class="text-secondary text-decoration-none carousel-opener" data-bs-toggle="modal" data-bs-target="#teamModal" data-bs-slide-to="<?=  $count ?>"> > More</a>
                             </span>
                         </p>
                     </div>
                 </div>
             </div> 
+    <?php $count++; ?>
     <?php endforeach; ?>
         </div>
     </div>
@@ -56,7 +59,7 @@ $num_team_members = count($team_cards);
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="teamCarousel" class="carousel slide" data-interval="false" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <?php  for($i=0; $i<$num_team_members; $i++ ) : ?>
                             <button type="button" data-bs-target="#teamCarouselIndicators" data-bs-slide-to="<?= $i ?>" class="active" aria-current="true" aria-label="Slide <?= $i ?>"></button>

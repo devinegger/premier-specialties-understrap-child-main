@@ -9296,8 +9296,6 @@
 	  }
 	})();
 
-	// Add your custom JS here.
-	//const { findConfig } = require("browserslist");
 	// custom function for switching image and content on product information
 	(function ($) {
 	  $(document).ready(function ($) {
@@ -9322,7 +9320,72 @@
 	      }
 	    });
 	  });
-	})(jQuery);
+	})(jQuery); // Open search form on icon click 
+
+
+	(function ($) {
+	  $(document).ready(function ($) {
+	    $('.search-icon').click(function () {
+	      $(this).toggleClass('d-none');
+	      $('.search-form-wrap').toggleClass('d-none');
+	    });
+	  });
+	})(jQuery); // Open carousel on slide of person clicked
+
+
+	(function ($) {
+	  $(document).ready(function ($) {
+	    let teamCarousel = $('#teamCarousel');
+	    $('.carousel-opener').click(function () {
+	      let slide = $(this).data('bs-slide-to');
+	      teamCarousel.carousel(slide);
+	    });
+	  });
+	})(jQuery); // Normalize height of all carousel items in client quotes
+
+
+	(function ($) {
+	  $(document).ready(function ($) {
+	    var items = $('#quoteCarousel .carousel-item'),
+	        //grab all slides
+	    heights = [],
+	        //create empty array to store height values
+	    tallest; //create variable to make note of the tallest slide
+
+	    if (items.length) {
+	      function normalizeHeights() {
+	        items.each(function () {
+	          //add heights to array
+	          heights.push($(this).height());
+	        });
+	        tallest = Math.max.apply(null, heights); //cache largest value
+
+	        items.each(function () {
+	          $(this).css('min-height', tallest + 'px');
+	        });
+	      }
+	      normalizeHeights();
+	      $(window).on('resize orientationchange', function () {
+	        tallest = 0, heights.length = 0; //reset vars
+
+	        items.each(function () {
+	          $(this).css('min-height', '0'); //reset min-height
+	        });
+	        normalizeHeights(); //run it again 
+	      });
+	    }
+	  });
+	})(jQuery); // move navigation icons to the left if login button exists
+
+
+	(function ($) {
+	  $(document).ready(function ($) {
+	    if ($('.login-btn').length) {
+	      $('.nav-icons').addClass('move-left');
+	    }
+	  });
+	})(jQuery); // allow for product template quanity input to update add to cart url to include quantity
+
 
 	(function ($) {
 	  $(document).ready(function ($) {

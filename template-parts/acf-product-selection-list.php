@@ -5,11 +5,11 @@
  */
 
 $product_items = get_sub_field('product_list'); // array of Products
-
+$background_color = get_sub_field('background_color');
 ?>
 
-<section id="product-section-list">
-    <div class="container px-3">
+<section id="product-section-list"  style="background-color: <?= $background_color ?>;">
+    <div class="container px-3 py-2">
 
         <?php 
         foreach($product_items as $product_item) : 

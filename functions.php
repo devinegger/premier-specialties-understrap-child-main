@@ -225,3 +225,19 @@ function woo_add_custom_general_fields_save( $post_id ){
 	*/
 	
 }
+
+// remove parent page templates
+
+function child_remove_page_templates( $page_templates ) {
+	unset( $page_templates['page-templates/blank.php'] );
+	unset( $page_templates['page-templates/both-sidebarspage.php'] );
+	unset( $page_templates['page-templates/empty.php'] );
+	unset( $page_templates['page-templates/fullwidthpage.php'] );
+	unset( $page_templates['page-templates/left-sidebarpage.php'] );
+	unset( $page_templates['page-templates/right-sidebarpage.php'] );
+
+	return $page_templates;
+}
+
+add_filter( 'theme_page_templates', 'child_remove_page_templates' );
+

@@ -4,6 +4,7 @@
  * Template Part for displaying ACF Product Information Groups
  */
 
+$background_color = get_sub_field('background_color');
 
 $info_groups = get_sub_field('info_group');
 $page_group_number = $args['group_count'];
@@ -26,9 +27,9 @@ foreach($info_groups as $info_group)  {
 ?>
 
 
-<section id="product-info" data-group="<?=$page_group_number?>" class="group-<?= $page_group_number ?>">
-    <div class="container px-3">
-        <div class="row img-left-tile bg-light mb-2">
+<section id="product-info" data-group="<?=$page_group_number?>" class="group-<?= $page_group_number ?>" style="background-color: <?= $background_color ?>;">
+    <div class="container px-3 py-2">
+        <div class="row img-left-tile bg-light">
             <div class="col-md-3 p-0">
                 <?php 
                     foreach($image_group as $single_image) { 

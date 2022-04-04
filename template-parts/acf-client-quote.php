@@ -25,7 +25,7 @@ $active_class = "";
 							<?php $quote_attribution = $client_quote['quote_attribution']; ?>
 							<?php $active_class = $count === 0 ? "active" : ""; ?>
 						<div class="carousel-item text-center <?= $active_class ?>">
-							<p class="quote-body fs-4 w-50 mx-auto mb-1">"<?= $quote_body ?>"</p>
+							<p class="quote-body fs-4 w-50 mx-auto my-1">"<?= $quote_body ?>"</p>
 							<p class="quote-author fw-bold"><?= $quote_attribution ?></p>
 						</div>
 						<?php $count++; ?>
