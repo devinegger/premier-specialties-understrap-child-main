@@ -11,13 +11,9 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<section class="no-results not-found">
+<section class="no-results not-found py-2">
 
-	<header class="page-header">
-
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h1>
-
-	</header><!-- .page-header -->
+		<h3 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h3>
 
 	<div class="page-content">
 

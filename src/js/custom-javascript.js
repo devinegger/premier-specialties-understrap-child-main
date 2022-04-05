@@ -32,7 +32,16 @@
         $('.search-icon').click( function() {
             $(this).toggleClass('d-none');
             $('.search-form-wrap').toggleClass('d-none');
+            $('.search-field').focus();
+            $('.search-field').select();
+            $('.btn-close').toggleClass('d-none');
         });
+
+        $('.btn-close').click( function() {
+            $(this).toggleClass('d-none');
+            $('.search-form-wrap').toggleClass('d-none');
+            $('.search-icon').toggleClass('d-none');
+        })
 
     });
 

@@ -31,22 +31,10 @@ $background_color = get_sub_field('background_color');
             $product_number = get_post_meta($product_ID, '_number_field', TRUE);
             $product_description = get_post_meta($product_ID, '_textarea', TRUE);
 
-            //echo $product->get_type();
-
             
             if ($product->is_type( 'variable' )) {
                 $available_variations = $product->get_available_variations();
-
-                /*
-                foreach ($available_variations as $variation) {
-                    $pa_request_name = $variation['attributes']['attribute_pa_request'];
-                    echo ucwords(str_replace('-', ' ', $pa_request_name));
-                    //print_r($variation);
-                }
-                */
             }
-
-            
 
         ?>
         <div class="row bg-light mb-2 p-3 product-tile">

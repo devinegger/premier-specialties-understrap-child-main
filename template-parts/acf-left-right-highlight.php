@@ -14,24 +14,28 @@ $image_arr = get_sub_field('image');
 $image_ID = $image_arr['ID']; 
 $image_URL = $image_arr['url']; 
 $image_alt = $image_arr['alt']; 
-$image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'left-right-img d-flex mx-auto', 'alt'=>$image_alt) );
+$image = wp_get_attachment_image( $image_ID, 'full', FALSE, array('src'=>$image_URL, 'class'=> 'left-right-img img-fluid', 'alt'=>$image_alt) );
 
 // video modal
-$video_URL = get_field('video_url', 'options');
-$vimeo_video_id = substr($video_URL, -9);
-$vimeo_embed_url = "https://player.vimeo.com/video/". $vimeo_video_id . "?h=cbc8e3bbc7&portrait=0";
-$modal_attributes = $video_URL ? 'data-bs-toggle="modal" data-bs-target="#videoModal"' : '';
+$video_URL = get_sub_field('video_url');
+if($video_URL) {
+	$vimeo_video_id = substr($video_URL, -9);
+	$vimeo_embed_url = "https://player.vimeo.com/video/". $vimeo_video_id . "?h=cbc8e3bbc7&portrait=0";
+	$modal_attributes = $video_URL ? 'data-bs-toggle="modal" data-bs-target="#videoModal"' : '';
+}
 
 // everything else
 $headline = get_sub_field('headline');
 $headline_color = get_sub_field('headline_color');
 $content = get_sub_field('content');
 $button = get_sub_field('button');
-$button_text = $button['title'];
-$button_link = $button['url'];
-$button_target = $button['target'];
-$button_bg_color = get_sub_field('button_background_color');
-$button_text_color = get_sub_field('button_text_color');
+if($button) {
+	$button_text = $button['title'];
+	$button_link = $button['url'];
+	$button_target = $button['target'];
+	$button_bg_color = get_sub_field('button_background_color');
+	$button_text_color = get_sub_field('button_text_color');
+}
 
 $image_class = "";
 $text_class = "text-end";
@@ -43,10 +47,10 @@ if ($image_horizontal_position === "Right") {
 
 if ($image_vertical_position === "Bottom") {
 	$align_items = "end";
-	$row_class = "pt-4";
+	$row_class = "";
 } else {
 	$align_items = "center";
-	$row_class = "py-2";
+	$row_class = "py-3";
 }
 
 ?>
@@ -54,14 +58,16 @@ if ($image_vertical_position === "Bottom") {
 <!-- Headline Left Image Right -->
 <section id="left-right-highlight" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row <?= $row_class ?> align-items-center">
-			<div class="d-flex col-md-6 align-items-<?= $align_items ?> <?= $image_class ?>">
+		<div class="row <?= $row_class ?> align-items-<?= $align_items ?>">
+			<div class="d-flex col-md-5  <?= $image_class ?>">
 				<?= $image ?>
 			</div>
-			<div class="col-md-6 py-4 <?= $text_class ?>">
+			<div class="col-md-7 py-4 <?= $text_class ?>">
 				<h3 class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></h3>
 				<p class="text-dark-gray mb-3"><?= $content ?></p>
-				<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" <?= $modal_attributes ?>  target="<?= $button_target ?>"  style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
+				<?php if($button) : ?>
+					<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" <?= $modal_attributes ?>  target="<?= $button_target ?>"  style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

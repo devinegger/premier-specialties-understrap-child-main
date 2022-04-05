@@ -59,7 +59,7 @@ $count=0;
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div id="teamCarousel" class="carousel slide" data-interval="false" data-bs-ride="carousel">
+                <div id="teamCarousel" class="carousel slide" data-bs-interval="false">
                     <div class="carousel-indicators">
                         <?php  for($i=0; $i<$num_team_members; $i++ ) : ?>
                             <button type="button" data-bs-target="#teamCarouselIndicators" data-bs-slide-to="<?= $i ?>" class="active" aria-current="true" aria-label="Slide <?= $i ?>"></button>
