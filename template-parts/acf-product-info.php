@@ -73,7 +73,9 @@ foreach($info_groups as $info_group)  {
                     <?php $section_count !==0 ? $content_class .= " d-none" : $content_class .= ""; ?>
 
                 <p class="text-black <?= $content_class ?>"><?= $single_content['content'] ?>
-                    <a class="more-link text-decoration-none fw-light" href="<?= $single_content['more_link']['url'] ?>"> More ></a>
+                    <?php if ($single_content['more_link']) : ?>
+                        <a class="more-link text-decoration-none fw-light" href="<?= $single_content['more_link']['url'] ?>"> More ></a>
+                    <?php endif;?>
                 </p>
                     <?php $section_count++; ?>
                 <?php endforeach; ?>

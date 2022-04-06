@@ -53,6 +53,21 @@ get_header();
 							}
 							?>
 
+							<?php 
+							if (have_rows('section_templates')) : // if there are custom section templates on the page
+
+								while (have_rows('section_templates')) : the_row();
+
+									// standard wysiwyg template
+									if (get_row_layout() == 'standard_wysiwyg') : 
+										get_template_part('template-parts/acf', 'standard-wysiwyg'); 
+									endif;
+
+								endwhile;
+							
+							endif;
+							?>
+
 					</div><!-- .col -->
 				</div><!-- .row -->
 			</div><!-- .container -->
