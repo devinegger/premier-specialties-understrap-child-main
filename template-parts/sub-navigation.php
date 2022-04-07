@@ -10,7 +10,8 @@
  * 
  */
 
-$current_post_id = $post->ID;
+$current_post_id = get_queried_object_id();
+
 $current_slug = $post->post_name;
 $base_slug = "/";
 $class_active = "";
@@ -32,6 +33,8 @@ $child_args = array(
 );
 // get array of child page objects
 $children = get_children($child_args);
+
+
 ?>
 
 <section id="sub-navigation">

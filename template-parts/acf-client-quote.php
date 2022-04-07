@@ -12,7 +12,7 @@ $count = 0;
 $active_class = "";
 ?>
 <!-- client quotes slider -->
-<section id="client-quote" style="background-color: <?= $background_color ?>;">
+<section class="client-quote" style="background-color: <?= $background_color ?>;">
 	<div class="container">
 		<div class="row py-4">
 			<div class="col-12">

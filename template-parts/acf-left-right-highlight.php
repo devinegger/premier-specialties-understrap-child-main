@@ -56,10 +56,10 @@ if ($image_vertical_position === "Bottom") {
 ?>
 
 <!-- Headline Left Image Right -->
-<section id="left-right-highlight" style="background-color: <?= $background_color ?>;">
+<section class="left-right-highlight" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row <?= $row_class ?> align-items-<?= $align_items ?>">
-			<div class="d-flex col-md-5  <?= $image_class ?>">
+		<div class="row <?= $row_class ?> align-items-center">
+			<div class="col-md-5 d-flex  align-items-<?= $align_items ?> <?= $image_class ?>">
 				<?= $image ?>
 			</div>
 			<div class="col-md-7 py-4 <?= $text_class ?>">

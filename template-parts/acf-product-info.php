@@ -27,7 +27,7 @@ foreach($info_groups as $info_group)  {
 ?>
 
 
-<section id="product-info" data-group="<?=$page_group_number?>" class="group-<?= $page_group_number ?>" style="background-color: <?= $background_color ?>;">
+<section class="product-info group-<?= $page_group_number ?>" data-group="<?=$page_group_number?>" style="background-color: <?= $background_color ?>;">
     <div class="container px-3 py-2">
         <div class="row img-left-tile bg-light">
             <div class="col-md-3 p-0">

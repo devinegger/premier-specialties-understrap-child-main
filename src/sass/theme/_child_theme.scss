@@ -179,6 +179,14 @@ a.fasc-button {
     }
 }
 
+/* SEARCH */
+.entry-meta {
+    a {
+        color: $white;
+        // text-decoration: none;
+    }
+}
+
 
 /* TEMPLATE PARTS */
 
@@ -263,7 +271,7 @@ a.fasc-button {
 
 
 // CTA PANEL 
-#cta-panel {
+.cta-panel {
     .content-pane {
         min-height: 400px;
     }
@@ -276,7 +284,7 @@ a.fasc-button {
 
 
 // PRODUCT INFORMATION GROUP
-#product-info {
+.product-info {
     .img-left-tile {
         img {
             height: 100%;
@@ -381,49 +389,3 @@ a.fasc-button {
 .dataTables_scrollBody, .tablepress {
     width: 100% !important;
 }
-
-
-
-/*
-
-
-.tablepress .odd td {
-	background-color: #f2f2f2 !important;
-}
-
-
-
-.tablepress-id-1 td.column-2 {
-    text-align: left !important;
-    font-size: 16px;
-}
-
-table, #tablepress-1-scroll-wrapper label, .ui-tabs-anchor, .accordion .accordion-head, .skill-wrap .skill_name, .chart-wrap span, .animate-number-wrap h6 span, .woocommerce-tabs .tabs li a, .be-countdown, body, .special-heading-wrap .caption-wrap .body-font {
-    font-family: "Open Sans","Arial",sans-serif;
-}
-
-.tablepress-id-1 td.column-2 {
-	color:#575058 !important;
-}
-
-td.row-details a {
-	color:#8326A0 !important;
-}
-
-.tablepress-row-details tbody tr.row-details-row-open+tr td.row-details {
-	font-size:14px !important;
-}
-
-.tablepress-id-1 span.inci-name, .tablepress-id-1 span.product-code {
-    font-weight: bold;
-}
-
-.dataTables_paginate a {
-	color:#8326A0 !important;
-	text-decoration:none !important;
-}
-
-
-
-
-*/

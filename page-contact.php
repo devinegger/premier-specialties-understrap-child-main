@@ -10,16 +10,20 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+// get page background color
+$page_background = get_field('page_background');
+
 ?>
+
+<div class="wrapper" id="page-wrapper" style="background-color: <?= $page_background ?>;">
 
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
 
-<div class="wrapper" id="page-wrapper">
 	<div id="content" tabindex="-1">
 		<main class="site-main" id="main">
 			<div class="container">
-				<div class="row justify-content-center py-3">
+				<div class="row justify-content-center pb-2">
 					<div class="col-md-5" style="z-index: 999;">
 						<div class="contact-form align-items-center mx-2">
 							<p>Please fill out each of the sections below.</p>
@@ -40,18 +44,6 @@ get_header();
 						</div>
 					</div>
 					<div class="col-md-7">			
-									
-							<?php
-							while ( have_posts() ) {
-								the_post();
-								get_template_part( 'loop-templates/content', 'page-internal' );
-
-								// If comments are open or we have at least one comment, load up the comment template.
-								if ( comments_open() || get_comments_number() ) {
-									comments_template();
-								}
-							}
-							?>
 
 							<?php 
 							if (have_rows('section_templates')) : // if there are custom section templates on the page

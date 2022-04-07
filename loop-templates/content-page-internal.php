@@ -9,9 +9,8 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-
-	<div class="entry-content container py-3">
+<section class="post-content">
+	<div class="entry-content container py-2">
 		<div class="row">
 			<div class="col">
 				<?php
@@ -22,11 +21,4 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_edit_post_link(); ?>
-
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-## -->
+</section><!-- .post-content -->

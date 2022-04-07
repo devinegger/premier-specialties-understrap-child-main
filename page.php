@@ -16,8 +16,6 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $page_id = get_the_ID();
-//$page = get_page_by_id($page_id); 
-$image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
 
 // get page background color
 $page_background = get_field('page_background');

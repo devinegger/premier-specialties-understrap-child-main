@@ -16,7 +16,7 @@ $num_team_members = count($team_cards);
 $count=0;
 ?>
 
-<section id="team-members" style="background-color:<?= $background_color ?> ;">
+<section class="team-members" style="background-color:<?= $background_color ?> ;">
     <div class="container px-3 py-4">
         <div class="row row-cols-1 row-cols-md-3 g-4 mb-2 justify-content-around">
 

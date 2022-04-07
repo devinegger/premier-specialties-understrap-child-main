@@ -6,12 +6,16 @@
 
 $page_id = get_the_ID();
 
-if(is_search()) {
-	$bg_image = '/wp-content/uploads/2022/03/OnScent_B_Heros-Rectangle-Strategic-Partners.png';
-	$icon_image = '/wp-content/uploads/2022/03/leaves-of-a-plant.png';
+if(is_search() || is_single() || is_home() ) {
+	$bg_image = '/wp-content/uploads/2022/03/OnScent_B_Heros-Rectangle-Resources.png';
+	$icon_image = '/wp-content/uploads/2022/04/Resources-Icon-Only-72px.png';
 } else {
 	$bg_image = wp_get_attachment_image_url( get_post_thumbnail_id( $page_id ), 'full' );
 	$icon_image = get_field('page_icon') ? get_field('page_icon') : "/wp-content/uploads/2022/03/leaves-of-a-plant.png";
+}
+
+if(!$bg_image) { // set default background image
+	$bg_image = '/wp-content/uploads/2022/03/OnScent_B_Heros-Rectangle-Resources.png';
 }
 ?>
 
@@ -33,6 +37,17 @@ if(is_search()) {
 							</h1>
 						<?php else : ?>
 							<h1 class="entry-title display-4 fw-bold text-light text-center"><?php single_post_title(); ?></h1>
+							<?php if(is_single()) : ?>
+								<div class="entry-meta text-white text-center">
+
+									<?= "Posted by "?> 
+									<?= get_the_author(); ?>
+									<?= " on " ?> 
+									<?= the_date(); ?>
+
+								</div><!-- .entry-meta -->
+
+							<?php endif; ?>
 						<?php endif; ?>
 					</header>
 				</div>
