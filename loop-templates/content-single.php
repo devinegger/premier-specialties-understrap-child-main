@@ -12,19 +12,17 @@ defined( 'ABSPATH' ) || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row">
 		<div class="col-md-4  order-md-2">
-			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-			<div class="entry-meta text-center">
-
-				<?= "Posted by "?> 
-				<?= get_the_author(); ?>
-				<?= " on " ?> 
-				<?= get_the_date(); ?>
-
-			</div><!-- .entry-meta -->
+			
+			<?php dynamic_sidebar( 'right-sidebar' ); ?>
 		</div>
 		<div class="col-md-8">
 			<div class="entry-content">
-
+			<span style="float: left; padding: 0 2rem 1rem 0;">
+				<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+			</span>
+			<h1 class="entry-title display-6 fw-bold mb-1"><?php single_post_title(); ?></h1>
+			<p><?= "Posted on "?> 
+			<?= the_date(); ?></p>
 			<?php
 				the_content();
 				understrap_link_pages();

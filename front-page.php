@@ -18,6 +18,9 @@ get_header();
 $image_arr = get_field('hero_image', 'option');
 $image_URL = $image_arr['url'];
 
+$mobile_image_arr = get_field('mobile_hero_image', 'option');
+$mobile_image_URL = $mobile_image_arr['url'];
+
 $headline = get_field('headline', 'option');
 
 $content = get_field('content', 'options');
@@ -60,25 +63,31 @@ if($video_URL_two) {
 		<main class="site-main" id="main">
 		
 			<!-- homepage hero -->
-			<div class="homepage-hero d-flex align-items-center" style="background-image: url('<?= $image_URL ?>')">
-				<div class="container py-5">
-					<div class="row">
-						<div class="text-light" style="max-width: <?= $content_width ?>px;">
-							<div class="container">
-								<h2 class="display-4 fw-bold"><?= $headline ?></h2>
-								<p><?= $content ?></p>
+			<div class="homepage-hero d-flex align-items-center" style="background-image: url('<?= $image_URL ?>');">
+				
+				<!--<div class="mobile-wrap align-items-center" style="background-image: url('<?= $mobile_image_URL ?>');">
+				apply different image bg for mobile
+				</div>-->
+
+				
+					<div class="container pt-5 py-md-5" style="z-index: 99;">
+						<div class="row">
+							<div class="text-light" style="max-width: <?= $content_width ?>px;">
+								<div class="container">
+									<h2 class="display-5 display-md-4 fw-bold"><?= $headline ?></h2>
+									<p><?= $content ?></p>
+								</div>
 							</div>
-						</div>
-						<div class="d-flex text-light">
-							<div class="container ">
-								<a class="btn btn-primary text-white mt-2 px-3 py-1 me-1" href="<?= $button_one_url ?>" target="<?= $button_one_target ?>" <?= $modal_attributes_one ?>><?= $button_one_title ?></a>
-								<?php if($button_two): ?>
-									<a class="btn btn-primary text-white mt-2 px-3 py-1" href="<?= $button_two_url ?>" target="<?= $button_two_target ?>" <?= $modal_attributes_two ?>><?= $button_two_title ?></a>
-								<?php endif; ?>
+							<div class="d-flex text-light">
+								<div class="container ">
+									<a class="btn btn-primary text-white mt-2 px-3 py-1 me-1" href="<?= $button_one_url ?>" target="<?= $button_one_target ?>" <?= $modal_attributes_one ?>><?= $button_one_title ?></a>
+									<?php if($button_two): ?>
+										<a class="btn btn-primary text-white mt-2 px-3 py-1" href="<?= $button_two_url ?>" target="<?= $button_two_target ?>" <?= $modal_attributes_two ?>><?= $button_two_title ?></a>
+									<?php endif; ?>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 			</div>
 			<?php if($video_URL_one) : ?>
 			<!-- video modal ONE -->

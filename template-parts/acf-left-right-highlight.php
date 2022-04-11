@@ -58,12 +58,12 @@ if ($image_vertical_position === "Bottom") {
 <!-- Headline Left Image Right -->
 <section class="left-right-highlight" style="background-color: <?= $background_color ?>;">
 	<div class="container">
-		<div class="row <?= $row_class ?> align-items-center">
-			<div class="col-md-5 d-flex  align-items-<?= $align_items ?> <?= $image_class ?>">
+		<div class="row <?= $row_class ?> align-items-<?= $align_items ?>">
+			<div class="col-lg-5 d-flex justify-content-center fadeup-effect <?= $image_class ?> image-column">
 				<?= $image ?>
 			</div>
-			<div class="col-md-7 py-4 <?= $text_class ?>">
-				<h3 class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></h3>
+			<div class="col-lg-7 py-4 m-auto <?= $text_class ?> text-column">
+				<h3 class="display-6 display-lg-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></h3>
 				<p class="text-dark-gray mb-3"><?= $content ?></p>
 				<?php if($button) : ?>
 					<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" <?= $modal_attributes ?>  target="<?= $button_target ?>"  style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
@@ -81,7 +81,7 @@ if ($image_vertical_position === "Bottom") {
 			<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="modal-body">
 				<div class="ratio ratio-16x9">
-					<iframe src="<?= $vimeo_embed_url_one ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+					<iframe src="<?= $vimeo_embed_url ?>" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 					<script src="https://player.vimeo.com/api/player.js"></script>
 				</div>
 			</div>

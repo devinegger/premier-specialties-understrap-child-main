@@ -30,7 +30,7 @@ foreach($info_groups as $info_group)  {
 <section class="product-info group-<?= $page_group_number ?>" data-group="<?=$page_group_number?>" style="background-color: <?= $background_color ?>;">
     <div class="container px-3 py-2">
         <div class="row img-left-tile bg-light">
-            <div class="col-md-3 p-0">
+            <div class="col-md-4 col-lg-3 p-0">
                 <?php 
                     foreach($image_group as $single_image) { 
                         
@@ -51,7 +51,7 @@ foreach($info_groups as $info_group)  {
                     $section_count = 0;
                 ?>
             </div>
-            <div class="col-md-9 p-2">
+            <div class="col-md-8 col-lg-9 p-2">
                 <div class="d-flex">
                     <ul class="nav text-secondary align-items-center">
 

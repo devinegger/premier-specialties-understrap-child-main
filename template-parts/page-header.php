@@ -6,7 +6,7 @@
 
 $page_id = get_the_ID();
 
-if(is_search() || is_single() || is_home() ) {
+if(is_search() || is_single() || is_home() || is_404() ) {
 	$bg_image = '/wp-content/uploads/2022/03/OnScent_B_Heros-Rectangle-Resources.png';
 	$icon_image = '/wp-content/uploads/2022/04/Resources-Icon-Only-72px.png';
 } else {
@@ -35,19 +35,14 @@ if(!$bg_image) { // set default background image
 							);
 							?>
 							</h1>
-						<?php else : ?>
+						<?php elseif(is_404()) : ?>
+							<h1 class="page-title text-white text-center"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'understrap' ); ?></h1>
+						<?php elseif(is_home()) : ?>
+							<h1 class="entry-title display-4 fw-bold text-light text-center">Blog</h1>
+						<?php elseif(is_single()) : ?>
+							<span class="entry-title display-4 fw-bold text-light text-center h1 d-block">Blog</span>
+						<?php else:  ?>
 							<h1 class="entry-title display-4 fw-bold text-light text-center"><?php single_post_title(); ?></h1>
-							<?php if(is_single()) : ?>
-								<div class="entry-meta text-white text-center">
-
-									<?= "Posted by "?> 
-									<?= get_the_author(); ?>
-									<?= " on " ?> 
-									<?= the_date(); ?>
-
-								</div><!-- .entry-meta -->
-
-							<?php endif; ?>
 						<?php endif; ?>
 					</header>
 				</div>

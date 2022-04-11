@@ -10,12 +10,14 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+<!-- Page Header -->
+<?php get_template_part('template-parts/page', 'header'); ?>
+
+	<div class="container py-2" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -24,12 +26,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<main class="site-main" id="main">
 
 					<section class="error-404 not-found">
-
-						<header class="page-header">
-
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'understrap' ); ?></h1>
-
-						</header><!-- .page-header -->
 
 						<div class="page-content">
 
@@ -63,14 +59,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<?php endif; ?>
 
-							<?php
-
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-							the_widget( 'WP_Widget_Tag_Cloud' );
-							?>
 
 						</div><!-- .page-content -->
 

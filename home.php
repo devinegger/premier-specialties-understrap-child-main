@@ -25,7 +25,7 @@ get_header();
 
 			<div class="container">
 
-				<div class="row row-cols-1 row-cols-md-3 g-4 py-2">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-2">
 
 						<?php
 						if ( have_posts() ) {

@@ -51,8 +51,8 @@ footer#colophon {
 
                     &:hover,
                     &:focus {
-                        font-weight: bold;
                         color: $secondary;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -60,15 +60,42 @@ footer#colophon {
             @include media-breakpoint-up(md) {
                 display: flex;
                 justify-content: space-between;
+
+                li {
+                    a {
+                        text-align: center;
+                    }
+                }                
             }
 
             @include media-breakpoint-only(lg) {
                 li {
                     a {
                         font-size: 0.875rem;
+                        padding: .75rem 0.5rem;
                     }
                 }
             }
+            @include media-breakpoint-up(lg) {
+                margin-right: -0.5rem;
+                margin-left: -0.5rem;
+
+                li {
+                    a {
+                        padding: .75rem 0.5rem;
+                    }
+                }
+            }
+            @include media-breakpoint-up(xl) {
+                margin-right: -0.75rem;
+                margin-left: -0.75rem;
+
+                li {
+                    a {
+                        padding: .75rem;
+                    }
+                }
+            }            
         }        
     }
 

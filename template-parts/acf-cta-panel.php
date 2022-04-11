@@ -42,11 +42,11 @@ $button_text_color = get_sub_field('button_text_color');
 <section id="cta-panel" style="background-color: <?= $background_color ?>;">
 	<div class="container">
 		<div class="row align-items-center <?= $row_class ?>">
-			<div class="col-md-6 py-md-5 text-center content-pane">
+			<div class="col-lg-6 py-md-5 text-center content-pane">
 				<p class="display-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></p>
 				<a class="btn btn-primary px-3 border-0" href="<?= $button_link ?>" target="<?= $button_target ?>" style="background-color:<?= $button_bg_color?>; color: <?= $button_text_color ?>; "><?= $button_text ?></a>
 			</div>
-			<div class="col-md-6 d-flex align-items-<?= $align_items ?>">
+			<div class="col-lg-6 mt-2 mt-md-0 d-flex fadeup-effect align-items-<?= $align_items ?>">
 				<?= $image ?>
 			</div>
 		</div>

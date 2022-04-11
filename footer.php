@@ -99,14 +99,6 @@ $social_links = get_field('social_media_links', 'options');
 							<span class="social-text"><?= $link_title ?></span>
 						</a>
 					</li>
-					<!--
-					<li>
-						<a class="text-white text-decoration-none" href="">
-							<i class="fa fa-brands fa-youtube-play"></i>
-							<span class="social-text">YouTube</span>
-						</a>
-					</li>
-					-->
 					<?php endforeach; ?>
 				</ul>
 			</div>

@@ -9,7 +9,7 @@ $background_color = get_sub_field('background_color');
 ?>
 
 <section class="product-section-list"  style="background-color: <?= $background_color ?>;">
-    <div class="container px-3 py-2">
+    <div class="container px-1 px-md-3 py-2">
 
         <?php 
         foreach($product_items as $product_item) : 
@@ -37,13 +37,13 @@ $background_color = get_sub_field('background_color');
             }
 
         ?>
-        <div class="row bg-light mb-2 p-3 product-tile">
+        <div class="row bg-light mb-2 p-1 p-md-3 product-tile">
             <div class="col">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3">
                         <?= $product_image ?>
                     </div>
-                    <div class="col-md-9 p-2">
+                    <div class="col-lg-9 p-2">
                         <h3 class="fw-bold mb-0"><?= $product_name ?></h3>
                         <span class="product-sub-titles text-gray">INCI Name: <?= $INCI_name ?></span>
                         <p class="text-black"><?= $product_description ?></p>
@@ -62,7 +62,7 @@ $background_color = get_sub_field('background_color');
                     <?php $add_to_cart_url =  $base_url . $variation_url . $quantity_url; ?>
                 <div class="row py-1">
                     <div class="col">
-                        <div class="text-end">
+                        <div class="form-group text-end">
                             <label class="text-gray"><?= ucwords(str_replace('-', ' ', $pa_request_name)); ?></label>
                             <input class="mx-2 text-center quantity-input" placeholder="1" value="1" type="number" size="2"/>
                             <a class="add-to-cart btn btn-secondary rounded-0" href="<?= $add_to_cart_url ?>">Add to Cart</a>

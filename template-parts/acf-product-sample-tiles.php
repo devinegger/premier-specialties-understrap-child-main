@@ -10,7 +10,7 @@ $background_color = get_sub_field('background_color');
 
 <section class="product-sample-tiles" style="background-color: <?= $background_color ?>;">
     <div class="container px-3 py-4">
-        <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-around">
+        <div class="row row-cols-1 row-cols-lg-2 g-4 justify-content-around">
 
     <?php 
         foreach($sample_tiles as $sample_tile) : 

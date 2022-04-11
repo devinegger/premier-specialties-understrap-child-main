@@ -18,7 +18,7 @@ $count=0;
 
 <section class="team-members" style="background-color:<?= $background_color ?> ;">
     <div class="container px-3 py-4">
-        <div class="row row-cols-1 row-cols-md-3 g-4 mb-2 justify-content-around">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-2 justify-content-around">
 
     <?php
     foreach($team_cards as $team_card) : 
@@ -31,7 +31,7 @@ $count=0;
         $job_description = substr($job_description,0,200);
     ?>
             <div class="col">
-                <div class="card text-center team-member border-0">
+                <div class="card text-center team-member border-0 h-100">
                     <img src="<?= $headshot_URL ?>" class="card-img-top headshot m-auto pt-2" alt="..." />
                     <div class="card-body p-2">
                         <h3 class="card-title mb-1 fw-bold fs-5"><?= $name ?></h3>

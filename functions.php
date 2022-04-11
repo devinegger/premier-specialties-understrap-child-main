@@ -227,7 +227,6 @@ function woo_add_custom_general_fields_save( $post_id ){
 }
 
 // remove parent page templates
-
 function child_remove_page_templates( $page_templates ) {
 	unset( $page_templates['page-templates/blank.php'] );
 	unset( $page_templates['page-templates/both-sidebarspage.php'] );
@@ -241,3 +240,6 @@ function child_remove_page_templates( $page_templates ) {
 
 add_filter( 'theme_page_templates', 'child_remove_page_templates' );
 
+
+// remove ellipses from exceprt 
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
