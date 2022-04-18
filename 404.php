@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="wrapper" id="error-404-wrapper">
+<div class="wrapper" id="error-404-wrapper" style="background-color: #ffffff;">
 
 <!-- Page Header -->
 <?php get_template_part('template-parts/page', 'header'); ?>
@@ -21,7 +21,7 @@ get_header();
 
 		<div class="row">
 
-			<div class="col-md-12 content-area" id="primary">
+			<div class="col-md-12 content-area py-4" id="primary">
 
 				<main class="site-main" id="main">
 
@@ -29,36 +29,7 @@ get_header();
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'understrap' ); ?></p>
-
-							<?php get_search_form(); ?>
-
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-
-								<div class="widget widget_categories">
-
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
-
-									<ul>
-										<?php
-										wp_list_categories(
-											array(
-												'orderby'  => 'count',
-												'order'    => 'DESC',
-												'show_count' => 1,
-												'title_li' => '',
-												'number'   => 10,
-											)
-										);
-										?>
-									</ul>
-
-								</div><!-- .widget -->
-
-							<?php endif; ?>
-
+							<a href="/"><img class="" src="/wp-content/uploads/2022/04/ON_404_Image_1302x444px_v3.png" alt="Page not found, click to go to home page." /></a>
 
 						</div><!-- .page-content -->
 

@@ -19,6 +19,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<!-- Google Tag Manager --> 
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

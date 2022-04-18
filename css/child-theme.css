@@ -15712,7 +15712,7 @@ a.fasc-button {
 #main-nav {
   position: absolute;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
 #main-nav .nav-item.active .nav-link {
   font-weight: 700;
@@ -15738,7 +15738,7 @@ a.fasc-button {
 @media (max-width: 991.98px) {
   .nav-icons {
     display: block;
-    width: 100%;
+    width: calc(100% - 1rem);
   }
   .nav-icons .search-form-wrap {
     position: absolute;
@@ -15804,7 +15804,7 @@ a.fasc-button {
   }
 
   .homepage-hero {
-    font-size: 0.7rem;
+    font-size: 0.95rem;
   }
 
   .nav-icons {
@@ -15967,6 +15967,11 @@ a.fasc-button {
     text-align: center !important;
   }
 }
+@media (max-width: 767.98px) {
+  .product-sample-tiles h3, .product-sample-tiles .h3 {
+    font-size: 1.4rem;
+  }
+}
 .cta-panel .content-pane {
   min-height: 400px;
 }
@@ -16029,12 +16034,23 @@ a.fasc-button {
     padding: 0;
   }
 }
+@media (min-width: 992px) {
+  #single-wrapper .image-wrap {
+    float: left;
+    padding: 0 2rem 1rem 0;
+    max-width: 20rem;
+  }
+}
 .shop_table {
   background-color: #fff;
 }
 
 .return-to-shop {
   display: none !important;
+}
+
+.woocommerce-cart table.cart input {
+  margin: 0 0 0 auto;
 }
 
 .tablepress-row-details .row-details-toggle .row-details-close {
@@ -16048,8 +16064,8 @@ a.fasc-button {
 }
 
 .tablepress-id-1 th {
-  -ms-writing-mode: sideways-lr;
-  writing-mode: sideways-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
   font-size: 0.8rem;
 }
 
@@ -16205,6 +16221,8 @@ footer#colophon .social-links li a .fa {
   border-radius: 1rem;
   padding: 2rem;
   margin-top: -200px;
+  position: relative;
+  z-index: 900;
 }
 .contact-form p {
   font-size: 1.125rem;
@@ -16212,6 +16230,11 @@ footer#colophon .social-links li a .fa {
   color: #fff;
 }
 
+@media (max-width: 1199.98px) {
+  .contact-form {
+    margin-top: 1rem;
+  }
+}
 .hbspt-form input:not([type=submit]),
 .hbspt-form textarea {
   border: none;

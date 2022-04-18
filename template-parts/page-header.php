@@ -36,7 +36,7 @@ if(!$bg_image) { // set default background image
 							?>
 							</h1>
 						<?php elseif(is_404()) : ?>
-							<h1 class="page-title text-white text-center"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'understrap' ); ?></h1>
+							<h1 class="page-title display-4 fw-bold text-white text-center">404</h1>
 						<?php elseif(is_home()) : ?>
 							<h1 class="entry-title display-4 fw-bold text-light text-center">Blog</h1>
 						<?php elseif(is_single()) : ?>

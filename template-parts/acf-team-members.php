@@ -28,7 +28,7 @@ $count=0;
         $headshot_URL = wp_get_attachment_url( get_post_meta( $team_member->ID, 'headshot', TRUE ) );
         $job_title = get_post_meta($team_member->ID, 'job_title', TRUE);
         $job_description = get_post_meta( $team_member->ID, 'job_description', TRUE );
-        $job_description = substr($job_description,0,200);
+        $job_description = wp_trim_words($job_description,55, "");
     ?>
             <div class="col">
                 <div class="card text-center team-member border-0 h-100">

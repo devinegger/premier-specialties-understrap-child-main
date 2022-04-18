@@ -23,6 +23,7 @@ if($video_URL) {
 	$vimeo_embed_url = "https://player.vimeo.com/video/". $vimeo_video_id . "?h=cbc8e3bbc7&portrait=0";
 	$modal_attributes = $video_URL ? 'data-bs-toggle="modal" data-bs-target="#videoModal"' : '';
 }
+$link_image_to_video = get_sub_field('link_image_to_video');
 
 // everything else
 $headline = get_sub_field('headline');
@@ -60,7 +61,12 @@ if ($image_vertical_position === "Bottom") {
 	<div class="container">
 		<div class="row <?= $row_class ?> align-items-<?= $align_items ?>">
 			<div class="col-lg-5 d-flex justify-content-center fadeup-effect <?= $image_class ?> image-column">
-				<?= $image ?>
+				<?php if($link_image_to_video) : // default is true ?>
+					<a href="#" <?= $modal_attributes ?>><?= $image ?></a>
+				<?php else :  ?>
+					<?= $image ?>
+				<?php endif; ?>
+				
 			</div>
 			<div class="col-lg-7 py-4 m-auto <?= $text_class ?> text-column">
 				<h3 class="display-6 display-lg-5 fw-semi-bold" style="color: <?= $headline_color ?>;"><?= $headline ?></h3>

@@ -26,11 +26,6 @@ if($post_type==="product") :
 	$product_number = get_post_meta($product_ID, '_number_field', TRUE);
 	$product_description = get_post_meta($product_ID, '_textarea', TRUE);
 
-	
-	if ($product->is_type( 'variable' )) {
-		$available_variations = $product->get_available_variations();
-	}
-
 ?>
 
 <div class="row bg-light mb-2 p-3 product-tile">
@@ -47,25 +42,42 @@ if($post_type==="product") :
 			</div>
 		</div>
 
-		<? foreach($available_variations as $variation) :?>
-			<? //print_r($variation); ?>
-			<?php $pa_request_name = $variation['attributes']['attribute_pa_request']; ?>
-			<?php $variation_ID = $variation['variation_id']; ?>
-			<?php // create the add to cart url ?>
-			<?php $base_url = get_home_url() . '/cart/?add-to-cart=' . $product_ID; ?>
-			<?php $variation_url = '&variation_id=' . $variation_ID . '&attribute_pa_request=' . $pa_request_name; ?>
-			<?php $quantity_url = '&quantity=1'; ?>
-			<?php $add_to_cart_url =  $base_url . $variation_url . $quantity_url; ?>
-		<div class="row py-1">
-			<div class="col">
-				<div class="text-end">
-					<label class="text-gray"><?= ucwords(str_replace('-', ' ', $pa_request_name)); ?></label>
-					<input class="mx-2 text-center quantity-input" placeholder="1" value="1" type="number" size="2"/>
-					<a class="add-to-cart btn btn-secondary rounded-0" href="<?= $add_to_cart_url ?>">Add to Cart</a>
+		<?php if ($product->is_type( 'variable' )) : // product is variable ?>
+			<?php $available_variations = $product->get_available_variations(); ?>
+
+			<? foreach($available_variations as $variation) :?>
+				<? //print_r($variation); ?>
+				<?php $pa_request_name = $variation['attributes']['attribute_pa_request']; ?>
+				<?php $variation_ID = $variation['variation_id']; ?>
+				<?php // create the add to cart url ?>
+				<?php $base_url = get_home_url() . '/cart/?add-to-cart=' . $product_ID; ?>
+				<?php $variation_url = '&variation_id=' . $variation_ID . '&attribute_pa_request=' . $pa_request_name; ?>
+				<?php $quantity_url = '&quantity=1'; ?>
+				<?php $add_to_cart_url =  $base_url . $variation_url . $quantity_url; ?>
+			<div class="row py-1">
+				<div class="col">
+					<div class="text-end">
+						<label class="text-gray"><?= ucwords(str_replace('-', ' ', $pa_request_name)); ?></label>
+						<input class="mx-2 text-center quantity-input" placeholder="1" value="1" type="number" size="2"/>
+						<a class="add-to-cart btn btn-secondary rounded-0" href="<?= $add_to_cart_url ?>">Add to Cart</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<? endforeach ; ?>
+			<? endforeach ; ?>
+		<?php else : // simple prouduct ?>
+			<?php $base_url = get_home_url() . '/cart/?add-to-cart=' . $product_ID; ?>
+			<?php $quantity_url = '&quantity=1'; ?>
+			<?php $add_to_cart_url =  $base_url . $variation_url . $quantity_url; ?>
+			<div class="row py-1">
+				<div class="col">
+					<div class="form-group text-end">
+						<label class="text-gray">Request Standard Sample</label>
+						<input class="mx-2 text-center quantity-input" placeholder="1" value="1" type="number" size="2"/>
+						<a class="add-to-cart btn btn-secondary rounded-0" href="<?= $add_to_cart_url ?>">Add to Cart</a>
+					</div>
+				</div>
+			</div>
+		<?php endif; // end if variable ?>
 	</div>
 </div>
 

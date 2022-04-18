@@ -24,7 +24,7 @@ $page_background = get_field('page_background');
 		<main class="site-main" id="main">
 			<div class="container">
 				<div class="row justify-content-center pb-2">
-					<div class="col-md-5" style="z-index: 999;">
+					<div class="col-xl-5" style="z-index: 999;">
 						<div class="contact-form align-items-center mx-2">
 							<p>Please fill out each of the sections below.</p>
 							<p><small><em>* Required</em></small></p>
@@ -43,7 +43,7 @@ $page_background = get_field('page_background');
 							
 						</div>
 					</div>
-					<div class="col-md-7">			
+					<div class="col-xl-7">			
 
 							<?php 
 							if (have_rows('section_templates')) : // if there are custom section templates on the page

@@ -27,10 +27,10 @@ $background_color = get_sub_field('background_color');
     ?>
             <div class="col">
                 <div class="row img-left-tile bg-light align-items-center">
-                    <div class="col-5 px-0">
+                    <div class="col-4 col-md-5 px-0">
                         <?= $image ?>
                     </div>
-                    <div class="col-7 pe-3 text-end">
+                    <div class="col-8 col-md-7 pe-3 text-end">
                         <h3 class="fw-bold mb-0 display-6"><?= $title ?></h3>
                         <a class="fst-italic text-secondary text-decoration-none" href="<?= $link_url ?>">Order Samples</a>
                     </div>
