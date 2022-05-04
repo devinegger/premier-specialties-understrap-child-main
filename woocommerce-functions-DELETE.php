@@ -442,7 +442,7 @@ function only_ten_items_allowed_cart_update( $passed, $cart_item_key, $values, $
 function wc_customer_details( $fields, $sent_to_admin, $order ) {
 	if ( empty( $fields ) ) {
 		if ( $order->get_billing_email() ) {
-			$fields['billing_email'] = array(
+			$fields['billing_email'] = array(   
 				'label' => __( 'Email address', 'woocommerce' ),
 				'value' => wptexturize( $order->get_billing_email() ),
 			);

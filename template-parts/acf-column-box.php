@@ -13,7 +13,7 @@ $num_columns = get_sub_field('number_of_columns');
 $column_class = $num_columns === '2' ? "col-md-6" : "col-md-4";
 $content_boxes = get_sub_field('content_boxes');
 ?>
-<section class="column-box" style="background-color: <?= $background_color ?>;">
+<section id="learn-more" class="column-box" style="background-color: <?= $background_color ?>;">
 	<div class="container">
 		<div class="row py-3">
 			<div class="col-12">

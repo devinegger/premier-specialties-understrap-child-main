@@ -16,13 +16,11 @@ $content_group = array();
 
 
 foreach($info_groups as $info_group)  {
-    // because of the way this template is set up, we have to run through the 
-    // info groups array and put the individual pieces into their own array, 
-    // so that we can loop through them at different parts in the template
+    // loop through info groups and put each section into their own arrays
 
-    $image_group[] = $info_group['image'];
-    $title_group[] = $info_group['title'];
-    $content_group[] = array('content' => $info_group['content'], 'more_link' => $info_group['more_link']);
+    $image_group[] = $info_group['image']; // add images to image array
+    $title_group[] = $info_group['title']; // add titles to title array
+    $content_group[] = array('content' => $info_group['content'], 'more_link' => $info_group['more_link']); // add content and more links to array
 }
 ?>
 
@@ -51,7 +49,7 @@ foreach($info_groups as $info_group)  {
                     $section_count = 0;
                 ?>
             </div>
-            <div class="col-md-8 col-lg-9 p-2">
+            <div class="col-md-8 col-lg-9 p-1 p-lg-2">
                 <div class="d-flex">
                     <ul class="nav text-secondary align-items-center">
 
@@ -72,7 +70,7 @@ foreach($info_groups as $info_group)  {
                     <?php $content_class = 'content-' . $section_count; ?>
                     <?php $section_count !==0 ? $content_class .= " d-none" : $content_class .= ""; ?>
 
-                <p class="text-black <?= $content_class ?>"><?= $single_content['content'] ?>
+                <p class="content text-black <?= $content_class ?>"><?= $single_content['content'] ?>
                     <?php if ($single_content['more_link']) : ?>
                         <a class="more-link text-decoration-none fw-light" href="<?= $single_content['more_link']['url'] ?>"> More ></a>
                     <?php endif;?>

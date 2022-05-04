@@ -3,10 +3,7 @@
 /**
  * Template Part for displaying ACF Team Members
  * 
- * Displays a 3 column row with the Team Members custom post type data displayed in cards using the Title as 
- * the name of the person, and then custom fields for Headshot, Job Title, and Job Description
- * 
- * This template file also creates a modal with a carousel for each Team Member CPT as well.
+ * This template file also creates a modal with a carousel for each Team Member CPT.
  * 
  */
 

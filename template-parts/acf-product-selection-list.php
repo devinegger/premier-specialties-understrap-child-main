@@ -22,7 +22,7 @@ $background_color = get_sub_field('background_color');
             $product = wc_get_product($product_ID); // the actual product object
 
             $product_image_ID = get_post_thumbnail_id( $product_ID ); 
-            $product_image = wp_get_attachment_image( $product_image_ID, array(260,180), FALSE, array('class'=>'img-full') ); // not sure how to grab the product img url and alt from here... 
+            $product_image = wp_get_attachment_image( $product_image_ID, array(260,180), FALSE, array('class'=>'img-full') );
 
             // product custom meta
             $INCI_name = get_post_meta($product_ID, '_text_field', TRUE);
@@ -45,10 +45,10 @@ $background_color = get_sub_field('background_color');
 
                 <?php if ($product->is_type( 'variable' )) : // variable product ?> 
                        
-                    <?php $available_variations = $product->get_available_variations(); ?>
+                    <?php $available_variations = $product->get_available_variations(); // get the variations ?>
 
-                    <? foreach($available_variations as $variation) :?>
-                        <?php if ($variation['attributes']['attribute_pa_request']) { // for some reason some variations have a different attribute name
+                    <? foreach($available_variations as $variation) : // loop through the variations and create add to cart button for each ?>
+                        <?php if ($variation['attributes']['attribute_pa_request']) { // some variations may have a different attribute name
                             $pa_request_name = $variation['attributes']['attribute_pa_request'];
                         } else {
                             $pa_request_name = $variation['attributes']['attribute_request'];

@@ -15780,6 +15780,7 @@ a.fasc-button {
   background-repeat: no-repeat;
   background-position: top center;
   height: 100vh;
+  min-height: 600px;
 }
 
 .mobile-wrap {
@@ -16016,6 +16017,9 @@ a.fasc-button {
   }
   .product-info .nav-link {
     font-size: 1rem !important;
+  }
+  .product-info .content {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 767.98px) {

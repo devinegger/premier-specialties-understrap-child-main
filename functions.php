@@ -124,10 +124,11 @@ function team_member_place_holder($title , $post){
 
 }
 
-/*	
-* Bringing over existing WooCommerce customizations
-*/
 
+
+/*	
+* WooCommerce Customizations (brought over from previous site)
+*/
 
 // add custom fields to product
 
@@ -201,30 +202,61 @@ function woo_add_custom_general_fields_save( $post_id ){
 	if( !empty( $woocommerce_textarea ) )
 		update_post_meta( $post_id, '_textarea', esc_html( $woocommerce_textarea ) );
 	
-	/*  I don't know where these are coming from, and I don't see them
-	 *   in the product data, so I'm not going to include them for now 
-	 * 
-	
-	 // Select
-	$woocommerce_select = $_POST['_select'];
-	if( !empty( $woocommerce_select ) )
-		update_post_meta( $post_id, '_select', esc_attr( $woocommerce_select ) );
-	
-	// Custom Field
-	$custom_field_type =  array( esc_attr( $_POST['_field_one'] ), esc_attr( $_POST['_field_two'] ) );
-	update_post_meta( $post_id, '_custom_field_type', $custom_field_type );
-	
-	// Hidden Field
-	$woocommerce_hidden_field = $_POST['_hidden_field'];
-	if( !empty( $woocommerce_hidden_field ) )
-		update_post_meta( $post_id, '_hidden_field', esc_attr( $woocommerce_hidden_field ) );
-		
-	// Product Field Type
-	$product_field_type =  $_POST['product_field_type'];
-	update_post_meta( $post_id, '_product_field_type_ids', $product_field_type );
-	*/
-	
 }
+
+/**
+ * Changing auto complete on all WooCommerce orders to "processing" status. Allows to manually complete order when approved, and then  email will be sent automatically with link to download product.
+ */
+add_action( 'woocommerce_thankyou', 'custom_woocommerce_auto_complete_order' );
+function custom_woocommerce_auto_complete_order( $order_id ) { 
+    if ( ! $order_id ) {
+        return;
+    }
+
+    $order = wc_get_order( $order_id );
+    $order->update_status( 'processing' );
+}
+
+// Begin WooCommerce – Cart limit to 10 items
+// Checking and validating when products are added to cart
+add_filter( 'woocommerce_add_to_cart_validation', 'only_ten_items_allowed_add_to_cart', 10, 3 );
+
+function only_ten_items_allowed_add_to_cart( $passed, $product_id, $quantity ) {
+
+    $cart_items_count = WC()->cart->get_cart_contents_count();
+    $total_count = $cart_items_count + $quantity;
+
+    if( $cart_items_count >= 10 || $total_count > 10 ){
+        // Set to false
+        $passed = false;
+        // Display a message
+         wc_add_notice( __( "Your cart is full. Please contact info@premierfragrances.com for further inquiries.", "woocommerce" ), "error" );
+    }
+    return $passed;
+}
+// Checking and validating when updating cart item quantities when products are added to cart
+add_filter( 'woocommerce_update_cart_validation', 'only_ten_items_allowed_cart_update', 10, 4 );
+function only_ten_items_allowed_cart_update( $passed, $cart_item_key, $values, $updated_quantity ) {
+
+    $cart_items_count = WC()->cart->get_cart_contents_count();
+    $original_quantity = $values['quantity'];
+    $total_count = $cart_items_count - $original_quantity + $updated_quantity;
+
+    if( $cart_items_count > 10 || $total_count > 10 ){
+        // Set to false
+        $passed = false;
+        // Display a message
+         wc_add_notice( __( "Your cart is full. Please contact info@premierfragrances.com for further inquiries.", "woocommerce" ), "error" );
+    }
+    return $passed;
+}
+// End WooCommerce – Cart limit to 10 items
+
+
+/*
+ * end WooCommerce functions
+ */
+
 
 // remove parent page templates
 function child_remove_page_templates( $page_templates ) {

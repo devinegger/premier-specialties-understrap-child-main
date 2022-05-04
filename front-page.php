@@ -70,7 +70,7 @@ if($video_URL_two) {
 				</div>-->
 
 				
-					<div class="container pt-5 py-md-5" style="z-index: 99;">
+					<div class="container pt-5 py-3" style="z-index: 99;">
 						<div class="row">
 							<div class="text-light" style="max-width: <?= $content_width ?>px;">
 								<div class="container">

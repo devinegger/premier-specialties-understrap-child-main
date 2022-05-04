@@ -116,7 +116,7 @@ a.fasc-button {
     background-repeat: no-repeat;
     background-position: top center;
     height: 100vh;
-    
+    min-height: 600px;
 }
 
 .mobile-wrap {
@@ -423,6 +423,8 @@ a.fasc-button {
         }  
     }
 
+    
+
     .more-link {
         color: $on-scent-semi-light-blue;
     }
@@ -435,6 +437,10 @@ a.fasc-button {
 
         .nav-link {
             font-size: 1rem !important;
+        }
+
+        .content {
+            font-size: .8rem;
         }
     }
 }
